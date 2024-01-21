@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# WINE GATE
 
-## Getting Started
+## 日本語で気軽にワインを探せる初心者と初心者にワインを布教したい人向けのワインコミュニティサイト
 
-First, run the development server:
+現在開発中
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 使用技術
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- フロントエンド
+  フレームワークはNext.js(App Router)を使用、CSSはTailwind CSSとUIライブラリにMantine UIを採用しています。  
+  状態管理にはクライアントサイドにzustand、非同期処理周りにtanstack/queryを採用予定です。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- バックエンド
+  supabaseを採用。  
+  当初はNest.jsを採用し、バックエンドも出来る所を魅せるポートフォリオに仕上げる予定でしたが、今回のアプリケーションはマネタイズを目指しており転職活動終了以降も継続的に保守運用する必要があること、  
+  今回ユーザー投稿の画像を保存及び処理する必要がある事、  
+  現時点での私のインフラ知識ではそこまでのインフラ環境を整える事に不安があった事等から今回は見送りsupabaseを採用しました。  
+  supabaseには画像処理APIもある為、将来的にはsupabase側で画像処理を行い画像の通信をsupabase→クライアントサイドとすることでVercel←→supabase間のトラフィックを抑制していく予定です。  
+  日本語検索にはPostgreSQL拡張のPGroongaを採用予定。
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- インフラ
+  背伸びせず今回もVercelを使用予定
 
-## Learn More
+- テスト
+  スタイルガイドにStorybookを使用、テストフレームワークはJestとplaywrightを使用予定。  
+  Vitestを使ってみたかったのですが、Next.js上でTailwind CSSを使う場合PostcssがcommonJSでの動作になってしまいVitestを動作させることが叶わなかったのでいつも通りJestを使用。  
+  テスト戦略として、今回コンポーネント設計をatomic designを意識して行い、templatesレイヤー以下でスタイルガイドの作成とJestで単体テストと結合テスト、pagesレイヤー以上はplaywrightに任せる事にしました。  
+  海外の記事を見てもRSCのテスト戦略は非同期処理を行うレイヤーとそれを受け取るレイヤーでコンテナを分ける実装が主張されていた為、これが一番安パイだと考えました。
 
-To learn more about Next.js, take a look at the following resources:
+### ER図
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+![ER図](./public/erchart.png)
+userはsupabase authのテーブルをそのまま流用の為簡易的に記載しています。  
+データベース設計は初めてですが、一応第三正規系まで正規化しています。  
+ただし、winesテーブルのtagsがMantine UIのTagsInputの仕様で複数入力の内容が一つの文字列として結合してFormDataに渡される所については扱いに大分悩みました。  
+ユーザーの自由入力欄であり、このカラムでソートする事はないであろうことと分割してsupabaseに送るとなると少し処理が複雑化する事から、一つの文字列としてデータベースに登録し、クライアントサイドで分割する仕様に決定。  
+この場合でも別テーブルにするべきだったのか、データベースのプロの意見も聞きたい所です。
