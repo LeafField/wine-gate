@@ -1,6 +1,8 @@
 import React from "react";
 import { fetcher } from "../utils/fetcher";
 
+export const runtime = "edge";
+
 export default async function Home() {
   const data = await fetcher();
 
