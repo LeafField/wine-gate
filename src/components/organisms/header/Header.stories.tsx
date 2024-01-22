@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from "@storybook/react";
-import HeaderTitle from "./Header";
+import Header from "./Header";
 import { notoStyle } from "../../../utils/font";
 
 const meta = {
   title: "organisms/header",
-  component: HeaderTitle,
+  component: Header,
   decorators: [
     (StoryComponents) => (
       <div className={notoStyle.className}>
@@ -12,7 +12,7 @@ const meta = {
       </div>
     ),
   ],
-} satisfies Meta<typeof HeaderTitle>;
+} satisfies Meta<typeof Header>;
 
 export default meta;
 

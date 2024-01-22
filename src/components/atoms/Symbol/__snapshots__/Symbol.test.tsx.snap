@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Symbolの単体テスト スナップショット 1`] = `
+<div>
+  <figure
+    class="symbol absolute inset-0"
+  >
+    <img
+      alt="wine gate"
+      data-nimg="1"
+      decoding="async"
+      fetchpriority="high"
+      height="124"
+      loading="eager"
+      src="/symbol.svg"
+      style="color: transparent; object-fit: cover;"
+      width="124"
+    />
+  </figure>
+</div>
+`;

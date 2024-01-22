@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderTitleの単体テスト スナップショット 1`] = `
+<div>
+  <header
+    class="relative flex h-[clamp(3.44rem,9.24vw,6rem)] flex-col items-center justify-center bg-red text-white"
+  >
+    <p
+      class="text-center text-header-subtitle"
+    >
+      気軽にワイン入門、気楽にワイン紹介
+    </p>
+    <h1
+      class="className text-center text-header-title "
+    >
+      WINE GATE
+    </h1>
+    <figure
+      class="symbol absolute inset-0"
+    >
+      <img
+        alt="wine gate"
+        data-nimg="1"
+        decoding="async"
+        fetchpriority="high"
+        height="124"
+        loading="eager"
+        src="/symbol.svg"
+        style="color: transparent; object-fit: cover;"
+        width="124"
+      />
+    </figure>
+  </header>
+</div>
+`;
