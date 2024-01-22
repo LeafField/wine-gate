@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "@mantine/core/styles.css";
 import "./globals.css";
 import { MantineProvider } from "@mantine/core";
+import Header from "../components/organisms/header/Header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,8 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={inter.className}>
-        <MantineProvider>{children}</MantineProvider>
+        <Header />
+        <MantineProvider defaultColorScheme="light">{children}</MantineProvider>
       </body>
     </html>
   );

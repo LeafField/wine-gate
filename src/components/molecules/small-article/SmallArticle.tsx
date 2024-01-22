@@ -2,14 +2,15 @@ import React, { FC } from "react";
 import Link from "next/link";
 import Pill from "../../atoms/pill/Pill";
 import WineImage from "../../atoms/wine-image/WineImage";
+import { SmallArticleProps } from "../../../types/article_types";
 
-import { Database } from "../../../types/schema";
-
-type Wines = Database["public"]["Tables"]["wines"]["Row"];
-type Chara = Pick<Database["public"]["Tables"]["categories"]["Row"], "chara">;
-type Props = Pick<Wines, "title" | "id" | "image_src" | "tags"> & Chara;
-
-const SmallArticle: FC<Props> = ({ chara, tags, image_src, title, id }) => {
+const SmallArticle: FC<SmallArticleProps> = ({
+  chara,
+  tags,
+  image_src,
+  title,
+  id,
+}) => {
   const splitTags = tags && tags.split(",");
 
   return (

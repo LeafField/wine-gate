@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Headingの単体テスト スナップショットテスト 1`] = `
+<div>
+  <h2
+    class="text-heading2 border-b-2 border-red  "
+  >
+    テストタイトル
+  </h2>
+</div>
+`;
