@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footerの結合テスト スナップショット 1`] = `
+<div>
+  <footer
+    class="flex h-12 items-center justify-center bg-red "
+  >
+    <small
+      class=" text-center text-xs leading-[0.75rem] text-white"
+    >
+      2023©LeafField
+    </small>
+  </footer>
+</div>
+`;

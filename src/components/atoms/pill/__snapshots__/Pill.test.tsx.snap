@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pillの単体テスト スナップショット 1`] = `
+<div>
+  <div
+    class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+  >
+    渋い
+  </div>
+</div>
+`;
