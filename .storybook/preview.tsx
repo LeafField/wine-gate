@@ -6,6 +6,8 @@ import {
 import "@mantine/core/styles.css";
 import "../src/app/globals.css";
 import { initialize, mswLoader } from "msw-storybook-addon";
+import React from "react";
+import { notoStyle } from "../src/utils/font";
 
 initialize({
   onUnhandledRequest: "bypass",
@@ -28,6 +30,13 @@ const preview: Preview = {
     },
   },
   loaders: [mswLoader],
+  decorators: [
+    (Story) => (
+      <div className={notoStyle.className}>
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 export default preview;
