@@ -16,16 +16,16 @@ export const Primary: Story = {
     chara: "渋い",
     title: "コノスル カベルネ・ソーヴィニヨン ビシクレタ・レゼルバ",
     image_src: dummyImage.src,
-    slug: "/",
+    id: "/",
   },
 };
 
 export const Secondary: Story = {
   args: {
     chara: "酸っぱい",
-    couplingTags: "樽熟成,上級者向き",
+    tags: "樽熟成,上級者向き",
     title: "コノスル カベルネ・ソーヴィニヨン ビシクレタ・レゼルバ",
     image_src: dummyImage.src,
-    slug: "/",
+    id: "/",
   },
 };

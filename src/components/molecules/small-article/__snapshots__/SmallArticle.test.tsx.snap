@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SmallArticle 単体テスト スナップショット 1`] = `
+<div>
+  <article
+    class="group max-w-[20.75rem] border border-gray "
+  >
+    <a
+      href="1"
+    >
+      <div
+        class="h-[11.625rem] w-[20.75rem] overflow-hidden bg-gray "
+      >
+        <figure
+          class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+        >
+          <img
+            alt="ワイン画像"
+            data-nimg="fill"
+            decoding="async"
+            fetchpriority="high"
+            loading="eager"
+            sizes="332px"
+            src="/_next/image?url=%2Ftest%2Fimage.jpg&w=3840&q=75"
+            srcset="/_next/image?url=%2Ftest%2Fimage.jpg&w=16&q=75 16w, /_next/image?url=%2Ftest%2Fimage.jpg&w=32&q=75 32w, /_next/image?url=%2Ftest%2Fimage.jpg&w=48&q=75 48w, /_next/image?url=%2Ftest%2Fimage.jpg&w=64&q=75 64w, /_next/image?url=%2Ftest%2Fimage.jpg&w=96&q=75 96w, /_next/image?url=%2Ftest%2Fimage.jpg&w=128&q=75 128w, /_next/image?url=%2Ftest%2Fimage.jpg&w=256&q=75 256w, /_next/image?url=%2Ftest%2Fimage.jpg&w=384&q=75 384w, /_next/image?url=%2Ftest%2Fimage.jpg&w=640&q=75 640w, /_next/image?url=%2Ftest%2Fimage.jpg&w=750&q=75 750w, /_next/image?url=%2Ftest%2Fimage.jpg&w=828&q=75 828w, /_next/image?url=%2Ftest%2Fimage.jpg&w=1080&q=75 1080w, /_next/image?url=%2Ftest%2Fimage.jpg&w=1200&q=75 1200w, /_next/image?url=%2Ftest%2Fimage.jpg&w=1920&q=75 1920w, /_next/image?url=%2Ftest%2Fimage.jpg&w=2048&q=75 2048w, /_next/image?url=%2Ftest%2Fimage.jpg&w=3840&q=75 3840w"
+            style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+          />
+        </figure>
+      </div>
+      <h3
+        class="px-2 text-base text-black transition-colors duration-300 group-hover:text-blue"
+      >
+        Test Title
+      </h3>
+      <div
+        class="flex flex-row justify-center gap-2 pb-2 pt-2 "
+      >
+        <div
+          class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+        >
+          chara
+        </div>
+        <div
+          class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+        >
+          tag1
+        </div>
+        <div
+          class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+        >
+          tag2
+        </div>
+      </div>
+    </a>
+  </article>
+</div>
+`;

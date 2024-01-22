@@ -9,6 +9,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "WINE GATE",
   description: "日本語で気楽にワインが探せるワインコミュニティサイトです",
+  robots: {
+    index: false,
+  },
 };
 
 export default function RootLayout({
