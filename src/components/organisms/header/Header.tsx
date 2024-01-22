@@ -2,7 +2,7 @@ import React from "react";
 import { KumarOne } from "../../../utils/font";
 import { Symbol } from "../../atoms/Symbol/Symbol";
 
-const HeaderTitle = () => {
+const Header = () => {
   return (
     <header className="relative flex h-[clamp(3.44rem,9.24vw,6rem)] flex-col items-center justify-center bg-red text-white">
       <p className="text-center text-header-subtitle">
@@ -16,4 +16,4 @@ const HeaderTitle = () => {
   );
 };
 
-export default HeaderTitle;
+export default Header;
