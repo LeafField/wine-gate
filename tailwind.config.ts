@@ -22,6 +22,7 @@ const config: Config = {
         "header-subtitle": "clamp(0.625rem,1.54vw,1rem)",
         "header-title": "clamp(1.25rem,3.46vw,2.25rem)",
         "main-text": "clamp(0.875rem,1.54vw,1rem)",
+        heading2: "clamp(1.5rem,3.07vw,2rem)",
       },
     },
   },
