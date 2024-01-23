@@ -17,29 +17,29 @@ const CategorySearch: FC<Props> = ({ categories }) => {
   return (
     <div className="nav-panel">
       <h2 className="nav-title">カテゴリー検索</h2>
-      <div className="flex flex-col gap-y-6">
-        <ul className="flex w-[18.3125rem] justify-between">
+      <div className="panel-inner flex flex-col gap-y-6">
+        <ul className=" flex justify-between">
           {redItems.map((item) => (
             <li key={item.id}>
               <CategoryLink src={item.category} title={item.chara} />
             </li>
           ))}
         </ul>
-        <ul className="flex w-[18.3125rem] justify-end gap-6">
+        <ul className="flex justify-end gap-6">
           {whiteItems.map((item) => (
             <li key={item.id}>
               <CategoryLink src={item.category} title={item.chara} />
             </li>
           ))}
         </ul>
-        <ul className="flex w-[18.3125rem] justify-end gap-6">
+        <ul className="flex justify-end gap-6">
           {interimItems.map((item) => (
             <li key={item.id}>
               <CategoryLink src={item.category} title={item.chara} />
             </li>
           ))}
         </ul>
-        <ul className="flex w-[18.3125rem] justify-end gap-6">
+        <ul className="flex justify-end gap-6">
           {otherItems.map((item) => (
             <li key={item.id}>
               <CategoryLink src={item.category} title={item.chara} />

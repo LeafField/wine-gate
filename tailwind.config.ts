@@ -34,7 +34,7 @@ const config: Config = {
     },
   },
   plugins: [
-    plugin(({ addComponents }) => {
+    plugin(({ addComponents, addUtilities }) => {
       addComponents({
         ".symbol": {
           width: "clamp(4.08rem,12vw,7.75rem)",
@@ -59,6 +59,11 @@ const config: Config = {
           width: "20.8125rem",
           border: "1px solid #B8B6B6",
           padding: "1rem 1.25rem",
+        } satisfies CSSProperties,
+      });
+      addUtilities({
+        ".panel-inner": {
+          width: "18.3125rem",
         } satisfies CSSProperties,
       });
     }),
