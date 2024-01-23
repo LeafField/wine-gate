@@ -1,11 +1,19 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "@mantine/core/styles.css";
 import "./globals.css";
 import Header from "../components/organisms/header/Header";
 import MantineWrapper from "../components/organisms/mantine/MantineWrapper";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "WINE GATE",
+  description: "日本語で気楽にワインが探せるワインコミュニティサイトです",
+  robots: {
+    index: false,
+  },
+};
 
 export default function RootLayout({
   children,
