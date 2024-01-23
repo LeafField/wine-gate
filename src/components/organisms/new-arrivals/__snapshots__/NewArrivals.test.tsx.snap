@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NewArrivalsの単体テスト スナップショットテスト 1`] = `
+exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
 <div>
   <section
     class="desktop:w-[64.9375rem] laptop:w-[43.0625rem] tablet:w-[20.75rem] flex w-full flex-col gap-[3.75rem]"
