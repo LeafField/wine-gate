@@ -5,6 +5,13 @@ import dummyImage from "../../../images/dummy_wine.png";
 const meta = {
   title: "molecules/SmallArticle",
   component: SmallArticle,
+  decorators: [
+    (Story) => (
+      <div className="w-[20.75rem]">
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof SmallArticle>;
 
 export default meta;

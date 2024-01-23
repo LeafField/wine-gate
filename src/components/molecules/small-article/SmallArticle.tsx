@@ -14,18 +14,19 @@ const SmallArticle: FC<SmallArticleProps> = ({
   const splitTags = tags && tags.split(",");
 
   return (
-    <article className="group max-w-[20.75rem] border border-gray ">
-      <Link href={id}>
+    // <Link href={id} className="block w-[20.75rem]">
+    <Link href={id} className="block w-full">
+      <article className="group h-full w-full border border-gray ">
         <WineImage src={image_src} />
-        <h3 className="px-2 text-base text-black transition-colors duration-300 group-hover:text-blue">
+        <h3 className="w-full px-2 text-base text-black transition-colors duration-300 group-hover:text-blue">
           {title}
         </h3>
-        <div className="flex flex-row justify-center gap-2 pb-2 pt-2 ">
+        <div className="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2 ">
           <Pill title={chara} />
           {splitTags && splitTags.map((tag) => <Pill key={tag} title={tag} />)}
         </div>
-      </Link>
-    </article>
+      </article>
+    </Link>
   );
 };
 

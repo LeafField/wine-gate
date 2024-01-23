@@ -6,7 +6,7 @@ const meta = {
   title: "organisms/new-arrivals",
   component: NewArrivals,
   args: {
-    articles: [...smallArticleDummyData],
+    articles: [...smallArticleDummyData, ...smallArticleDummyData],
   },
 } as Meta<typeof NewArrivals>;
 
