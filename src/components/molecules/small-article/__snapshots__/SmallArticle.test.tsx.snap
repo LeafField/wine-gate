@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`SmallArticle 単体テスト スナップショット 1`] = `
+exports[`SmallArticle 単体テスト > スナップショット 1`] = `
 <div>
   <article
     class="group max-w-[20.75rem] border border-gray "

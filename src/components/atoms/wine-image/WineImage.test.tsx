@@ -1,10 +1,10 @@
 import { render } from "@testing-library/react";
 import WineImage from "./WineImage";
-import dummyImage from "../../../images/dummy_wine.png";
+import { describe, test, expect } from "vitest";
 
 describe("WineImage 単体テスト", () => {
   test("スナップショット", () => {
-    const { container } = render(<WineImage src={dummyImage.src} />);
+    const { container } = render(<WineImage src={"/dummy.jpeg"} />);
     expect(container).toMatchSnapshot();
   });
 });

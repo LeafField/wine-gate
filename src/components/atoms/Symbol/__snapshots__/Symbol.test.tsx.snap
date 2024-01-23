@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Symbolの単体テスト スナップショット 1`] = `
+exports[`Symbolの単体テスト > スナップショット 1`] = `
 <div>
   <figure
     class="symbol absolute inset-0"

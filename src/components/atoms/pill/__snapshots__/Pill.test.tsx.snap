@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Pillの単体テスト スナップショット 1`] = `
+exports[`Pillの単体テスト > スナップショット 1`] = `
 <div>
   <div
     class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "

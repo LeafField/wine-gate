@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import SmallArticle from "./SmallArticle";
+import { describe, test, expect } from "vitest";
 
 describe("SmallArticle 単体テスト", () => {
   const props = {
@@ -13,13 +14,13 @@ describe("SmallArticle 単体テスト", () => {
   test("指定されたプロパティを持つ要素がレンダリングされているか", () => {
     render(<SmallArticle {...props} />);
     const imageElement = screen.getByAltText("ワイン画像");
-    expect(imageElement).toBeInTheDocument();
+    expect(imageElement).toBeDefined();
 
     const titleElement = screen.getByText(props.title);
-    expect(titleElement).toBeInTheDocument();
+    expect(titleElement).toBeDefined();
 
     const charaElement = screen.getByText(props.chara);
-    expect(charaElement).toBeInTheDocument();
+    expect(charaElement).toBeDefined();
 
     const tagElements = screen.getAllByText(/tag/);
     expect(tagElements.length).toBe(2);

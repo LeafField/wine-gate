@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Footerの結合テスト スナップショット 1`] = `
+exports[`Footerの結合テスト > スナップショット 1`] = `
 <div>
   <footer
     class="flex h-12 items-center justify-center bg-red "

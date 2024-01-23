@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`HeaderTitleの単体テスト スナップショット 1`] = `
+exports[`HeaderTitleの単体テスト > スナップショット 1`] = `
 <div>
   <header
     class="relative flex h-[clamp(3.44rem,9.24vw,6rem)] flex-col items-center justify-center bg-red text-white"
@@ -11,7 +11,7 @@ exports[`HeaderTitleの単体テスト スナップショット 1`] = `
       気軽にワイン入門、気楽にワイン紹介
     </p>
     <h1
-      class="className text-center text-header-title "
+      class="undefined text-center text-header-title "
     >
       WINE GATE
     </h1>

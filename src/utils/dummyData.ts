@@ -1,4 +1,5 @@
 import dummyImage from "../images/dummy_wine.png";
+import { Database } from "../types/schema";
 
 export const smallArticleDummyData = [
   {
@@ -23,3 +24,13 @@ export const smallArticleDummyData = [
     image_src: dummyImage.src,
   },
 ];
+
+export const categoryDummyData: Database["public"]["Tables"]["categories"]["Row"][] =
+  [
+    {
+      id: 10,
+      category: "hoge",
+      chara: "渋い",
+      sub: "other",
+    },
+  ];
