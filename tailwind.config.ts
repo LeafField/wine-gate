@@ -24,6 +24,7 @@ const config: Config = {
         "header-title": "clamp(1.25rem,3.46vw,2.25rem)",
         "main-text": "clamp(0.875rem,1.54vw,1rem)",
         heading2: "clamp(1.5rem,3.07vw,2rem)",
+        heading3: "clamp(1.125rem,2.31vw,1.5rem)",
       },
       screens: {
         desktop: "1440px",
@@ -38,6 +39,26 @@ const config: Config = {
         ".symbol": {
           width: "clamp(4.08rem,12vw,7.75rem)",
           height: "clamp(4.08rem,12vw,7.75rem)",
+        } satisfies CSSProperties,
+      });
+      addComponents({
+        ".nav-title": {
+          fontSize: "clamp(1.125rem,2.31vw,1.5rem)",
+          width: "18.3125rem",
+          textAlign: "right",
+          color: "#030303",
+        } satisfies CSSProperties,
+      });
+      addComponents({
+        ".nav-panel": {
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          gap: "0.5rem",
+          width: "20.8125rem",
+          border: "1px solid #B8B6B6",
+          padding: "1rem 1.25rem",
         } satisfies CSSProperties,
       });
     }),

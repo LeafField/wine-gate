@@ -7,7 +7,7 @@ exports[`SmallArticle 単体テスト スナップショット 1`] = `
     href="1"
   >
     <article
-      class="group h-full w-full border border-gray "
+      class="group h-full w-full border border-gray transition-colors duration-500 hover:border-blue"
     >
       <div
         class="aspect-video w-full overflow-hidden bg-gray "
@@ -29,7 +29,7 @@ exports[`SmallArticle 単体テスト スナップショット 1`] = `
         </figure>
       </div>
       <h3
-        class="w-full px-2 text-base text-black transition-colors duration-300 group-hover:text-blue"
+        class="w-full px-2 text-base text-black"
       >
         Test Title
       </h3>

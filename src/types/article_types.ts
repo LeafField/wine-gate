@@ -7,3 +7,5 @@ export type SmallArticleProps = Pick<
   "title" | "id" | "image_src" | "tags"
 > &
   Pick<Database["public"]["Tables"]["categories"]["Row"], "chara">;
+
+export type CategoryProps = Database["public"]["Tables"]["categories"]["Row"];
