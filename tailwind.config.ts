@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 import { CSSProperties } from "react";
+import containerQuery from "@tailwindcss/container-queries";
 
 const config: Config = {
   content: [
@@ -24,6 +25,11 @@ const config: Config = {
         "main-text": "clamp(0.875rem,1.54vw,1rem)",
         heading2: "clamp(1.5rem,3.07vw,2rem)",
       },
+      screens: {
+        desktop: "1440px",
+        laptop: "1108px",
+        tablet: "768px",
+      },
     },
   },
   plugins: [
@@ -35,6 +41,7 @@ const config: Config = {
         } satisfies CSSProperties,
       });
     }),
+    containerQuery,
   ],
 };
 export default config;
