@@ -3,7 +3,7 @@ import CategorySearch from "./CategorySearch";
 import { categoryDummyData } from "../../../utils/dummyData";
 
 const meta = {
-  title: "CategorySearch",
+  title: "molecules/CategorySearch",
   component: CategorySearch,
   args: {
     categories: categoryDummyData,
