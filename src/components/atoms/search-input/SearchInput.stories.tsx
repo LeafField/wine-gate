@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from "@storybook/react";
 import SearchInput from "./SearchInput";
-import DummyForm from "../../dummy/DummyForm";
+import DummyForm from "../../test-components/DummyForm";
 
 const meta = {
   title: "atoms/SearchInput",

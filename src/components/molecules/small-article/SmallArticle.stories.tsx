@@ -7,7 +7,7 @@ const meta = {
   component: SmallArticle,
   decorators: [
     (Story) => (
-      <div className="w-[20.75rem]">
+      <div className="grid w-[20.75rem] grid-cols-1">
         <Story />
       </div>
     ),
