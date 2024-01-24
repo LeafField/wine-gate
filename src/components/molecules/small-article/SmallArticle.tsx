@@ -15,15 +15,17 @@ const SmallArticle: FC<SmallArticleProps> = ({
 
   return (
     // <Link href={id} className="block w-[20.75rem]">
-    <Link href={id} className="block w-full">
-      <article className="group h-full w-full border border-gray transition-colors duration-500 hover:border-blue">
-        <WineImage src={image_src} />
-        <h3 className="w-full px-2 text-base text-black">{title}</h3>
-        <div className="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2 ">
-          <Pill title={chara} />
-          {splitTags && splitTags.map((tag) => <Pill key={tag} title={tag} />)}
-        </div>
-      </article>
+    <Link
+      href={id}
+      className="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+      role="article"
+    >
+      <WineImage src={image_src} />
+      <h3 className="w-full px-2 text-base text-black">{title}</h3>
+      <div className="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2">
+        <Pill title={chara} />
+        {splitTags && splitTags.map((tag) => <Pill key={tag} title={tag} />)}
+      </div>
     </Link>
   );
 };

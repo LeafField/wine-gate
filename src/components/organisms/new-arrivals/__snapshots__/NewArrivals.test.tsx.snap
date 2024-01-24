@@ -3,7 +3,7 @@
 exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
 <div>
   <section
-    class="desktop:w-[64.9375rem] laptop:w-[43.0625rem] tablet:w-[20.75rem] flex w-full flex-col gap-[3.75rem]"
+    class="flex w-full flex-col gap-[3.75rem] tablet:w-[20.75rem] laptop:w-[43.0625rem] desktop:w-[64.9375rem]"
   >
     <div
       class="col-span-3"
@@ -15,153 +15,144 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
       </h2>
     </div>
     <div
-      class="desktop:grid-cols-3 laptop:grid-cols-2 grid grid-cols-1 justify-items-stretch gap-5"
+      class="grid grid-cols-1 justify-items-stretch gap-5 laptop:grid-cols-2 desktop:grid-cols-3"
     >
       <a
-        class="block w-full"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="1"
+        role="article"
       >
-        <article
-          class="group h-full w-full border border-gray transition-colors duration-500 hover:border-blue"
+        <div
+          class="aspect-video w-full overflow-hidden bg-gray "
+        >
+          <figure
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+          >
+            <img
+              alt="ワイン画像"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              sizes="(min-width:768px) 332px,100vw"
+              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+            />
+          </figure>
+        </div>
+        <h3
+          class="w-full px-2 text-base text-black"
+        >
+          コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ
+        </h3>
+        <div
+          class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
         >
           <div
-            class="aspect-video w-full overflow-hidden bg-gray "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
           >
-            <figure
-              class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
-            >
-              <img
-                alt="ワイン画像"
-                data-nimg="fill"
-                decoding="async"
-                fetchpriority="high"
-                loading="eager"
-                sizes="(min-width:768px) 332px,100vw"
-                src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
-              />
-            </figure>
+            渋い
           </div>
-          <h3
-            class="w-full px-2 text-base text-black"
-          >
-            コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ
-          </h3>
           <div
-            class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2 "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
           >
-            <div
-              class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
-            >
-              渋い
-            </div>
-            <div
-              class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
-            >
-              樽熟成
-            </div>
+            樽熟成
           </div>
-        </article>
+        </div>
       </a>
       <a
-        class="block w-full"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="2"
+        role="article"
       >
-        <article
-          class="group h-full w-full border border-gray transition-colors duration-500 hover:border-blue"
+        <div
+          class="aspect-video w-full overflow-hidden bg-gray "
+        >
+          <figure
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+          >
+            <img
+              alt="ワイン画像"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              sizes="(min-width:768px) 332px,100vw"
+              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+            />
+          </figure>
+        </div>
+        <h3
+          class="w-full px-2 text-base text-black"
+        >
+          コノスル シャルドネ ビシクレタ・レゼルバ
+        </h3>
+        <div
+          class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
         >
           <div
-            class="aspect-video w-full overflow-hidden bg-gray "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
           >
-            <figure
-              class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
-            >
-              <img
-                alt="ワイン画像"
-                data-nimg="fill"
-                decoding="async"
-                fetchpriority="high"
-                loading="eager"
-                sizes="(min-width:768px) 332px,100vw"
-                src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
-              />
-            </figure>
+            辛口白
           </div>
-          <h3
-            class="w-full px-2 text-base text-black"
-          >
-            コノスル シャルドネ ビシクレタ・レゼルバ
-          </h3>
           <div
-            class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2 "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
           >
-            <div
-              class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
-            >
-              辛口白
-            </div>
-            <div
-              class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
-            >
-              フルーティ
-            </div>
+            フルーティ
           </div>
-        </article>
+        </div>
       </a>
       <a
-        class="block w-full"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="3"
+        role="article"
       >
-        <article
-          class="group h-full w-full border border-gray transition-colors duration-500 hover:border-blue"
+        <div
+          class="aspect-video w-full overflow-hidden bg-gray "
+        >
+          <figure
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+          >
+            <img
+              alt="ワイン画像"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              sizes="(min-width:768px) 332px,100vw"
+              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+            />
+          </figure>
+        </div>
+        <h3
+          class="w-full px-2 text-base text-black"
+        >
+          コノスル カルメネール ビシクレタ・レゼルバ
+        </h3>
+        <div
+          class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
         >
           <div
-            class="aspect-video w-full overflow-hidden bg-gray "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
           >
-            <figure
-              class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
-            >
-              <img
-                alt="ワイン画像"
-                data-nimg="fill"
-                decoding="async"
-                fetchpriority="high"
-                loading="eager"
-                sizes="(min-width:768px) 332px,100vw"
-                src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-                srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-                style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
-              />
-            </figure>
+            酸っぱい
           </div>
-          <h3
-            class="w-full px-2 text-base text-black"
-          >
-            コノスル カルメネール ビシクレタ・レゼルバ
-          </h3>
           <div
-            class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2 "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
           >
-            <div
-              class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
-            >
-              酸っぱい
-            </div>
-            <div
-              class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
-            >
-              樽熟成
-            </div>
-            <div
-              class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
-            >
-              濃厚
-            </div>
+            樽熟成
           </div>
-        </article>
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+          >
+            濃厚
+          </div>
+        </div>
       </a>
     </div>
   </section>
