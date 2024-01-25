@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from "@storybook/react";
-import CategorySearch from "./CategorySearch";
+import CategoryPanel from "./CategoryPanel";
 import { categoryDummyData } from "../../../utils/dummyData";
 
 const meta = {
-  title: "molecules/CategorySearch",
-  component: CategorySearch,
+  title: "molecules/CategoryPanel",
+  component: CategoryPanel,
   args: {
     categories: categoryDummyData,
   },
-} satisfies Meta<typeof CategorySearch>;
+} satisfies Meta<typeof CategoryPanel>;
 
 export default meta;
 
-type Story = StoryObj<typeof CategorySearch>;
+type Story = StoryObj<typeof CategoryPanel>;
 
 export const Default: Story = {};
