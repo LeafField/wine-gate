@@ -29,6 +29,7 @@ const SearchCategory: FC<Props> = ({ selectData }) => {
       onChange={changeHandler}
       styles={{ dropdown: { maxHeight: 200, overflowY: "auto" } }}
       withScrollArea={false}
+      id="search-category"
     />
   );
 };

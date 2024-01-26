@@ -12,8 +12,8 @@ exports[`Searchカテゴリーの単体テスト スナップショットテス�
   >
     <label
       class="m-8fdc1311 mantine-InputWrapper-label mantine-Select-label"
-      for="mantine-t6lemayen"
-      id="mantine-t6lemayen-label"
+      for="search-category"
+      id="search-category-label"
     >
       カテゴリー
     </label>
@@ -30,7 +30,7 @@ exports[`Searchカテゴリーの単体テスト スナップショットテス�
         autocomplete="off"
         class="m-8fb7ebe7 mantine-Input-input mantine-Select-input"
         data-variant="default"
-        id="mantine-t6lemayen"
+        id="search-category"
         readonly=""
         value="全て"
       />

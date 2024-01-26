@@ -12,8 +12,8 @@ exports[`SearchSortコンポーネント スナップショットテスト 1`] =
   >
     <label
       class="m-8fdc1311 mantine-InputWrapper-label mantine-Select-label"
-      for="mantine-mf9rz41pd"
-      id="mantine-mf9rz41pd-label"
+      for="search-sort"
+      id="search-sort-label"
     >
       表示順
     </label>
@@ -30,7 +30,7 @@ exports[`SearchSortコンポーネント スナップショットテスト 1`] =
         autocomplete="off"
         class="m-8fb7ebe7 mantine-Input-input mantine-Select-input"
         data-variant="default"
-        id="mantine-mf9rz41pd"
+        id="search-sort"
         readonly=""
         value="新着順"
       />
