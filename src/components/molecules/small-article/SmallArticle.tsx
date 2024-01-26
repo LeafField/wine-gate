@@ -14,7 +14,6 @@ const SmallArticle: FC<SmallArticleProps> = ({
   const splitTags = tags && tags.split(",");
 
   return (
-    // <Link href={id} className="block w-[20.75rem]">
     <Link
       href={id}
       className="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"

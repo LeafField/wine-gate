@@ -81,3 +81,7 @@ export const categoryDummyData: CategoryProps[] = [
     sub: "other",
   },
 ];
+
+export const selectDummyData = categoryDummyData.map((category) => {
+  return { value: category.category, label: category.chara };
+});

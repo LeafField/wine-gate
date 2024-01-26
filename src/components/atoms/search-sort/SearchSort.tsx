@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Select, ComboboxData, ComboboxItem } from "@mantine/core";
+import { Select, ComboboxData } from "@mantine/core";
 
 const selectData = [
   {
@@ -18,8 +18,8 @@ const selectData = [
 ] satisfies ComboboxData;
 
 const SearchSort = () => {
-  const [select, setSelect] = useState(selectData[0].value);
-  const changeSelect = (value: string | null) => {
+  const [select, setSelect] = useState<string>(selectData[0].value);
+  const changeHandler = (value: string | null) => {
     if (value) {
       setSelect(value);
     }
@@ -31,7 +31,8 @@ const SearchSort = () => {
       label="表示順"
       data={selectData}
       value={select}
-      onChange={changeSelect}
+      onChange={changeHandler}
+      id="search-sort"
     />
   );
 };
