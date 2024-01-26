@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchButtonの単体テスト スナップショットテスト 1`] = `
+<div>
+  <button
+    class="border-2 border-gray px-3 py-1 transition-colors duration-300 hover:border-blue focus:border-blue focus:outline-none"
+    type="submit"
+  >
+    検索
+  </button>
+</div>
+`;
