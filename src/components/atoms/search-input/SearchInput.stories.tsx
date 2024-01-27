@@ -7,9 +7,11 @@ const meta = {
   component: SearchInput,
   decorators: [
     (Story) => (
-      <DummyForm>
-        <Story />
-      </DummyForm>
+      <div className="panel-inner">
+        <DummyForm>
+          <Story />
+        </DummyForm>
+      </div>
     ),
   ],
 } satisfies Meta<typeof SearchInput>;

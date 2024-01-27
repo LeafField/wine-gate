@@ -20,7 +20,7 @@ describe("SearchInputの単体テスト", () => {
   });
 
   test("コンポーネントがクラッシュせずにレンダリングされる", () => {
-    render(<SearchInput />, { wrapper: MantineProvider });
+    render(<SearchInput error={""} />, { wrapper: MantineProvider });
     const inputElement = screen.getByRole("textbox", {
       name: "search",
     });
@@ -28,7 +28,7 @@ describe("SearchInputの単体テスト", () => {
   });
 
   test("ユーザーの入力が正しく反映される", () => {
-    render(<SearchInput />, { wrapper: MantineProvider });
+    render(<SearchInput error={""} />, { wrapper: MantineProvider });
     const inputElement = screen.getByRole<HTMLInputElement>("textbox", {
       name: "search",
     });
@@ -37,7 +37,7 @@ describe("SearchInputの単体テスト", () => {
   });
 
   test("クローズボタンをクリックすると入力がクリアされる", () => {
-    render(<SearchInput />, { wrapper: MantineProvider });
+    render(<SearchInput error={""} />, { wrapper: MantineProvider });
     const inputElement = screen.getByRole<HTMLInputElement>("textbox", {
       name: "search",
     });
@@ -48,7 +48,9 @@ describe("SearchInputの単体テスト", () => {
   });
 
   test("スナップショットテスト", () => {
-    const { container } = render(<SearchInput />, { wrapper: MantineProvider });
+    const { container } = render(<SearchInput error={""} />, {
+      wrapper: MantineProvider,
+    });
     expect(container).toMatchSnapshot();
   });
 });
