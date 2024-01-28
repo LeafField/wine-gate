@@ -27,12 +27,13 @@ const SearchSort = () => {
 
   return (
     <Select
-      className="ml-auto w-1/2 [&>label]:block [&>label]:text-right"
+      className="ml-auto w-2/3 [&>label]:block [&>label]:text-right"
       label="表示順"
       data={selectData}
       value={select}
       onChange={changeHandler}
       id="search-sort"
+      name="sort"
     />
   );
 };

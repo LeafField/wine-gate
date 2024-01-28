@@ -4,6 +4,9 @@ import { CSSProperties } from "react";
 import containerQuery from "@tailwindcss/container-queries";
 
 const config: Config = {
+  future: {
+    hoverOnlyWhenSupported: true,
+  },
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",

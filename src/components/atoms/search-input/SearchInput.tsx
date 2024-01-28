@@ -1,9 +1,13 @@
-import React, { ChangeEvent, useState } from "react";
-import { Input, CloseButton } from "@mantine/core";
+import React, { ChangeEvent, FC, useState } from "react";
+import { Input, CloseButton, TextInput } from "@mantine/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
-const SearchInput = () => {
+type Props = {
+  error: string | null;
+};
+
+const SearchInput: FC<Props> = ({ error }) => {
   const [value, setValue] = useState<string>("");
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
@@ -11,8 +15,8 @@ const SearchInput = () => {
   };
 
   return (
-    <Input
-      className="panel-inner focus:border-blue"
+    <TextInput
+      className="w-full focus:border-blue"
       leftSection={<FontAwesomeIcon icon={faMagnifyingGlass} />}
       rightSection={
         <CloseButton
@@ -26,6 +30,9 @@ const SearchInput = () => {
       placeholder="検索"
       name="search"
       aria-label="search"
+      error={error}
+      withErrorStyles={false}
+      id="search"
     />
   );
 };

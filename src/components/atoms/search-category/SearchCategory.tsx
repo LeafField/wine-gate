@@ -22,7 +22,7 @@ const SearchCategory: FC<Props> = ({ selectData }) => {
 
   return (
     <Select
-      className="ml-auto w-1/2 [&>label]:block [&>label]:text-right"
+      className="ml-auto w-2/3 [&>label]:block [&>label]:text-right"
       data={selectDataPlus}
       label="カテゴリー"
       value={value}
@@ -30,6 +30,7 @@ const SearchCategory: FC<Props> = ({ selectData }) => {
       styles={{ dropdown: { maxHeight: 200, overflowY: "auto" } }}
       withScrollArea={false}
       id="search-category"
+      name="category"
     />
   );
 };
