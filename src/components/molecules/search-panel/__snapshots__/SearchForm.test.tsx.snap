@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchFormの単体テスト スナップショットテスト 1`] = `
+exports[`SearchFormの結合テスト スナップショットテスト 1`] = `
 <div>
   <style
     data-mantine-styles="classes"
