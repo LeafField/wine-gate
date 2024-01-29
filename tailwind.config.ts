@@ -44,6 +44,7 @@ const config: Config = {
           height: "clamp(4.08rem,12vw,7.75rem)",
         } satisfies CSSProperties,
       });
+
       addComponents({
         ".nav-title": {
           fontSize: "clamp(1.125rem,2.31vw,1.5rem)",
@@ -52,6 +53,7 @@ const config: Config = {
           color: "#030303",
         } satisfies CSSProperties,
       });
+
       addComponents({
         ".nav-panel": {
           display: "flex",
@@ -64,13 +66,57 @@ const config: Config = {
           padding: "1rem 1.25rem",
         } satisfies CSSProperties,
       });
+
       addUtilities({
         ".panel-inner": {
           width: "18.3125rem",
         } satisfies CSSProperties,
       });
+
+      addComponents({
+        ".user-panel-button": {
+          width: "8.5rem",
+          height: "4.5rem",
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "center",
+          borderRadius: "0.75rem",
+          border: "2px solid #B8B6B6",
+          transition: "border-color 0.3s ease,",
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".grid-areas": {
+          gridTemplateAreas: '"hero hero" "main nav"',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".empty-hero:not(:has(.hero))": {
+          paddingTop: "3.75rem",
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".main": {
+          gridArea: "main",
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".nav": {
+          gridArea: "nav",
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".hero": {
+          gridArea: "hero",
+        } satisfies CSSProperties,
+      });
     }),
-    containerQuery,
   ],
 };
 export default config;

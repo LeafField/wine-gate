@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "../components/organisms/header/Header";
 import MantineWrapper from "../components/organisms/mantine/MantineWrapper";
 import { Metadata } from "next";
+import AuthListener from "../components/organisms/listener/AuthListener";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={inter.className}>
+        <AuthListener />
         <MantineWrapper>
           <Header />
           {children}

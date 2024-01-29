@@ -3,7 +3,7 @@ import { create } from "zustand";
 type User = {
   username: string;
   id: string;
-  email: string;
+  email: string | undefined;
 };
 
 type Store = {

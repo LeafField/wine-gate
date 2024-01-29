@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contaierの単体テスト スナップショットテスト 1`] = `
+<div>
+  <div
+    class="grid-areas empty-hero mx-auto grid max-w-[1440px] grid-cols-[1039px_333px] justify-center gap-x-5 px-6 tablet:px-0"
+  />
+</div>
+`;

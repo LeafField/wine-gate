@@ -9,7 +9,7 @@ type Props = {
 const UserPanelButton: FC<Props> = ({ href, title }) => {
   return (
     <Link
-      className="flex h-[4.5rem] w-[8.5rem] items-center justify-center rounded-xl border-2 border-gray "
+      className="user-panel-button hover:border-blue focus:outline-blue"
       href={href}
     >
       <span className="w-24 text-center">{title}</span>

@@ -3,7 +3,7 @@
 exports[`UserPanelButtonの単体テスト スナップショットテスト 1`] = `
 <div>
   <a
-    class="flex h-[4.5rem] w-[8.5rem] items-center justify-center rounded-xl border-2 border-gray "
+    class="user-panel-button hover:border-blue focus:outline-blue"
     href="/"
   >
     <span

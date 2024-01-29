@@ -1,17 +1,12 @@
-import { Meta, StoryObj } from "@storybook/react";
-import Navigation from "./Navigation";
+import { StoryObj, Meta } from "@storybook/react";
+import LogoutButton from "./LogoutButton";
 import { spyOn, within } from "@storybook/test";
 import { supabase } from "../../../utils/supabase";
 
 const meta = {
-  title: "organisms/Navigation",
-  component: Navigation,
-  parameters: {
-    nextjs: {
-      appDirectory: true,
-    },
-  },
-} as Meta<typeof Navigation>;
+  title: "atoms/LogoutButton",
+  component: LogoutButton,
+} satisfies Meta<typeof LogoutButton>;
 
 export default meta;
 

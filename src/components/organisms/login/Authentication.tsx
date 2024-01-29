@@ -13,9 +13,11 @@ import Image from "next/image";
 import LoginImage from "../../../images/loginImage.jpg";
 import { supabase } from "../../../utils/supabase";
 import { UserMetadata } from "@supabase/supabase-js";
+import { useRouter } from "next/navigation";
 
 const Authentication = () => {
   const [session, setSesstion] = useState<UserMetadata | undefined>();
+  const router = useRouter();
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -35,9 +37,11 @@ const Authentication = () => {
         email: data.email.toString(),
         password: data.password.toString(),
       });
-      if (error) console.log(error);
+      if (error) {
+        throw new Error(error.message);
+      }
       setSesstion(userData?.user?.user_metadata.username);
-      console.log(userData?.user?.user_metadata.username);
+      router.push("/");
     }
   };
 
