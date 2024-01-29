@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Symbol = () => {
   return (
-    <figure className="symbol absolute inset-0">
+    <figure className="symbol absolute inset-0 z-50">
       <Image
         src={"/symbol.svg"}
         alt="wine gate"

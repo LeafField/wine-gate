@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserPanelButtonの単体テスト スナップショットテスト 1`] = `
+<div>
+  <a
+    class="flex h-[4.5rem] w-[8.5rem] items-center justify-center rounded-xl border-2 border-gray "
+    href="/"
+  >
+    <span
+      class="w-24 text-center"
+    >
+      ワイン記事を投稿する
+    </span>
+  </a>
+</div>
+`;
