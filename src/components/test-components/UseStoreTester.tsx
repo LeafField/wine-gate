@@ -17,7 +17,7 @@ const UseStoreTester: FC<Props> = ({ login }) => {
     } else {
       logout();
     }
-  }, [login]);
+  }, [login, setUser, logout]);
   return null;
 };
 

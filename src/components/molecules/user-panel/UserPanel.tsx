@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Link from "next/link";
 import { useStore } from "../../../store";
 import UserPanelButton from "../../atoms/user-panel-button/UserPanelButton";
 import LoginButton from "../../atoms/login-button/LoginButton";
