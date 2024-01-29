@@ -6,7 +6,7 @@ type Props = {
   categories: CategoryProps[];
 };
 
-const CategorySearch: FC<Props> = ({ categories }) => {
+const CategoryPanel: FC<Props> = ({ categories }) => {
   const redItems = categories.filter((category) => category.sub === "red");
   const whiteItems = categories.filter((category) => category.sub === "white");
   const interimItems = categories.filter(
@@ -17,7 +17,7 @@ const CategorySearch: FC<Props> = ({ categories }) => {
   return (
     <div className="nav-panel">
       <h2 className="nav-title">カテゴリー検索</h2>
-      <div className="panel-inner flex flex-col gap-y-6">
+      <div className="flex flex-col gap-y-6 panel-inner">
         <ul className=" flex justify-between">
           {redItems.map((item) => (
             <li key={item.id}>
@@ -51,4 +51,4 @@ const CategorySearch: FC<Props> = ({ categories }) => {
   );
 };
 
-export default CategorySearch;
+export default CategoryPanel;

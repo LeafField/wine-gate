@@ -1,6 +1,7 @@
 import React from "react";
 import { KumarOne } from "../../../utils/font";
 import { Symbol } from "../../atoms/Symbol/Symbol";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -9,7 +10,7 @@ const Header = () => {
         気軽にワイン入門、気楽にワイン紹介
       </p>
       <h1 className={`${KumarOne.className} text-center text-header-title `}>
-        WINE GATE
+        <Link href={"/"}>WINE GATE</Link>
       </h1>
       <Symbol />
     </header>

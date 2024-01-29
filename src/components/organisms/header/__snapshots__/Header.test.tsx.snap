@@ -13,10 +13,14 @@ exports[`HeaderTitleの単体テスト スナップショット 1`] = `
     <h1
       class="className text-center text-header-title "
     >
-      WINE GATE
+      <a
+        href="/"
+      >
+        WINE GATE
+      </a>
     </h1>
     <figure
-      class="symbol absolute inset-0"
+      class="symbol absolute inset-0 z-50"
     >
       <img
         alt="wine gate"

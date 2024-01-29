@@ -3,7 +3,7 @@
 exports[`Symbolの単体テスト スナップショット 1`] = `
 <div>
   <figure
-    class="symbol absolute inset-0"
+    class="symbol absolute inset-0 z-50"
   >
     <img
       alt="wine gate"

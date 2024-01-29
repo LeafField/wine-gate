@@ -11,7 +11,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
       カテゴリー検索
     </h2>
     <div
-      class="panel-inner flex flex-col gap-y-6"
+      class="flex flex-col gap-y-6 panel-inner"
     >
       <ul
         class=" flex justify-between"

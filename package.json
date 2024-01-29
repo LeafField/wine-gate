@@ -29,7 +29,8 @@
     "postcss-preset-mantine": "^1.12.3",
     "react": "^18",
     "react-dom": "^18",
-    "zod": "^3.22.4"
+    "zod": "^3.22.4",
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^7.6.10",
