@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoutButtonの単体テスト スナップショットテスト 1`] = `
+<div>
+  <div
+    class="user-panel-button cursor-pointer hover:border-blue focus:outline-blue"
+  >
+    <span
+      class="w-24 select-none text-center"
+    >
+      ログアウト
+    </span>
+  </div>
+</div>
+`;
