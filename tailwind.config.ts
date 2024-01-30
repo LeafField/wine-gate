@@ -94,7 +94,7 @@ const config: Config = {
       });
 
       addUtilities({
-        ".empty-hero:not(:has(.hero))": {
+        ".empty-hero:not(:has([class*=hero]))": {
           paddingTop: "3.75rem",
         } satisfies CSSProperties,
       });
@@ -114,6 +114,7 @@ const config: Config = {
       addUtilities({
         ".hero": {
           gridArea: "hero",
+          marginBottom: "7.5rem",
         } satisfies CSSProperties,
       });
     }),
