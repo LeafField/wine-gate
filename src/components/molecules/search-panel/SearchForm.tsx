@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, FormEvent, useState } from "react";
+import React, { FC, FormEvent, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 import SearchButton from "../../atoms/search-button/SearchButton";
 import SearchInput from "../../atoms/search-input/SearchInput";
@@ -14,10 +14,13 @@ type Props = {
 
 const SearchPanel: FC<Props> = ({ selectData }) => {
   const [errorState, setErrorState] = useState<string | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
 
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    inputRef.current?.blur();
+
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
     const schema = searchSchema.safeParse(data);
@@ -40,7 +43,7 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
         onSubmit={submitHandler}
         role="search"
       >
-        <SearchInput error={errorState} />
+        <SearchInput ref={inputRef} error={errorState} />
         <SearchSort />
         <SearchCategory selectData={selectData} />
         <SearchButton />

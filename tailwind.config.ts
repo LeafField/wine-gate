@@ -89,7 +89,14 @@ const config: Config = {
 
       addUtilities({
         ".grid-areas": {
-          gridTemplateAreas: '"hero hero" "main nav"',
+          gridTemplate:
+            '"hero hero hero hero" auto ".... main nav ...." auto / 1fr auto auto 1fr',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".grid-areaMobile": {
+          gridTemplateAreas: '"hero" "main" ',
         } satisfies CSSProperties,
       });
 

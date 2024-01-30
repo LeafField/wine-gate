@@ -7,7 +7,7 @@ import { categoryDummyData } from "../../../utils/dummyData";
 
 const Navigation = () => {
   return (
-    <nav className="nav space-y-6">
+    <nav className="hidden space-y-6 nav tablet:block">
       <UserPanel />
       <CategoryPanel categories={categoryDummyData} />
       <SearchPanel selectData={selectDummyData} />

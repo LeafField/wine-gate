@@ -3,7 +3,7 @@
 exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
 <div>
   <section
-    class="flex w-full flex-col gap-[3.75rem] tablet:w-[20.75rem] laptop:w-[43.0625rem] desktop:w-[64.9375rem]"
+    class="flex w-full flex-col gap-[3.75rem] px-6 tablet:w-[20.75rem] tablet:px-0 laptop:w-[43.0625rem] desktop:w-[64.9375rem]"
   >
     <div
       class="col-span-3"
