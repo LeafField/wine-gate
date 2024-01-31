@@ -35,6 +35,19 @@ const config: Config = {
         laptop: "1108px",
         tablet: "768px",
       },
+      zIndex: {
+        nav: "100",
+        "nav-menu": "200",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
+      animation: {
+        fadeIn: "fadeIn 0.3s ease-in-out",
+      },
     },
   },
   plugins: [
@@ -123,6 +136,22 @@ const config: Config = {
         ".hero": {
           gridArea: "hero",
           marginBottom: "7.5rem",
+        } satisfies CSSProperties,
+      });
+      addComponents({
+        ".show-panel": {
+          visibility: "visible",
+          position: "absolute",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          minHeight: "100svh",
+          width: "100vw",
+          bottom: "0",
+          left: "0",
+          right: "0",
+          backgroundColor: "rgba(255,255,255,1)",
+          transition: "background-color 0.3s ease",
         } satisfies CSSProperties,
       });
     }),

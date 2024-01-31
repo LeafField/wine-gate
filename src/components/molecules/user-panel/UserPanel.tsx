@@ -6,9 +6,11 @@ import LoginButton from "../../atoms/login-button/LoginButton";
 import LogoutButton from "../../atoms/logout-button/LogoutButton";
 
 const UserPanel = () => {
-  const { user } = useStore();
+  const { user, menu } = useStore();
   return (
-    <div className="nav-panel">
+    <div
+      className={`max-tablet:animate-fadeIn nav-panel ${menu === "member" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+    >
       <div className="w-full">
         <h2 className="nav-title">会員メニュー</h2>
         {user && <p className="text-right">ようこそ{user.username}様</p>}

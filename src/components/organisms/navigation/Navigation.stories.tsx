@@ -26,3 +26,21 @@ export const Default: Story = {
     });
   },
 };
+
+export const Mobile: Story = {
+  play: async ({ canvasElement }) => {
+    within(canvasElement);
+    spyOn(supabase.auth, "signOut").mockImplementationOnce(() => {
+      console.log("signOut");
+      return Promise.resolve({ error: null, data: null });
+    });
+  },
+  parameters: {
+    viewport: {
+      defaultViewport: "iphone6",
+    },
+    backgrounds: {
+      default: "dark",
+    },
+  },
+};

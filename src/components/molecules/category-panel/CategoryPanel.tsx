@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 import { CategoryProps } from "../../../types/article_types";
 import CategoryLink from "../../atoms/category-link/CategoryLink";
+import { useStore } from "../../../store";
 
 type Props = {
   categories: CategoryProps[];
@@ -13,9 +14,12 @@ const CategoryPanel: FC<Props> = ({ categories }) => {
     (category) => category.sub === "interim",
   );
   const otherItems = categories.filter((category) => category.sub === "other");
+  const { menu } = useStore();
 
   return (
-    <div className="nav-panel">
+    <div
+      className={`max-tablet:animate-fadeIn nav-panel ${menu === "category" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+    >
       <h2 className="nav-title">カテゴリー検索</h2>
       <div className="flex flex-col gap-y-4 panel-inner">
         <ul className=" flex justify-between">
