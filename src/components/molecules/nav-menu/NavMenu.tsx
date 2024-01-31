@@ -5,7 +5,7 @@ import MenberButton from "../../atoms/menber-button/MenberButton";
 
 const NavMenu: FC = () => {
   return (
-    <div className="flex bg-black/80 py-1">
+    <div className="z-nav-menu fixed bottom-0 left-0 right-0 flex w-full bg-black/80 py-1 backdrop-blur-sm tablet:hidden">
       <MenberButton />
       <FreeButton />
       <CategoryButton />
