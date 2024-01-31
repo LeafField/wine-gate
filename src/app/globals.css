@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .sb-show-main.sb-main-padded {
-  padding: 0;
-} */
+input {
+  font-size: 1rem !important;
+}
