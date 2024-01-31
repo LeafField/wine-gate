@@ -67,7 +67,6 @@ const Authentication = () => {
         </Title>
 
         <form onSubmit={submitHandler}>
-          <p>{session && session.toString()}</p>
           {register && (
             <TextInput
               label="ユーザー名 (投稿記事に表示されます)"

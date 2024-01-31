@@ -1,7 +1,6 @@
 import type { Config } from "tailwindcss";
 import plugin from "tailwindcss/plugin";
 import { CSSProperties } from "react";
-import containerQuery from "@tailwindcss/container-queries";
 
 const config: Config = {
   future: {
@@ -28,6 +27,8 @@ const config: Config = {
         "main-text": "clamp(0.875rem,1.54vw,1rem)",
         heading2: "clamp(1.5rem,3.07vw,2rem)",
         heading3: "clamp(1.125rem,2.31vw,1.5rem)",
+        "menu-title": "clamp(0.625rem,2.79vw,0.75rem)",
+        "menu-icon": "clamp(1rem,4.18vw,1.125rem)",
       },
       screens: {
         desktop: "1440px",
@@ -89,12 +90,19 @@ const config: Config = {
 
       addUtilities({
         ".grid-areas": {
-          gridTemplateAreas: '"hero hero" "main nav"',
+          gridTemplate:
+            '"hero hero hero hero" auto ".... main nav ...." auto / 1fr auto auto 1fr',
         } satisfies CSSProperties,
       });
 
       addUtilities({
-        ".empty-hero:not(:has(.hero))": {
+        ".grid-areaMobile": {
+          gridTemplateAreas: '"hero" "main" ',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".empty-hero:not(:has([class*=hero]))": {
           paddingTop: "3.75rem",
         } satisfies CSSProperties,
       });
@@ -114,6 +122,7 @@ const config: Config = {
       addUtilities({
         ".hero": {
           gridArea: "hero",
+          marginBottom: "7.5rem",
         } satisfies CSSProperties,
       });
     }),

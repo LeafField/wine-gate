@@ -5,8 +5,10 @@ import { smallArticleDummyData } from "../../utils/dummyData";
 
 export default async function Home() {
   return (
-    <main className="main">
-      <NewArrivals articles={smallArticleDummyData} />
-    </main>
+    <>
+      <main className="main">
+        <NewArrivals articles={smallArticleDummyData} />
+      </main>
+    </>
   );
 }

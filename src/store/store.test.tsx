@@ -29,4 +29,17 @@ describe("useStoreの単体テスト", () => {
     });
     expect(result.current.user).toBeNull();
   });
+
+  test("menuの初期値がcloseである事", () => {
+    const { result } = renderHook(() => useStore());
+    expect(result.current.menu).toBe("close");
+  });
+
+  test("setMenuを実行した時、menuの値が期待された値に更新されること", () => {
+    const { result } = renderHook(() => useStore());
+    act(() => {
+      result.current.setMenu("category");
+    });
+    expect(result.current.menu).toBe("category");
+  });
 });

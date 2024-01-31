@@ -9,7 +9,7 @@ type Props = {
 
 const NewArrivals: FC<Props> = ({ articles }) => {
   return (
-    <section className="flex w-full flex-col gap-[3.75rem] tablet:w-[20.75rem] laptop:w-[43.0625rem] desktop:w-[64.9375rem]">
+    <section className="flex w-full flex-col gap-[3.75rem] px-6 tablet:w-[20.75rem] tablet:px-0 laptop:w-[43.0625rem] desktop:w-[64.9375rem]">
       <div className="col-span-3">
         <Heading title="新着ワイン" />
       </div>

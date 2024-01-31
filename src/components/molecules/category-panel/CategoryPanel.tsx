@@ -17,7 +17,7 @@ const CategoryPanel: FC<Props> = ({ categories }) => {
   return (
     <div className="nav-panel">
       <h2 className="nav-title">カテゴリー検索</h2>
-      <div className="flex flex-col gap-y-6 panel-inner">
+      <div className="flex flex-col gap-y-4 panel-inner">
         <ul className=" flex justify-between">
           {redItems.map((item) => (
             <li key={item.id}>
