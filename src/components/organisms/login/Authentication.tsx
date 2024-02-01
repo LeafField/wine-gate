@@ -13,12 +13,14 @@ import Image from "next/image";
 import LoginImage from "../../../images/loginImage.jpg";
 import { supabase } from "../../../utils/supabase";
 import { useRouter } from "next/navigation";
+import { useStore } from "../../../store";
 
 const Authentication = () => {
   const router = useRouter();
   const [register, dispatch] = useReducer((state: boolean) => !state, false);
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
+  const { setModal } = useStore();
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -39,9 +41,10 @@ const Authentication = () => {
       if (authData.user?.identities?.length === 0) {
         alert("そのメールアドレスは既に登録されています。");
       } else {
-        alert(
-          "ご登録のメールアドレスに確認メールを送りました。\nメール内のリンクをクリックして登録を完了してください。",
-        );
+        setModal([
+          "ご登録いただいたメールアドレスへ確認メールを送信しました。",
+          "メール内のリンクより登録を完了してください。",
+        ]);
         router.push("/");
       }
     } else {
@@ -54,8 +57,10 @@ const Authentication = () => {
           "ログインに失敗しました。\nメールアドレスかパスワードが間違っています。",
         );
         throw new Error(error.message);
+      } else {
+        setModal(["ログインしました"]);
+        router.push("/");
       }
-      router.push("/");
     }
   };
 
@@ -92,7 +97,7 @@ const Authentication = () => {
           )}
 
           <TextInput
-            label="Emailアドレス"
+            label="メールアドレス"
             placeholder="hello@example.com"
             size="md"
             mt={register ? "md" : ""}

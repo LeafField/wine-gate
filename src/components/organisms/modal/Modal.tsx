@@ -7,14 +7,16 @@ const Modal: FC = () => {
   const { modal, clearModal } = useStore();
 
   useEffect(() => {
-    buttonRef.current?.focus();
-  }, [buttonRef]);
+    if (modal.length !== 0) {
+      buttonRef.current?.focus();
+    }
+  }, [buttonRef, modal]);
 
   if (modal.length !== 0) {
     return (
       <>
-        <dialog open className="overlay animate-fadeIn">
-          <div className="border border-gray px-4 py-4 shadow-md max-tablet:mx-4 tablet:w-[400px]">
+        <dialog open className="overlay z-overlay animate-fadeIn">
+          <div className="relative z-nav-menu border border-gray bg-white px-4 py-4 shadow-md max-tablet:mx-4 tablet:w-[400px]">
             {modal.map((message, index) => (
               <p key={index} className={`text-base`}>
                 {message}

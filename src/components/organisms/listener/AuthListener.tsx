@@ -4,7 +4,7 @@ import { useStore } from "../../../store";
 import { supabase } from "../../../utils/supabase";
 
 const AuthListener: FC = () => {
-  const { setUser, logout } = useStore();
+  const { setUser, logout, setModal, setMenu } = useStore();
 
   supabase.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_IN" && session?.user) {
@@ -15,6 +15,8 @@ const AuthListener: FC = () => {
       });
     } else if (event === "SIGNED_OUT") {
       logout();
+      setModal(["ログアウトしました"]);
+      setMenu("close");
     }
   });
 
