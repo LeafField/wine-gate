@@ -36,10 +36,15 @@ const config: Config = {
         tablet: "768px",
       },
       zIndex: {
+        front: "1",
         "auth-paper": "10",
         nav: "100",
         overlay: "500",
         "nav-menu": "1000",
+      },
+      backgroundImage: {
+        "image-cover":
+          "linear-gradient(to top, rgba(0, 0, 0, 0.8) 16%, rgba(0, 0, 0, 0.4) 50%,transparent 100%)",
       },
       keyframes: {
         fadeIn: {
