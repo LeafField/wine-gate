@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CategoryPanel from "../../molecules/category-panel/CategoryPanel";
 import SearchPanel from "../../molecules/search-panel/SearchForm";

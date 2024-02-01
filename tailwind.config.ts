@@ -36,6 +36,7 @@ const config: Config = {
         tablet: "768px",
       },
       zIndex: {
+        "auth-paper": "10",
         nav: "100",
         "nav-menu": "200",
       },
@@ -78,6 +79,7 @@ const config: Config = {
           width: "20.8125rem",
           border: "1px solid #B8B6B6",
           padding: "1rem 1.25rem",
+          backgroundColor: "#FFFFFF",
         } satisfies CSSProperties,
       });
 
@@ -141,7 +143,7 @@ const config: Config = {
       addComponents({
         ".show-panel": {
           visibility: "visible",
-          position: "absolute",
+          position: "fixed",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -150,8 +152,10 @@ const config: Config = {
           bottom: "0",
           left: "0",
           right: "0",
-          backgroundColor: "rgba(255,255,255,1)",
+          top: "0",
+          backgroundColor: "rgba(255,255,255,0.8)",
           transition: "background-color 0.3s ease",
+          backdropFilter: "blur(4px)",
         } satisfies CSSProperties,
       });
     }),

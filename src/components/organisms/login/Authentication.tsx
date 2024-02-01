@@ -1,5 +1,5 @@
 "use client";
-import React, { FormEvent, useReducer, useState } from "react";
+import React, { FormEvent, useReducer } from "react";
 import {
   Paper,
   TextInput,
@@ -12,40 +12,39 @@ import {
 import Image from "next/image";
 import LoginImage from "../../../images/loginImage.jpg";
 import { supabase } from "../../../utils/supabase";
-import { UserMetadata } from "@supabase/supabase-js";
 import { useRouter } from "next/navigation";
 
 const Authentication = () => {
-  const [session, setSesstion] = useState<UserMetadata | undefined>();
   const router = useRouter();
+  const [register, dispatch] = useReducer((state: boolean) => !state, false);
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
     if (register) {
-      const { data: userData } = await supabase.auth.signUp({
+      await supabase.auth.signUp({
         email: data.email.toString(),
         password: data.password.toString(),
         options: {
           data: { username: data.username.toString() },
         },
       });
-      setSesstion(userData?.user?.user_metadata.username);
     } else {
-      const { data: userData, error } = await supabase.auth.signInWithPassword({
+      const { error } = await supabase.auth.signInWithPassword({
         email: data.email.toString(),
         password: data.password.toString(),
       });
       if (error) {
+        alert(
+          "ログインに失敗しました。\nメールアドレスかパスワードが間違っています。",
+        );
         throw new Error(error.message);
       }
-      setSesstion(userData?.user?.user_metadata.username);
       router.push("/");
     }
   };
 
-  const [register, dispatch] = useReducer((state: boolean) => !state, false);
   return (
     <div className="relative h-[clamp(100svh-6rem,100svh-9.24vw,100svh-3.44rem)] overflow-hidden">
       <figure className="absolute -z-10 min-h-screen w-[100vw]">
@@ -58,11 +57,10 @@ const Authentication = () => {
         />
       </figure>
       <Paper
-        className="relative z-10 ml-auto h-full max-w-[600px] bg-white"
+        className="relative z-auth-paper ml-auto h-full max-w-[600px] bg-white px-6 pt-4"
         radius={0}
-        p={30}
       >
-        <Title order={2} ta="center" mt="md" mb={50}>
+        <Title order={2} ta="center" mt="md" className="mb-5 tablet:mb-12">
           {register ? "会員登録" : "ログイン"}
         </Title>
 
@@ -95,7 +93,7 @@ const Authentication = () => {
             id="password"
             type="password"
           />
-          <Button type="submit" fullWidth mt="xl" size="md">
+          <Button type="submit" bg={"blue"} fullWidth mt="xl" size="md">
             {register ? "会員登録" : "ログイン"}
           </Button>
         </form>
