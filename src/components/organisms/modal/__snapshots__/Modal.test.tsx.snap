@@ -3,11 +3,11 @@
 exports[`Modalの単体テスト スナップショットテスト 1`] = `
 <div>
   <dialog
-    class="overlay animate-fadeIn"
+    class="overlay z-overlay animate-fadeIn"
     open=""
   >
     <div
-      class="border border-gray px-4 py-4 shadow-md max-tablet:mx-4 tablet:w-[400px]"
+      class="relative z-nav-menu border border-gray bg-white px-4 py-4 shadow-md max-tablet:mx-4 tablet:w-[400px]"
     >
       <p
         class="text-base"
