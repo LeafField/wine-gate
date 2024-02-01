@@ -42,4 +42,26 @@ describe("useStoreの単体テスト", () => {
     });
     expect(result.current.menu).toBe("category");
   });
+
+  test("modalの初期値が空の配列であること", () => {
+    const { result } = renderHook(() => useStore());
+    expect(result.current.modal).toEqual([]);
+  });
+
+  test("setModalを実行した時、modalの値が期待された値に更新されること", () => {
+    const { result } = renderHook(() => useStore());
+    act(() => {
+      result.current.setModal(["メッセージ1", "メッセージ2"]);
+    });
+    expect(result.current.modal).toEqual(["メッセージ1", "メッセージ2"]);
+  });
+
+  test("clearModalを実行した時、modalの値が空の配列になること", () => {
+    const { result } = renderHook(() => useStore());
+    act(() => {
+      result.current.setModal(["メッセージ1", "メッセージ2"]);
+      result.current.clearModal();
+    });
+    expect(result.current.modal).toEqual([]);
+  });
 });
