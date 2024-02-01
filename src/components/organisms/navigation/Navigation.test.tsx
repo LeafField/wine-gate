@@ -23,23 +23,6 @@ jest.mock("../../../utils/supabase", () => {
 
 jest.mock("next/navigation");
 
-beforeAll(() => {
-  jest.spyOn(router, "useRouter").mockImplementation(() => ({
-    push: jest.fn(),
-    back: jest.fn(),
-    prefetch: jest.fn(),
-    reload: jest.fn(),
-    replace: jest.fn(),
-    pathname: "/",
-    route: "/",
-    query: {},
-    asPath: "/",
-    basePath: "",
-    forward: jest.fn(),
-    refresh: jest.fn(),
-  }));
-});
-
 describe("Navigationの結合テスト", () => {
   beforeEach(() => {
     jest.spyOn(router, "useRouter").mockImplementation(() => ({

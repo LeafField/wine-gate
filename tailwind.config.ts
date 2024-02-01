@@ -38,7 +38,8 @@ const config: Config = {
       zIndex: {
         "auth-paper": "10",
         nav: "100",
-        "nav-menu": "200",
+        overlay: "500",
+        "nav-menu": "1000",
       },
       keyframes: {
         fadeIn: {
@@ -156,6 +157,20 @@ const config: Config = {
           backgroundColor: "rgba(255,255,255,0.8)",
           transition: "background-color 0.3s ease",
           backdropFilter: "blur(4px)",
+        } satisfies CSSProperties,
+      });
+      addComponents({
+        ".overlay": {
+          width: "100vw",
+          height: "100vh",
+          position: "fixed",
+          top: "0",
+          left: "0",
+          backgroundColor: "rgba(255,255,255,0.6)",
+          backdropFilter: "blur(4px)",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         } satisfies CSSProperties,
       });
     }),

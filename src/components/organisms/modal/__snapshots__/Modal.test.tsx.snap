@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modalの単体テスト スナップショットテスト 1`] = `
+<div>
+  <dialog
+    class="overlay animate-fadeIn"
+    open=""
+  >
+    <div
+      class="border border-gray px-4 py-4 shadow-md max-tablet:mx-4 tablet:w-[400px]"
+    >
+      <p
+        class="text-base"
+      >
+        ご登録いただいたメールアドレスへ確認メールを送信しました。
+      </p>
+      <p
+        class="text-base"
+      >
+        メール内のリンクより登録を完了してください。
+      </p>
+      <button
+        class="mx-auto mt-4 block border-2 border-gray px-3 py-1 transition-colors duration-300 hover:border-blue focus:border-blue focus:outline-none"
+        type="button"
+      >
+        閉じる
+      </button>
+    </div>
+  </dialog>
+</div>
+`;

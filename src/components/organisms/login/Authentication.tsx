@@ -1,5 +1,5 @@
 "use client";
-import React, { FormEvent, useReducer } from "react";
+import React, { FormEvent, useReducer, useRef } from "react";
 import {
   Paper,
   TextInput,
@@ -17,19 +17,33 @@ import { useRouter } from "next/navigation";
 const Authentication = () => {
   const router = useRouter();
   const [register, dispatch] = useReducer((state: boolean) => !state, false);
+  const emailRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
     if (register) {
-      await supabase.auth.signUp({
+      const { data: authData, error } = await supabase.auth.signUp({
         email: data.email.toString(),
         password: data.password.toString(),
         options: {
           data: { username: data.username.toString() },
         },
       });
+      if (error) {
+        alert("登録に失敗しました。お手数ですが管理者までご連絡ください。");
+        throw new Error(error.message);
+      }
+      if (authData.user?.identities?.length === 0) {
+        alert("そのメールアドレスは既に登録されています。");
+      } else {
+        alert(
+          "ご登録のメールアドレスに確認メールを送りました。\nメール内のリンクをクリックして登録を完了してください。",
+        );
+        router.push("/");
+      }
     } else {
       const { error } = await supabase.auth.signInWithPassword({
         email: data.email.toString(),
@@ -54,6 +68,7 @@ const Authentication = () => {
           fill
           sizes="100vw"
           style={{ objectFit: "cover", width: "100%", height: "100%" }}
+          priority
         />
       </figure>
       <Paper
@@ -72,6 +87,7 @@ const Authentication = () => {
               size="md"
               name="username"
               id="username"
+              required
             />
           )}
 
@@ -83,6 +99,8 @@ const Authentication = () => {
             name="email"
             id="email"
             type="email"
+            required
+            ref={emailRef}
           />
           <PasswordInput
             label="パスワード"
@@ -92,6 +110,8 @@ const Authentication = () => {
             name="password"
             id="password"
             type="password"
+            required
+            ref={passwordRef}
           />
           <Button type="submit" bg={"blue"} fullWidth mt="xl" size="md">
             {register ? "会員登録" : "ログイン"}

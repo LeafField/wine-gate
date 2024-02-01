@@ -14,6 +14,9 @@ type Store = {
   logout: () => void;
   menu: Menu;
   setMenu: (menu: Menu) => void;
+  modal: string[];
+  setModal: (modal: string[]) => void;
+  clearModal: () => void;
 };
 
 export const useStore = create<Store>((set) => ({
@@ -22,4 +25,7 @@ export const useStore = create<Store>((set) => ({
   logout: () => set({ user: null }),
   menu: "close",
   setMenu: (menu) => set({ menu }),
+  modal: [],
+  setModal: (modal) => set({ modal }),
+  clearModal: () => set({ modal: [] }),
 }));
