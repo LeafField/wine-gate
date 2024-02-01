@@ -41,9 +41,6 @@ const Authentication = () => {
       if (authData.user?.identities?.length === 0) {
         alert("そのメールアドレスは既に登録されています。");
       } else {
-        // alert(
-        //   "ご登録のメールアドレスに確認メールを送りました。\nメール内のリンクをクリックして登録を完了してください。",
-        // );
         setModal([
           "ご登録いただいたメールアドレスへ確認メールを送信しました。",
           "メール内のリンクより登録を完了してください。",
@@ -100,7 +97,7 @@ const Authentication = () => {
           )}
 
           <TextInput
-            label="Emailアドレス"
+            label="メールアドレス"
             placeholder="hello@example.com"
             size="md"
             mt={register ? "md" : ""}
