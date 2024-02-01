@@ -36,6 +36,9 @@ const Authentication = () => {
         password: data.password.toString(),
       });
       if (error) {
+        alert(
+          "ログインに失敗しました。\nメールアドレスかパスワードが間違っています。",
+        );
         throw new Error(error.message);
       }
       router.push("/");
@@ -54,7 +57,7 @@ const Authentication = () => {
         />
       </figure>
       <Paper
-        className="z-auth-paper relative ml-auto h-full max-w-[600px] bg-white px-6 pt-4"
+        className="relative z-auth-paper ml-auto h-full max-w-[600px] bg-white px-6 pt-4"
         radius={0}
       >
         <Title order={2} ta="center" mt="md" className="mb-5 tablet:mb-12">

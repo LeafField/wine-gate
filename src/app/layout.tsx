@@ -1,12 +1,11 @@
-import { Inter } from "next/font/google";
 import "@mantine/core/styles.css";
 import "./globals.css";
 import Header from "../components/organisms/header/Header";
 import MantineWrapper from "../components/organisms/mantine/MantineWrapper";
 import { Metadata } from "next";
 import AuthListener from "../components/organisms/listener/AuthListener";
-
-const inter = Inter({ subsets: ["latin"] });
+import PageTransitionListener from "../components/atoms/Page-transition-listener/PageTransitionListener";
+import { notoStyle } from "../utils/font";
 
 export const metadata: Metadata = {
   title: "WINE GATE",
@@ -23,8 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className={inter.className}>
+      <body className={notoStyle.className}>
         <AuthListener />
+        <PageTransitionListener />
         <MantineWrapper>
           <Header />
           {children}

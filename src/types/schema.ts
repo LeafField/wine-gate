@@ -79,6 +79,7 @@ export interface Database {
           image_src: string
           place: string | null
           price: number
+          public: boolean
           sober_or_sweet: number
           tags: string | null
           tart: number
@@ -96,6 +97,7 @@ export interface Database {
           image_src: string
           place?: string | null
           price: number
+          public: boolean
           sober_or_sweet: number
           tags?: string | null
           tart: number
@@ -113,6 +115,7 @@ export interface Database {
           image_src?: string
           place?: string | null
           price?: number
+          public?: boolean
           sober_or_sweet?: number
           tags?: string | null
           tart?: number
