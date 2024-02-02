@@ -6,6 +6,8 @@ exports[`NavMenuの結合テスト 初期状態では会員メニュー、フリ
     class="z-nav-menu fixed bottom-0 left-0 right-0 flex w-full bg-black/80 py-1 backdrop-blur-sm tablet:hidden"
   >
     <button
+      aria-controls="user-panel"
+      aria-expanded="false"
       class="flex w-full flex-col items-center justify-center border-r border-white"
       type="button"
     >
@@ -31,6 +33,8 @@ exports[`NavMenuの結合テスト 初期状態では会員メニュー、フリ
       </span>
     </button>
     <button
+      aria-controls="free-search-panel"
+      aria-expanded="false"
       class="flex w-full flex-col items-center justify-center border-r border-white"
       type="button"
     >
@@ -56,6 +60,8 @@ exports[`NavMenuの結合テスト 初期状態では会員メニュー、フリ
       </span>
     </button>
     <button
+      aria-controls="category-panel"
+      aria-expanded="false"
       class="flex w-full flex-col items-center justify-center"
       type="button"
     >

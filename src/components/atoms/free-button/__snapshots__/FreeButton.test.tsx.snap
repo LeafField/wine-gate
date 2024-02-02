@@ -3,6 +3,8 @@
 exports[`FreeButtonの結合テスト 初期状態ではフリーワード検索ボタンが表示されている 1`] = `
 <div>
   <button
+    aria-controls="free-search-panel"
+    aria-expanded="false"
     class="flex w-full flex-col items-center justify-center border-r border-white"
     type="button"
   >

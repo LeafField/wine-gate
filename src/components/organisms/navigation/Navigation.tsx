@@ -14,6 +14,7 @@ const Navigation = () => {
     <nav className="nav">
       <div
         className={`${menu === "close" ? "invisible" : "show-panel"} z-nav tablet:visible tablet:static tablet:space-y-6`}
+        id="navigation"
       >
         <UserPanel />
         <CategoryPanel categories={categoryDummyData} />

@@ -18,6 +18,8 @@ const CloseButton: FC<Props> = ({ rightBorder = true }) => {
       type="button"
       className={`flex w-full flex-col items-center justify-center border-white ${rightBorder ? "border-r" : ""}`}
       onClick={clickhandler}
+      aria-controls="navigation"
+      aria-expanded={true}
     >
       <FontAwesomeIcon
         className="text-menu-icon text-white"

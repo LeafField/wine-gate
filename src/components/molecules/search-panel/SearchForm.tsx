@@ -39,7 +39,8 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
 
   return (
     <div
-      className={`max-tablet:animate-fadeIn nav-panel ${menu === "free" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+      className={`nav-panel max-tablet:animate-fadeIn ${menu === "free" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+      id="free-search-panel"
     >
       <h2 className="nav-title">フリーワード検索</h2>
       <form

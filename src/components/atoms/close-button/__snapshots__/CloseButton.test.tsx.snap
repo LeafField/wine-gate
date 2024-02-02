@@ -3,6 +3,8 @@
 exports[`CloseButton スナップショットテスト 1`] = `
 <div>
   <button
+    aria-controls="navigation"
+    aria-expanded="true"
     class="flex w-full flex-col items-center justify-center border-white border-r"
     type="button"
   >

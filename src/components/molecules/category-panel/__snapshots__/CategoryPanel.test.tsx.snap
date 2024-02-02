@@ -3,7 +3,8 @@
 exports[`CategoryPanelの単体テスト スナップショットテスト 1`] = `
 <div>
   <div
-    class="max-tablet:animate-fadeIn nav-panel max-tablet:hidden"
+    class="nav-panel max-tablet:animate-fadeIn max-tablet:hidden"
+    id="category-panel"
   >
     <h2
       class="nav-title"

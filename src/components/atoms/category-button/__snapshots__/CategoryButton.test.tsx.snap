@@ -3,6 +3,8 @@
 exports[`CategoryButtonの結合テスト 初期状態ではカテゴリー検索ボタンが表示されている 1`] = `
 <div>
   <button
+    aria-controls="category-panel"
+    aria-expanded="false"
     class="flex w-full flex-col items-center justify-center"
     type="button"
   >

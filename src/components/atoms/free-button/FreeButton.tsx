@@ -20,6 +20,8 @@ const FreeButton: FC = () => {
         type="button"
         className="flex w-full flex-col items-center justify-center border-r border-white"
         onClick={handleClick}
+        aria-controls="free-search-panel"
+        aria-expanded={false}
       >
         <FontAwesomeIcon
           className="text-menu-icon text-white"

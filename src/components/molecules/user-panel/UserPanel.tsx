@@ -9,7 +9,8 @@ const UserPanel = () => {
   const { user, menu } = useStore();
   return (
     <div
-      className={`max-tablet:animate-fadeIn nav-panel ${menu === "member" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+      className={`nav-panel max-tablet:animate-fadeIn ${menu === "member" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+      id="user-panel"
     >
       <div className="w-full">
         <h2 className="nav-title">会員メニュー</h2>
