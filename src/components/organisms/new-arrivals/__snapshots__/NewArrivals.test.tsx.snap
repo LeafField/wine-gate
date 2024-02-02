@@ -3,7 +3,8 @@
 exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
 <div>
   <section
-    class="flex w-full flex-col gap-[3.75rem] px-6 tablet:w-[20.75rem] tablet:px-0 laptop:w-[43.0625rem] desktop:w-[64.9375rem]"
+    class="tablet:pt-30 flex w-full flex-col gap-7 pt-16 first-of-type:pt-0 tablet:w-[20.75rem] tablet:px-0 laptop:w-[43.0625rem] desktop:w-[64.9375rem] px-6"
+    data-testid="top-page-container"
   >
     <div
       class="col-span-3"
@@ -18,9 +19,9 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
       class="grid grid-cols-1 justify-items-stretch gap-5 laptop:grid-cols-2 desktop:grid-cols-3"
     >
       <a
+        aria-label="コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ"
         class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="1"
-        role="article"
       >
         <div
           class="aspect-video w-full overflow-hidden bg-gray "
@@ -62,9 +63,9 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
         </div>
       </a>
       <a
+        aria-label="コノスル シャルドネ ビシクレタ・レゼルバ"
         class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="2"
-        role="article"
       >
         <div
           class="aspect-video w-full overflow-hidden bg-gray "
@@ -106,9 +107,9 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
         </div>
       </a>
       <a
+        aria-label="コノスル カルメネール ビシクレタ・レゼルバ"
         class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="3"
-        role="article"
       >
         <div
           class="aspect-video w-full overflow-hidden bg-gray "

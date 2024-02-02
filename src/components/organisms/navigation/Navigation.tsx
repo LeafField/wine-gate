@@ -13,7 +13,7 @@ const Navigation = () => {
   return (
     <nav className="nav">
       <div
-        className={`${menu === "close" ? "invisible" : "show-panel"} z-nav tablet:visible tablet:static tablet:space-y-6`}
+        className={`${menu === "close" ? "invisible" : "show-panel"} top-1 z-nav tablet:visible tablet:sticky tablet:space-y-2`}
         id="navigation"
       >
         <UserPanel />

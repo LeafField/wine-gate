@@ -11,7 +11,7 @@ describe("NewArrivalsの結合テスト", () => {
 
   test("正しい数のSmallArticleコンポーネントがレンダリングされる", () => {
     render(<NewArrivals articles={smallArticleDummyData} />);
-    const smallArticleElements = screen.getAllByRole("article");
+    const smallArticleElements = screen.getAllByRole("link");
     expect(smallArticleElements.length).toEqual(3);
   });
 

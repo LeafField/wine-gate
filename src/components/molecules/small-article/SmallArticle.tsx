@@ -17,7 +17,7 @@ const SmallArticle: FC<SmallArticleProps> = ({
     <Link
       href={id}
       className="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
-      role="article"
+      aria-label={title}
     >
       <WineImage src={image_src} />
       <h3 className="w-full px-2 text-base text-black">{title}</h3>
