@@ -1,14 +1,7 @@
 import React from "react";
-import { fetcher } from "../../utils/fetcher";
-import NewArrivals from "../../components/organisms/new-arrivals/NewArrivals";
 import { smallArticleDummyData } from "../../utils/dummyData";
+import TopPage from "../../components/template/top-page/TopPage";
 
 export default async function Home() {
-  return (
-    <>
-      <main className="main">
-        <NewArrivals articles={smallArticleDummyData} />
-      </main>
-    </>
-  );
+  return <TopPage articles={smallArticleDummyData} />;
 }

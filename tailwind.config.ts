@@ -21,6 +21,10 @@ const config: Config = {
         gray: "#B8B6B6",
         black: "#030303",
       },
+      spacing: {
+        30: "7.5rem",
+        45: "11.25rem",
+      },
       fontSize: {
         "header-subtitle": "clamp(0.625rem,1.54vw,1rem)",
         "header-title": "clamp(1.25rem,3.46vw,2.25rem)",

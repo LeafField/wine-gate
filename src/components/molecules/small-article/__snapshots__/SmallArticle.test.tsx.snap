@@ -3,9 +3,9 @@
 exports[`SmallArticle 単体テスト スナップショット 1`] = `
 <div>
   <a
+    aria-label="Test Title"
     class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
     href="1"
-    role="article"
   >
     <div
       class="aspect-video w-full overflow-hidden bg-gray "
