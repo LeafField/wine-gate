@@ -3,6 +3,8 @@
 exports[`MenberButtonの結合テスト 初期状態では会員メニューのボタンが表示されている 1`] = `
 <div>
   <button
+    aria-controls="user-panel"
+    aria-expanded="false"
     class="flex w-full flex-col items-center justify-center border-r border-white"
     type="button"
   >
