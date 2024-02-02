@@ -18,7 +18,8 @@ const CategoryPanel: FC<Props> = ({ categories }) => {
 
   return (
     <div
-      className={`max-tablet:animate-fadeIn nav-panel ${menu === "category" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+      className={`nav-panel max-tablet:animate-fadeIn ${menu === "category" ? "max-tablet:flex" : "max-tablet:hidden"}`}
+      id="category-panel"
     >
       <h2 className="nav-title">カテゴリー検索</h2>
       <div className="flex flex-col gap-y-4 panel-inner">

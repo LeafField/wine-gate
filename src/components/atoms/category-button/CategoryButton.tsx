@@ -20,6 +20,8 @@ const CategoryButton: FC = () => {
         type="button"
         className="flex w-full flex-col items-center justify-center"
         onClick={handleClick}
+        aria-controls="category-panel"
+        aria-expanded={false}
       >
         <FontAwesomeIcon
           className="text-menu-icon text-white"

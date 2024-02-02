@@ -20,6 +20,8 @@ const MenberButton: FC = () => {
         type="button"
         className="flex w-full flex-col items-center justify-center border-r border-white"
         onClick={handleClick}
+        aria-controls="user-panel"
+        aria-expanded={false}
       >
         <FontAwesomeIcon
           className="text-menu-icon text-white"
