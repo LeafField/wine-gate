@@ -3,7 +3,7 @@
 exports[`Footerの結合テスト スナップショット 1`] = `
 <div>
   <footer
-    class="mt-45 flex h-12 items-center justify-center bg-red "
+    class="mt-45 flex h-12 items-center justify-center bg-red max-tablet:mb-12 "
   >
     <small
       class=" text-center text-xs leading-[0.75rem] text-white"

@@ -22,6 +22,7 @@ const config: Config = {
         black: "#030303",
       },
       spacing: {
+        15: "3.75rem",
         30: "7.5rem",
         45: "11.25rem",
       },
