@@ -15,6 +15,8 @@ const SelectLink: FC = () => {
           alt="棚に並ぶワインボトル"
           fill
           style={{ objectFit: "cover" }}
+          priority
+          sizes="(min-width:1440px) 686px, (min-width:768px) 332px, 100vw"
         />
       </figure>
       <div className="relative z-front flex h-full w-full bg-image-cover align-bottom">

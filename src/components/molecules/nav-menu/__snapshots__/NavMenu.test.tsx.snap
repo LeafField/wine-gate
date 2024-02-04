@@ -3,7 +3,7 @@
 exports[`NavMenuの結合テスト 初期状態では会員メニュー、フリーワード検索、カテゴリー検索のボタンが表示されている 1`] = `
 <div>
   <div
-    class="z-nav-menu fixed bottom-0 left-0 right-0 flex w-full bg-black/80 py-1 backdrop-blur-sm tablet:hidden"
+    class="fixed bottom-0 left-0 right-0 z-nav-menu flex h-12 w-full bg-black/80 py-1 backdrop-blur-sm tablet:hidden"
   >
     <button
       aria-controls="user-panel"
