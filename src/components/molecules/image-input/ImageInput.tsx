@@ -1,20 +1,10 @@
-import React, { ChangeEvent, FC, useEffect, useRef, useState } from "react";
+import React, { ChangeEvent, FC, useRef, useState } from "react";
 
 const ImageInput: FC = () => {
   const [imageName, setImageName] = useState<string>("");
-  const [ctx, setCtx] = useState<CanvasRenderingContext2D | null>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reader = new FileReader();
   const image = new Image();
-
-  useEffect(() => {
-    if (canvasRef.current) {
-      const context = canvasRef.current.getContext("2d");
-      if (context) {
-        setCtx(context);
-      }
-    }
-  }, [canvasRef]);
 
   const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -26,28 +16,26 @@ const ImageInput: FC = () => {
         image.src = typeof reader.result === "string" ? reader.result : "";
 
         image.addEventListener("load", () => {
-          if (!canvasRef.current) return;
-          ctx?.clearRect(
-            0,
-            0,
-            canvasRef.current.width,
-            canvasRef.current.height,
-          );
+          const ctx = canvasRef.current?.getContext("2d");
+          const canvas = canvasRef.current;
+
+          if (!canvas || !ctx) return;
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
           let width: number;
           let height: number;
           let dx: number = 0;
           let dy: number = 0;
           if (image.width > image.height) {
-            width = canvasRef.current.width;
+            width = canvas.width;
             height = (width / image.width) * image.height;
-            dy = (canvasRef.current.height - height) / 2;
+            dy = (canvas.height - height) / 2;
           } else {
-            width = (canvasRef.current.height / image.height) * image.width;
-            height = canvasRef.current.height;
-            dx = (canvasRef.current.width - width) / 2;
+            width = (canvas.height / image.height) * image.width;
+            height = canvas.height;
+            dx = (canvas.width - width) / 2;
           }
 
-          ctx?.drawImage(image, dx, dy, width, height);
+          ctx.drawImage(image, dx, dy, width, height);
         });
       });
     }
