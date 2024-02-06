@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from "@storybook/react";
 import ImageInput from "./ImageInput";
 import { FC, FormEvent, PropsWithChildren } from "react";
+import { useForm } from "@mantine/form";
+import { EditingPageSchemaType } from "../../../utils/schema";
 
 const DummyImageForm: FC<PropsWithChildren> = ({ children }) => {
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
@@ -20,9 +22,25 @@ const DummyImageForm: FC<PropsWithChildren> = ({ children }) => {
   );
 };
 
+const UseFormWrapper = () => {
+  const form = useForm<EditingPageSchemaType>({
+    initialValues: {
+      title: "",
+      price: 0,
+      place: "",
+      description: "",
+      erudition: "",
+      category_id: "",
+      image: null,
+    },
+  });
+
+  return <ImageInput form={form} />;
+};
+
 const meta = {
   title: "molecules/ImageInput",
-  component: ImageInput,
+  component: UseFormWrapper,
 } satisfies Meta<typeof ImageInput>;
 
 export default meta;
