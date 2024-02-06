@@ -1,7 +1,9 @@
-import React from "react";
+"use client";
+import React, { FormEvent } from "react";
+import EditingPage from "../../../components/template/editing-page/EditingPage";
 
 const page = () => {
-  return <div>page</div>;
+  return <EditingPage />;
 };
 
 export default page;

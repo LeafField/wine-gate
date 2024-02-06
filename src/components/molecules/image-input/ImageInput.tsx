@@ -1,6 +1,12 @@
-import React, { ChangeEvent, FC, useRef, useState } from "react";
+import React, { ChangeEvent, FC, useEffect, useRef, useState } from "react";
+import { EditingPageSchemaType } from "../../../utils/schema";
+import { UseFormReturnType } from "@mantine/form";
 
-const ImageInput: FC = () => {
+type Props = {
+  form: UseFormReturnType<EditingPageSchemaType>;
+};
+
+const ImageInput: FC<Props> = ({ form }) => {
   const [imageName, setImageName] = useState<string>("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const reader = new FileReader();
@@ -10,7 +16,14 @@ const ImageInput: FC = () => {
     const files = event.target.files;
     if (files) {
       const file = files[0];
+      form.setFieldValue("image", file);
       setImageName(file.name);
+    }
+  };
+
+  useEffect(() => {
+    const file = form.values.image;
+    if (file) {
       reader.readAsDataURL(file);
       reader.addEventListener("load", () => {
         image.src = typeof reader.result === "string" ? reader.result : "";
@@ -39,7 +52,7 @@ const ImageInput: FC = () => {
         });
       });
     }
-  };
+  }, [form.values.image]);
 
   return (
     <div>

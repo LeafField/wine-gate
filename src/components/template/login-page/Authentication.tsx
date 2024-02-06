@@ -34,10 +34,14 @@ const Authentication = () => {
           data: { username: data.username.toString() },
         },
       });
-      if (error) {
+
+      if (error?.status === 422) {
+        alert("パスワードが短すぎます。6文字以上で登録してください。");
+      } else if (error) {
         alert("登録に失敗しました。お手数ですが管理者までご連絡ください。");
         throw new Error(error.message);
       }
+
       if (authData.user?.identities?.length === 0) {
         alert("そのメールアドレスは既に登録されています。");
       } else {
