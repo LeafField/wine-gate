@@ -2,7 +2,7 @@ import { Meta, StoryObj } from "@storybook/react";
 import Authentication from "./Authentication";
 
 const meta = {
-  title: "organisms/Authentication",
+  title: "template/Authentication",
   component: Authentication,
   parameters: {
     nextjs: {
