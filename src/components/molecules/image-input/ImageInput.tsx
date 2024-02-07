@@ -9,8 +9,6 @@ type Props = {
 const ImageInput: FC<Props> = ({ form }) => {
   const [imageName, setImageName] = useState<string>("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const reader = new FileReader();
-  const image = new Image();
 
   const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -24,6 +22,8 @@ const ImageInput: FC<Props> = ({ form }) => {
   useEffect(() => {
     const file = form.values.image;
     if (file) {
+      const reader = new FileReader();
+      const image = new Image();
       reader.readAsDataURL(file);
       reader.addEventListener("load", () => {
         image.src = typeof reader.result === "string" ? reader.result : "";
@@ -71,7 +71,7 @@ const ImageInput: FC<Props> = ({ form }) => {
           onChange={changeHandler}
         />
         <p className="pointer-events-none absolute inset-0 mt-[1px] truncate pl-2">
-          {imageName ? imageName : "画像を選択してください"}
+          {imageName ? imageName : "画像を選択してください(必須)"}
         </p>
       </div>
     </div>

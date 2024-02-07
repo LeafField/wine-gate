@@ -17,7 +17,11 @@ const UseFormWrapper = () => {
       description: "",
       erudition: "",
       category_id: "",
-      image: [],
+      image: null,
+      fruity: 1,
+      tart: 1,
+      sober_or_sweet: 1,
+      other_charas: [],
     },
     validate: zodResolver(editingPageSchema),
   });

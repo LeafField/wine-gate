@@ -31,6 +31,12 @@ export const editingPageSchema = z.object({
   price: z.number().int().min(100, { message: "価格の入力は必須です" }),
   description: z.string().min(20, { message: "20文字以上入力してください" }),
   erudition: z.string().optional(),
+  sober_or_sweet: z.number().int().min(1).max(5),
+  tart: z.number().int().min(1).max(5),
+  fruity: z.number().int().min(1).max(5),
+  other_charas: z
+    .array(z.string().max(5, { message: "一つのタグに五文字までです。" }))
+    .max(2, { message: "タグは2つまでです" }),
 });
 
 export type EditingPageSchemaType = z.infer<typeof editingPageSchema> & {

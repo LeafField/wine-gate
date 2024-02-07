@@ -1,5 +1,7 @@
 import React, { FC, ReactNode } from "react";
 import { Slider } from "@mantine/core";
+import { UseFormReturnType } from "@mantine/form";
+import { EditingPageSchemaType } from "../../../utils/schema";
 
 type Marks = {
   value: number;
@@ -31,9 +33,10 @@ const marks: Marks[] = [
 
 type Props = {
   name: "sober_or_sweet" | "tart" | "fruity";
+  form: UseFormReturnType<EditingPageSchemaType>;
 };
 
-const FlavorSlider: FC<Props> = ({ name }) => {
+const FlavorSlider: FC<Props> = ({ name, form }) => {
   return (
     <Slider
       color="blue"
@@ -45,6 +48,7 @@ const FlavorSlider: FC<Props> = ({ name }) => {
       className="ml-2"
       label={(value) => marks.find((mark) => mark.value === value)?.label}
       marks={marks}
+      {...form.getInputProps(name)}
     />
   );
 };

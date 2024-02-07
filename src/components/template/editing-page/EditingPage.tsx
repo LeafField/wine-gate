@@ -1,7 +1,7 @@
 "use client";
 import React, { FC } from "react";
 import Heading from "../../atoms/heading/Heading";
-import { TextInput, Textarea, Button } from "@mantine/core";
+import { TextInput, Textarea, Button, TagsInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 
 import {
@@ -26,6 +26,10 @@ const EditingPage: FC = () => {
       erudition: "",
       category_id: "",
       image: null,
+      fruity: 1,
+      tart: 1,
+      sober_or_sweet: 1,
+      other_charas: [],
     },
     validate: zodResolver(editingPageSchema),
   });
@@ -46,6 +50,15 @@ const EditingPage: FC = () => {
         />
         <ImageInput form={form} />
         <TasteInput categories={categoryDummyData} form={form} />
+        <TagsInput
+          name="other_charas"
+          id="other_charas"
+          label="その他味の特徴、5文字以下のタグ2つまで"
+          placeholder="Enterでタグを区切る事が出来ます。"
+          maxTags={2}
+          maxLength={5}
+          {...form.getInputProps("other_charas")}
+        />
         <PriceInput form={form} />
         <TextInput
           label="何所で買えるか(必須)"
