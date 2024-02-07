@@ -40,7 +40,7 @@ const TasteInput: FC<Categories> = ({ categories, form }) => {
           form.values.category_id !== null && (
             <div className="mt-2">
               <p className="text-sm">渋味</p>
-              <FlavorSlider name="sober_or_sweet" />
+              <FlavorSlider name="sober_or_sweet" form={form} />
             </div>
           )}
         {form.values.category_id !== "" &&
@@ -53,13 +53,13 @@ const TasteInput: FC<Categories> = ({ categories, form }) => {
         {form.values.category_id !== "" && (
           <div className="mt-8">
             <p className="text-sm">酸味</p>
-            <FlavorSlider name="tart" />
+            <FlavorSlider name="tart" form={form} />
           </div>
         )}
         {form.values.category_id !== "" && (
           <div className="mt-8">
             <p className="text-sm">風味</p>
-            <FlavorSlider name="fruity" />
+            <FlavorSlider name="fruity" form={form} />
           </div>
         )}
       </fieldset>

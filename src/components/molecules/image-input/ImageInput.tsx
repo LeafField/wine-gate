@@ -71,7 +71,7 @@ const ImageInput: FC<Props> = ({ form }) => {
           onChange={changeHandler}
         />
         <p className="pointer-events-none absolute inset-0 mt-[1px] truncate pl-2">
-          {imageName ? imageName : "画像を選択してください"}
+          {imageName ? imageName : "画像を選択してください(必須)"}
         </p>
       </div>
     </div>
