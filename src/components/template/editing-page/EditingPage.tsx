@@ -10,6 +10,7 @@ import {
   imageInputSchema,
 } from "../../../utils/schema";
 import { zodResolver } from "mantine-form-zod-resolver";
+import { useStore } from "../../../store";
 
 import TasteInput from "../../molecules/taste-input/TasteInput";
 import ImageInput from "../../molecules/image-input/ImageInput";
@@ -17,10 +18,12 @@ import ImageInput from "../../molecules/image-input/ImageInput";
 import { categoryDummyData } from "../../../utils/dummyData";
 import PriceInput from "../../atoms/price-input/PriceInput";
 
-import { supabase } from "../../../utils/supabase";
-import { postWine } from "../../../utils/fetcher";
+import useMutateWines from "../../../hooks/useMutateWines";
 
 const EditingPage: FC = () => {
+  const { user } = useStore();
+  const { winePostMutation } = useMutateWines();
+
   const form = useForm<EditingPageSchemaType>({
     initialValues: {
       title: "",
@@ -39,25 +42,10 @@ const EditingPage: FC = () => {
   });
 
   const submitHandler = async (value: EditingPageSchemaType) => {
+    // 後でtry catchで組みなおす
     const image = imageInputSchema.safeParse(value.image);
-    console.log(image.success ? image.data : image.error.errors[0].message);
-    const user = await supabase.auth.getUser();
-    if (user.data.user && image.success) {
-      await postWine({
-        author_id: user.data.user.id,
-        author_name: user.data.user.user_metadata.username,
-        title: value.title,
-        price: value.price,
-        place: value.place,
-        description: value.description,
-        erudition: value.erudition,
-        category_id: Number(value.category_id),
-        fruity: value.fruity,
-        tart: value.tart,
-        sober_or_sweet: value.sober_or_sweet,
-        image_src: `${user.data.user.id}/${image.data.name}`,
-        tags: value.tags.join(),
-      });
+    if (user && image.success) {
+      winePostMutation.mutate({ value, user });
     }
   };
 
