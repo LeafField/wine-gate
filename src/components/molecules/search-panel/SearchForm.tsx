@@ -8,6 +8,7 @@ import SearchCategory from "../../atoms/search-category/SearchCategory";
 import { ComboboxData } from "@mantine/core";
 import { searchSchema } from "../../../utils/schema";
 import { useStore } from "../../../store";
+import { useQueryClient } from "@tanstack/react-query";
 
 type Props = {
   selectData: ComboboxData;
@@ -18,10 +19,12 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
   const { menu } = useStore();
+  const queryClient = useQueryClient();
 
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     inputRef.current?.blur();
+    queryClient.invalidateQueries({ queryKey: ["search"] });
 
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());

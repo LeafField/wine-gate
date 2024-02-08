@@ -4,6 +4,7 @@ import { notoStyle } from "../utils/font";
 import { Metadata } from "next";
 
 import MantineWrapper from "../components/organisms/mantine/MantineWrapper";
+import TanstackProvider from "../components/atoms/tanstack-provider/TanstackProvider";
 
 import Header from "../components/organisms/header/Header";
 import AuthListener from "../components/organisms/listener/AuthListener";
@@ -26,13 +27,15 @@ export default function RootLayout({
   return (
     <html lang="ja">
       <body className={notoStyle.className}>
-        <AuthListener />
-        <PageTransitionListener />
-        <Modal />
-        <MantineWrapper>
-          <Header />
-          {children}
-        </MantineWrapper>
+        <TanstackProvider>
+          <AuthListener />
+          <PageTransitionListener />
+          <Modal />
+          <MantineWrapper>
+            <Header />
+            {children}
+          </MantineWrapper>
+        </TanstackProvider>
       </body>
     </html>
   );

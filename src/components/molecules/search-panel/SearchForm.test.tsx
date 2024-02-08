@@ -1,9 +1,9 @@
-import { render, fireEvent, screen, waitFor } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import SearchForm from "./SearchForm";
-import { MantineProvider } from "@mantine/core";
 import { selectDummyData } from "../../../utils/dummyData";
 import * as router from "next/navigation";
 import userEvent from "@testing-library/user-event";
+import { ProviderWrapper } from "../../test-components/ProviderWrapper";
 
 jest.mock("next/navigation");
 const mockRouterPush = jest.fn();
@@ -24,6 +24,10 @@ describe("SearchFormの結合テスト", () => {
       forward: jest.fn(),
       refresh: jest.fn(),
     }));
+
+    render(<SearchForm selectData={selectDummyData} />, {
+      wrapper: ProviderWrapper,
+    });
   });
   afterEach(() => {
     jest.clearAllMocks();
@@ -34,17 +38,11 @@ describe("SearchFormの結合テスト", () => {
   });
 
   test("コンポーネントがクラッシュせずにレンダリングされる", () => {
-    render(<SearchForm selectData={selectDummyData} />, {
-      wrapper: MantineProvider,
-    });
     const formElement = screen.getByRole("search");
     expect(formElement).toBeInTheDocument();
   });
 
   test("正常系:submitActionが正しく動作しrouter.pushが実行される", async () => {
-    render(<SearchForm selectData={selectDummyData} />, {
-      wrapper: MantineProvider,
-    });
     const textBox = screen.getByRole("textbox", { name: "search" });
     const submitButton = screen.getByRole("button", { name: "検索" });
     await userEvent.type(textBox, "コノスル");
@@ -58,9 +56,6 @@ describe("SearchFormの結合テスト", () => {
   });
 
   test("異常系:inputタグの入力が4文字未満の時、バリデーションエラーを表示する", async () => {
-    render(<SearchForm selectData={selectDummyData} />, {
-      wrapper: MantineProvider,
-    });
     const textBox = screen.getByRole("textbox", { name: "search" });
     const submitButton = screen.getByRole("button", { name: "検索" });
     await userEvent.type(textBox, "コノス");
@@ -73,7 +68,7 @@ describe("SearchFormの結合テスト", () => {
 
   test("スナップショットテスト", () => {
     const { container } = render(<SearchForm selectData={selectDummyData} />, {
-      wrapper: MantineProvider,
+      wrapper: ProviderWrapper,
     });
     expect(container).toMatchSnapshot();
   });
