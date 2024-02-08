@@ -21,7 +21,7 @@ const UseFormWrapper = () => {
       fruity: 1,
       tart: 1,
       sober_or_sweet: 1,
-      other_charas: [],
+      tags: [],
     },
     validate: zodResolver(editingPageSchema),
   });
