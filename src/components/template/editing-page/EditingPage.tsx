@@ -7,6 +7,7 @@ import { useForm } from "@mantine/form";
 import {
   editingPageSchema,
   EditingPageSchemaType,
+  imageInputSchema,
 } from "../../../utils/schema";
 import { zodResolver } from "mantine-form-zod-resolver";
 
@@ -15,6 +16,9 @@ import ImageInput from "../../molecules/image-input/ImageInput";
 
 import { categoryDummyData } from "../../../utils/dummyData";
 import PriceInput from "../../atoms/price-input/PriceInput";
+
+import { supabase } from "../../../utils/supabase";
+import { postWine } from "../../../utils/fetcher";
 
 const EditingPage: FC = () => {
   const form = useForm<EditingPageSchemaType>({
@@ -29,18 +33,38 @@ const EditingPage: FC = () => {
       fruity: 1,
       tart: 1,
       sober_or_sweet: 1,
-      other_charas: [],
+      tags: [],
     },
     validate: zodResolver(editingPageSchema),
   });
 
+  const submitHandler = async (value: EditingPageSchemaType) => {
+    const image = imageInputSchema.safeParse(value.image);
+    console.log(image.success ? image.data : image.error.errors[0].message);
+    const user = await supabase.auth.getUser();
+    if (user.data.user && image.success) {
+      await postWine({
+        author_id: user.data.user.id,
+        author_name: user.data.user.user_metadata.username,
+        title: value.title,
+        price: value.price,
+        place: value.place,
+        description: value.description,
+        erudition: value.erudition,
+        category_id: Number(value.category_id),
+        fruity: value.fruity,
+        tart: value.tart,
+        sober_or_sweet: value.sober_or_sweet,
+        image_src: `${user.data.user.id}/${image.data.name}`,
+        tags: value.tags.join(),
+      });
+    }
+  };
+
   return (
     <div className="mx-auto my-15 max-w-[64.9375rem]">
       <Heading title="記事編集" />
-      <form
-        className="space-y-15"
-        onSubmit={form.onSubmit((value) => console.log(value))}
-      >
+      <form className="space-y-15" onSubmit={form.onSubmit(submitHandler)}>
         <TextInput
           label="ワイン名(必須、日本語)"
           id="title"
@@ -51,13 +75,13 @@ const EditingPage: FC = () => {
         <ImageInput form={form} />
         <TasteInput categories={categoryDummyData} form={form} />
         <TagsInput
-          name="other_charas"
-          id="other_charas"
+          name="tags"
+          id="tags"
           label="その他味の特徴、5文字以下のタグ2つまで"
           placeholder="Enterでタグを区切る事が出来ます。"
           maxTags={2}
           maxLength={5}
-          {...form.getInputProps("other_charas")}
+          {...form.getInputProps("tags")}
         />
         <PriceInput form={form} />
         <TextInput
