@@ -1,11 +1,7 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { spyOn } from "@storybook/test";
+import { spyOn, within } from "@storybook/test";
 import EditingPage from "./EditingPage";
 import * as fetcher from "../../../utils/fetcher";
-
-const mockFetcher = { ...fetcher };
-
-spyOn(mockFetcher, "postWine").mockResolvedValue("1");
 
 const meta = {
   title: "template/EditingPage",
@@ -28,4 +24,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  play: async ({ canvasElement }) => {
+    const mockFetcher = { ...fetcher };
+    spyOn(mockFetcher, "postWine").mockResolvedValue("1");
+    within(canvasElement);
+  },
+};

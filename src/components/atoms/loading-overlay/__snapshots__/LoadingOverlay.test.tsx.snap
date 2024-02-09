@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingOverlayの単体テスト スナップショットテスト 1`] = `
+<div>
+  <div
+    class="overlay z-overlay animate-fadeIn"
+  >
+    <div
+      class="relative z-nav-menu h-8 w-8 animate-spin rounded-full border-4 border-gray border-t-transparent"
+    >
+      <span
+        class="sr-only"
+      >
+        サーバーと通信中......
+      </span>
+    </div>
+  </div>
+</div>
+`;
