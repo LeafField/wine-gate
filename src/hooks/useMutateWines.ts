@@ -1,5 +1,5 @@
-import { useRouter } from "next/navigation";
 import { postWine } from "../utils/fetcher";
+import { useRouter } from "next/navigation";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 const useMutateWines = () => {
@@ -10,7 +10,7 @@ const useMutateWines = () => {
     mutationFn: postWine,
     onSuccess: (id) => {
       queryClient.invalidateQueries({ queryKey: ["wines"] });
-      router.push(`/article/${id}`);
+      router.push(`/wines/${id}`);
     },
     onError: (err: any) => {
       alert((err as Error).message);

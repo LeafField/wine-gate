@@ -40,3 +40,5 @@ export const imageInputSchema = z
   .refine((file) => IMAGE_TYPE.includes(file.type), {
     message: "画像形式はjpegかpngにしてください",
   });
+
+export type ImageInputSchemaType = z.infer<typeof imageInputSchema>;

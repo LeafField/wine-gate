@@ -47,10 +47,21 @@ const ImageInput: FC<Props> = ({ form }) => {
             height = canvas.height;
             dx = (canvas.width - width) / 2;
           }
-
+          ctx.save();
           ctx.drawImage(image, dx, dy, width, height);
+          ctx.restore();
         });
       });
+    } else {
+      const ctx = canvasRef.current?.getContext("2d");
+      const canvas = canvasRef.current;
+      if (!canvas || !ctx) return;
+      ctx.save();
+      ctx.font = "30px sans-serif";
+      ctx.fillStyle = "white";
+      ctx.textAlign = "center";
+      ctx.fillText("No Image", canvas.width / 2, canvas.height / 2 + 15);
+      ctx.restore();
     }
   }, [form.values.image]);
 
@@ -63,6 +74,12 @@ const ImageInput: FC<Props> = ({ form }) => {
         ref={canvasRef}
       ></canvas>
       <div className="relative mt-4 w-80 overflow-hidden border-2 border-gray">
+        <label
+          htmlFor="image"
+          className="pointer-events-none absolute inset-0 mt-[1px] truncate pl-2"
+        >
+          {imageName ? imageName : "画像選択(必須、150KBまで)"}
+        </label>
         <input
           type="file"
           name="image"
@@ -70,9 +87,6 @@ const ImageInput: FC<Props> = ({ form }) => {
           className="w-80 cursor-pointer opacity-0"
           onChange={changeHandler}
         />
-        <p className="pointer-events-none absolute inset-0 mt-[1px] truncate pl-2">
-          {imageName ? imageName : "画像を選択してください(必須)"}
-        </p>
       </div>
     </div>
   );

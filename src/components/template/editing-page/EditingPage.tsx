@@ -1,6 +1,6 @@
 "use client";
 import React, { FC } from "react";
-import Heading from "../../atoms/heading/Heading";
+
 import { TextInput, Textarea, Button, TagsInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
 
@@ -12,8 +12,10 @@ import {
 import { zodResolver } from "mantine-form-zod-resolver";
 import { useStore } from "../../../store";
 
+import Heading from "../../atoms/heading/Heading";
 import TasteInput from "../../molecules/taste-input/TasteInput";
 import ImageInput from "../../molecules/image-input/ImageInput";
+import LoadingOverlay from "../../atoms/loading-overlay/LoadingOverlay";
 
 import { categoryDummyData } from "../../../utils/dummyData";
 import PriceInput from "../../atoms/price-input/PriceInput";
@@ -42,15 +44,20 @@ const EditingPage: FC = () => {
   });
 
   const submitHandler = async (value: EditingPageSchemaType) => {
-    // 後でtry catchで組みなおす
+    if (!user) {
+      throw new Error("ログインしてください。");
+    }
     const image = imageInputSchema.safeParse(value.image);
-    if (user && image.success) {
-      winePostMutation.mutate({ value, user });
+    if (!image.success) {
+      console.log(image.error.errors[0].message);
+    } else if (image.success) {
+      winePostMutation.mutate({ value, user, image: image.data });
     }
   };
 
   return (
-    <div className="mx-auto my-15 max-w-[64.9375rem]">
+    <div className="relative z-0 mx-auto my-15 max-w-[64.9375rem]">
+      {winePostMutation.isPending && <LoadingOverlay />}
       <Heading title="記事編集" />
       <form className="space-y-15" onSubmit={form.onSubmit(submitHandler)}>
         <TextInput
