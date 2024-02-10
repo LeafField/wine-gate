@@ -1,9 +1,7 @@
 import React, { FC } from "react";
+import { Wines } from "../../../types/article_types";
 
-type Props = {
-  author_name: string;
-  price: number;
-};
+type Props = Pick<Wines, "author_name" | "price">;
 
 const ImageFooter: FC<Props> = ({ author_name, price }) => {
   return (
