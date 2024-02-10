@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ImageFooterの単体テスト propsに渡した値通りに正しくレンダリングされているか 1`] = `
+<div>
+  <div
+    class="flex items-center justify-between"
+  >
+    <p
+      class="text-main-text"
+    >
+      Test Author
+    </p>
+    <p
+      class="text-main-text"
+    >
+      1000
+      円
+      (参考価格)
+    </p>
+  </div>
+</div>
+`;

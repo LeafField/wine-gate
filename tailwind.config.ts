@@ -136,6 +136,8 @@ const config: Config = {
       addUtilities({
         ".main": {
           gridArea: "main",
+          minHeight:
+            "clamp(100vh - 3.44rem - 3rem,100vh - 9.24vw - 3rem,100vh - 6rem - 3rem)",
         } satisfies CSSProperties,
       });
 

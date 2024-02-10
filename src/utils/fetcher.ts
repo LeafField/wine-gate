@@ -29,7 +29,7 @@ export const postWine = async ({
     const { data, error } = await supabase
       .from("wines")
       .insert({
-        title: value.title,
+        title: value.title.replace(/　/g, " "),
         price: value.price,
         place: value.place,
         description: value.description,
