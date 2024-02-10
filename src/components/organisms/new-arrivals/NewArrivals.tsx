@@ -15,13 +15,11 @@ const NewArrivals: FC<Props> = ({ articles }) => {
       <div className="col-span-3">
         <Heading title="新着ワイン" />
       </div>
-      {/* <div className="grid grid-cols-1 justify-items-stretch gap-5 laptop:grid-cols-2 desktop:grid-cols-3"> */}
       <GridContainer>
         {articles.map((article) => (
           <SmallArticle key={article.id} {...article} />
         ))}
       </GridContainer>
-      {/* </div> */}
     </TopPageContainer>
   );
 };
