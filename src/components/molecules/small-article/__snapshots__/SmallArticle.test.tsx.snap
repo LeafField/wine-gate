@@ -35,17 +35,17 @@ exports[`SmallArticle 単体テスト スナップショット 1`] = `
       class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
     >
       <div
-        class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+        class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
       >
         chara
       </div>
       <div
-        class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+        class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
       >
         tag1
       </div>
       <div
-        class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+        class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
       >
         tag2
       </div>
