@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavoriteCountの単体テスト 渡されたPropsに対して正しくレンダリングされているか 1`] = `
+<div>
+  <p>
+    お気に入り数:
+    48
+  </p>
+</div>
+`;

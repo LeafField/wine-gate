@@ -51,12 +51,12 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
           class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
         >
           <div
-            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
           >
             渋い
           </div>
           <div
-            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
           >
             樽熟成
           </div>
@@ -95,12 +95,12 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
           class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
         >
           <div
-            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
           >
             辛口白
           </div>
           <div
-            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
           >
             フルーティ
           </div>
@@ -139,17 +139,17 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
           class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
         >
           <div
-            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
           >
             酸っぱい
           </div>
           <div
-            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
           >
             樽熟成
           </div>
           <div
-            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-sm text-black "
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
           >
             濃厚
           </div>
