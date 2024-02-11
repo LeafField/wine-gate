@@ -33,6 +33,14 @@ export const Default: Story = {
     wine_id: "1234",
     author_id: "5678",
   },
+  decorators: [
+    (Story) => (
+      <>
+        <UseStoreTester login={true} />
+        <Story />
+      </>
+    ),
+  ],
 };
 
 export const Mobile: Story = {
@@ -45,6 +53,14 @@ export const Mobile: Story = {
     wine_id: "1234",
     author_id: "5678",
   },
+  decorators: [
+    (Story) => (
+      <>
+        <UseStoreTester login={true} />
+        <Story />
+      </>
+    ),
+  ],
 };
 
 export const Author: Story = {
@@ -72,6 +88,21 @@ export const IsFavorite: Story = {
     (Story) => (
       <>
         <UseStoreTester login={true} />
+        <Story />
+      </>
+    ),
+  ],
+};
+
+export const NotLoggedIn: Story = {
+  args: {
+    wine_id: "1234",
+    author_id: "5678",
+  },
+  decorators: [
+    (Story) => (
+      <>
+        <UseStoreTester login={false} />
         <Story />
       </>
     ),
