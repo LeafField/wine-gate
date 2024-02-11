@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import { faStar } from "@fortawesome/free-regular-svg-icons";
 import { faStar as regiStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
