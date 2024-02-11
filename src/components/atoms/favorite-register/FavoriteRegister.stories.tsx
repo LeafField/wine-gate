@@ -2,7 +2,7 @@ import { StoryObj, Meta } from "@storybook/react";
 import FavoriteRegister from "./FavoriteRegister";
 
 const meta = {
-  title: "molecules/FavoriteRegister",
+  title: "atoms/FavoriteRegister",
   component: FavoriteRegister,
 } satisfies Meta<typeof FavoriteRegister>;
 
