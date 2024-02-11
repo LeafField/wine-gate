@@ -10,7 +10,7 @@ const useMutateWines = () => {
     mutationFn: postWine,
     onSuccess: (id) => {
       queryClient.invalidateQueries({ queryKey: ["wines"] });
-      router.push(`/wines/${id}`);
+      router.push(`/article/${id}`);
     },
     onError: (err: any) => {
       alert((err as Error).message);
