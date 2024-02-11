@@ -2,12 +2,6 @@ import { supabase } from "./supabase";
 import { EditingPageSchemaType, ImageInputSchemaType } from "./schema";
 import { User } from "../store";
 
-export const fetcher = async () => {
-  const { data, error } = await supabase.from("categories").select();
-  if (error) throw error;
-  return data;
-};
-
 export const postWine = async ({
   value,
   user,
@@ -47,4 +41,65 @@ export const postWine = async ({
     if (error) throw new Error("投稿に失敗しました");
     return data[0].id;
   }
+};
+
+export const favorite = async ({
+  wine_id,
+  user_id,
+}: {
+  wine_id: string;
+  user_id: string;
+}) => {
+  const { data, error } = await supabase
+    .from("favorite")
+    .select("user_id")
+    .eq("wine_id", wine_id);
+};
+
+export const favoriteCount = async (wine_id: string) => {
+  const { count, error } = await supabase
+    .from("favorite")
+    .select("id", { count: "exact", head: true });
+  if (error) throw new Error("お気に入りのカウントに失敗しました");
+  return count;
+};
+
+export const favoriteUserOne = async (wine_id: string) => {
+  const { data, error } = await supabase
+    .from("favorite")
+    .select("user_id")
+    .eq("wine_id", wine_id)
+    .single();
+  if (error) throw new Error("お気に入りのユーザー取得に失敗しました");
+  return data;
+};
+
+export const addFavorite = async ({
+  wine_id,
+  user_id,
+}: {
+  wine_id: string;
+  user_id: string;
+}) => {
+  const { error } = await supabase
+    .from("favorite")
+    .insert({ wine_id, user_id });
+
+  if (error) throw new Error("お気に入りの登録に失敗しました");
+};
+
+export const removeFavorite = async ({
+  wine_id,
+  user_id,
+}: {
+  wine_id: string;
+  user_id: string;
+}) => {
+  const { error } = await supabase
+    .from("favorite")
+    .delete()
+    .eq("wine_id", wine_id)
+    .eq("user_id", user_id);
+
+  if (error) throw new Error("お気に入りの解除に失敗しました");
 };

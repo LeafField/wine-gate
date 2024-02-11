@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleTagsの単体テスト ArticleTagsが正しくレンダリングされているか 1`] = `
+<div>
+  <div
+    class="flex w-fit items-center gap-2"
+  >
+    <div
+      class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-base"
+    >
+      渋い
+    </div>
+    <div
+      class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-base"
+    >
+      樽熟成
+    </div>
+    <div
+      class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-base"
+    >
+      中級者向け
+    </div>
+  </div>
+</div>
+`;
