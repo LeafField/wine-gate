@@ -50,31 +50,3 @@ export const tart: Marks[] = [
     label: "酸っぱい",
   },
 ];
-
-const fluity: Marks[] = [
-  {
-    value: 1,
-    label: "ない",
-  },
-  {
-    value: 2,
-    label: "弱い",
-  },
-  {
-    value: 3,
-    label: "普通",
-  },
-  {
-    value: 4,
-    label: "強め",
-  },
-  {
-    value: 5,
-    label: "とても強い",
-  },
-];
-
-const marks = {
-  sweet: sweet,
-  tart: tart,
-};
