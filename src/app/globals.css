@@ -5,3 +5,7 @@
 input {
   font-size: 1rem !important;
 }
+
+summary::-webkit-details-marker {
+  display: none;
+}
