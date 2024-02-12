@@ -43,23 +43,11 @@ export const postWine = async ({
   }
 };
 
-export const favorite = async ({
-  wine_id,
-  user_id,
-}: {
-  wine_id: string;
-  user_id: string;
-}) => {
-  const { data, error } = await supabase
-    .from("favorite")
-    .select("user_id")
-    .eq("wine_id", wine_id);
-};
-
 export const favoriteCount = async (wine_id: string) => {
   const { count, error } = await supabase
     .from("favorite")
-    .select("id", { count: "exact", head: true });
+    .select("id", { count: "exact", head: true })
+    .eq("wine_id", wine_id);
   if (error) throw new Error("お気に入りのカウントに失敗しました");
   return count;
 };
