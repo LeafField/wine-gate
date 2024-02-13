@@ -17,7 +17,7 @@ const BackLink: FC = () => {
       type="button"
       onClick={clickHandler}
     >
-      <FontAwesomeIcon className="mt-[2px]" icon={faReply} />
+      <FontAwesomeIcon className="mt-[0.125rem]" icon={faReply} />
       前のページに戻る
     </button>
   );

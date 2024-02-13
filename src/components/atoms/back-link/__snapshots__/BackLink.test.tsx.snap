@@ -8,7 +8,7 @@ exports[`BackLinkコンポーネントの単体テスト 戻るボタンが正�
   >
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-reply mt-[2px]"
+      class="svg-inline--fa fa-reply mt-[0.125rem]"
       data-icon="reply"
       data-prefix="fas"
       focusable="false"
