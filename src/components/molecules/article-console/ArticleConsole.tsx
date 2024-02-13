@@ -14,7 +14,7 @@ type Props = {
   author_id: string;
 };
 
-const ArticleConsoleView: FC<Props> = ({ wine_id, author_id }) => {
+const ArticleConsole: FC<Props> = ({ wine_id, author_id }) => {
   const { data: count } = useQueryFavoriteCount(wine_id);
   const { data } = useQueryFavoriteUser(wine_id);
   const { user } = useStore();
@@ -35,4 +35,4 @@ const ArticleConsoleView: FC<Props> = ({ wine_id, author_id }) => {
   );
 };
 
-export default ArticleConsoleView;
+export default ArticleConsole;
