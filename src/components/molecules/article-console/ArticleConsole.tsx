@@ -21,7 +21,7 @@ const ArticleConsole: FC<Props> = ({ wine_id, author_id }) => {
   const { user } = useStore();
 
   return (
-    <div className="flex items-center justify-between gap-x-4 tablet:w-fit">
+    <div className="flex items-center justify-between gap-x-2 @[330px]:gap-x-4 tablet:w-fit">
       {countLoading ? (
         <div className="h-6 w-28 animate-pulse bg-gray"></div>
       ) : (
