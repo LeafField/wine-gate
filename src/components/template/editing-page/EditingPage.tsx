@@ -44,16 +44,15 @@ const EditingPage: FC = () => {
   });
 
   const submitHandler = async (value: EditingPageSchemaType) => {
-    console.log(value.erudition);
-    // if (!user) {
-    //   throw new Error("ログインしてください。");
-    // }
-    // const image = imageInputSchema.safeParse(value.image);
-    // if (!image.success) {
-    //   console.log(image.error.errors[0].message);
-    // } else if (image.success) {
-    //   winePostMutation.mutate({ value, user, image: image.data });
-    // }
+    if (!user) {
+      throw new Error("ログインしてください。");
+    }
+    const image = imageInputSchema.safeParse(value.image);
+    if (!image.success) {
+      alert(image.error.errors[0].message);
+    } else if (image.success) {
+      winePostMutation.mutate({ value, user, image: image.data });
+    }
   };
 
   return (
