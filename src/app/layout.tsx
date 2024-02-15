@@ -9,6 +9,7 @@ import TanstackProvider from "../components/atoms/tanstack-provider/TanstackProv
 import Header from "../components/organisms/header/Header";
 import AuthListener from "../components/organisms/listener/AuthListener";
 import PageTransitionListener from "../components/atoms/Page-transition-listener/PageTransitionListener";
+import ViewPortListener from "../components/organisms/listener/ViewPortListener";
 import Modal from "../components/organisms/modal/Modal";
 
 export const metadata: Metadata = {
@@ -30,6 +31,7 @@ export default function RootLayout({
         <TanstackProvider>
           <AuthListener />
           <PageTransitionListener />
+          <ViewPortListener />
           <Modal />
           <MantineWrapper>
             <Header />

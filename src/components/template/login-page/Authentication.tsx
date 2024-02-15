@@ -63,7 +63,7 @@ const Authentication = () => {
         throw new Error(error.message);
       } else {
         setModal(["ログインしました"]);
-        router.push("/");
+        router.back();
       }
     }
   };

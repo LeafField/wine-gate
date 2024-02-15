@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 type Props = {
-  count: number;
+  count: number | null | undefined;
 };
 
 const FavoriteCount: FC<Props> = ({ count }) => {

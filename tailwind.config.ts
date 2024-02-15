@@ -63,6 +63,7 @@ const config: Config = {
     },
   },
   plugins: [
+    require("@tailwindcss/container-queries"),
     plugin(({ addComponents, addUtilities }) => {
       addComponents({
         ".symbol": {
@@ -122,8 +123,28 @@ const config: Config = {
       });
 
       addUtilities({
+        ".grid-areas:has(.article-title)": {
+          gridTemplate:
+            '"... title title title" auto ".... main nav ...." auto / 1fr auto auto 1fr',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".article-title": {
+          gridArea: "title",
+          marginBottom: "1.5rem",
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
         ".grid-areaMobile": {
           gridTemplateAreas: '"hero" "main" ',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".grid-areaMobile:has(.article-title)": {
+          gridTemplateAreas: '"title" "main" ',
         } satisfies CSSProperties,
       });
 

@@ -3,7 +3,7 @@
 exports[`ArticleHeaderの単体テスト スナップショットテスト 1`] = `
 <div>
   <h2
-    class="border-l-4 border-blue py-[0.125rem] pl-2 text-heading2"
+    class="article-title mx-4 mt-8 border-l-4 border-blue py-[0.125rem] pl-2 text-heading2 tablet:mx-0 tablet:pt-0"
   >
     コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ
   </h2>
