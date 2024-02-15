@@ -1,5 +1,9 @@
 import dummyImage from "../images/dummy_wine.png";
-import { SmallArticleProps, CategoryProps } from "../types/article_types";
+import {
+  SmallArticleProps,
+  CategoryProps,
+  WineProps,
+} from "../types/article_types";
 
 export const smallArticleDummyData: SmallArticleProps[] = [
   {
@@ -85,3 +89,24 @@ export const categoryDummyData: CategoryProps[] = [
 export const selectDummyData = categoryDummyData.map((category) => {
   return { value: category.category, label: category.chara };
 });
+
+export const wineDummyData: WineProps = {
+  id: "sdfaf",
+  title: "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ",
+  author_id: "fsdaf",
+  author_name: "ワイン大好き太郎",
+  image_src: dummyImage.src,
+  price: 2000,
+  categories: categoryDummyData[0],
+  tags: "樽熟成",
+  sober_or_sweet: 3,
+  tart: 3,
+  fruity: 3,
+  description:
+    "チリのワインといえばコノスル！\nカベルネソーヴィニヨンの中でも特におすすめの一本です。",
+  place: "スーパー,ネット通販",
+  erudition:
+    "カベルネソーヴィニヨンはボルドー地方の赤ワインの原料としても有名です。",
+  category_id: 1,
+  created_at: "2021-10-10",
+};

@@ -56,10 +56,10 @@ export const favoriteUserOne = async (wine_id: string) => {
   const { data, error } = await supabase
     .from("favorite")
     .select("user_id")
-    .eq("wine_id", wine_id)
-    .single();
+    .eq("wine_id", wine_id);
+  console.log(data, error);
   if (error) throw new Error("お気に入りのユーザー取得に失敗しました");
-  return data;
+  return data[0] ? data[0] : null;
 };
 
 export const addFavorite = async ({
@@ -90,4 +90,15 @@ export const removeFavorite = async ({
     .eq("user_id", user_id);
 
   if (error) throw new Error("お気に入りの解除に失敗しました");
+};
+
+export const getWine = async (id: string) => {
+  const { data, error } = await supabase
+    .from("wines")
+    .select("*,categories(*)")
+    .eq("id", id)
+    .single();
+  if (error) throw new Error("ワインの取得に失敗しました");
+
+  return data;
 };

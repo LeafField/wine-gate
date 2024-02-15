@@ -2,6 +2,10 @@ import { Database } from "./schema";
 
 export type Wines = Database["public"]["Tables"]["wines"]["Row"];
 
+export type WineProps = Wines & {
+  categories: CategoryProps | null;
+};
+
 export type WinePostType = Omit<
   Database["public"]["Tables"]["wines"]["Insert"],
   "id" | "created_at"

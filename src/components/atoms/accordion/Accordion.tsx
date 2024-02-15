@@ -57,7 +57,7 @@ const Accordion: FC<Props> = ({ content }) => {
   };
 
   return (
-    <details ref={detailsRef} className="overflow-hidden">
+    <details ref={detailsRef} className="max-w-full overflow-hidden">
       <summary
         onClick={clickHandler}
         className="block cursor-pointer select-none"
@@ -74,11 +74,7 @@ const Accordion: FC<Props> = ({ content }) => {
         </div>
       </summary>
       <div className="overflow-hidden" ref={contentRef}>
-        <div className="">
-          {content.split("\n").map((text, i) => (
-            <p key={i}>{text}</p>
-          ))}
-        </div>
+        <p className="whitespace-pre-wrap pt-2">{content}</p>
       </div>
     </details>
   );

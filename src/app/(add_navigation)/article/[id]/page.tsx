@@ -1,7 +1,10 @@
 import React from "react";
+import { getWine } from "../../../../utils/fetcher";
+import ArticlePage from "../../../../components/template/article-page/ArticlePage";
 
-const page = ({ params }: { params: { id: string } }) => {
-  return <div>記事ページ</div>;
+const page = async ({ params }: { params: { id: string } }) => {
+  const wine = await getWine(params.id);
+  return <ArticlePage {...wine} />;
 };
 
 export default page;
