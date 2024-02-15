@@ -12,7 +12,7 @@ type Props = {
 
 const ArticlePanel: FC<Props> = ({ author_id, category, tags, wine_id }) => {
   return (
-    <div className="flex flex-col items-center justify-between gap-y-4 border border-gray px-5 py-2 @[500px]:flex-row">
+    <div className="flex flex-col items-center justify-between gap-y-4 border border-gray px-5 py-2 @[566px]:flex-row">
       <div>
         <ArticleTags tags={tags} category={category} />
       </div>
