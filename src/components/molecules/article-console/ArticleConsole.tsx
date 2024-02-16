@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, Suspense } from "react";
+import React, { FC } from "react";
 
 import FavoriteRegister from "../../atoms/favorite-register/FavoriteRegister";
 import FavoriteCount from "../../atoms/favorite-count/FavoriteCount";
@@ -7,6 +7,7 @@ import EditingLink from "../../atoms/editing-link/EditingLink";
 
 import useQueryFavoriteCount from "../../../hooks/useQueryFavoriteCount";
 import useQueryFavoriteUser from "../../../hooks/useQueryFavoriteUser";
+import useMutateFavoriteCount from "../../../hooks/useMutateFavoriteCount";
 import { useStore } from "../../../store";
 
 type Props = {
@@ -18,6 +19,7 @@ const ArticleConsole: FC<Props> = ({ wine_id, author_id }) => {
   const { data: count, isLoading: countLoading } =
     useQueryFavoriteCount(wine_id);
   const { data } = useQueryFavoriteUser(wine_id);
+  const { CountAddMutation, CountRemoveMutation } = useMutateFavoriteCount();
   const { user } = useStore();
 
   return (
@@ -29,10 +31,14 @@ const ArticleConsole: FC<Props> = ({ wine_id, author_id }) => {
       )}
       {user && user?.id !== author_id && (
         <FavoriteRegister
-          loading={false}
+          loading={CountAddMutation.isPending || CountRemoveMutation.isPending}
           favorite={user?.id === data?.user_id ? true : false}
-          addFavoriteCallback={() => {}}
-          removeFavoriteCallback={() => {}}
+          addFavoriteCallback={() =>
+            CountAddMutation.mutate({ user_id: user.id, wine_id })
+          }
+          removeFavoriteCallback={() =>
+            CountRemoveMutation.mutate({ user_id: user.id, wine_id })
+          }
         />
       )}
       {user && user.id === author_id && <EditingLink wine_id={wine_id} />}
