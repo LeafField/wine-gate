@@ -1,5 +1,5 @@
 "use client";
-import React, { FC } from "react";
+import React, { FC, useEffect } from "react";
 
 import { TextInput, Textarea, Button, TagsInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
@@ -21,24 +21,29 @@ import { categoryDummyData } from "../../../utils/dummyData";
 import PriceInput from "../../atoms/price-input/PriceInput";
 
 import useMutateWines from "../../../hooks/useMutateWines";
+import { Wines } from "../../../types/article_types";
 
-const EditingPage: FC = () => {
-  const { user } = useStore();
-  const { winePostMutation } = useMutateWines();
+type Props = {
+  wine?: Wines | null;
+};
+
+const EditingPage: FC<Props> = ({ wine }) => {
+  const { user, setImage_src } = useStore();
+  const { winePostMutation, wineUpdateMutation } = useMutateWines();
 
   const form = useForm<EditingPageSchemaType>({
     initialValues: {
-      title: "",
-      price: 0,
-      place: "",
-      description: "",
-      erudition: "",
-      category_id: "",
+      title: wine?.title || "",
+      price: wine?.price || 0,
+      place: wine?.place || "",
+      description: wine?.description || "",
+      erudition: wine?.erudition || "",
+      category_id: wine?.category_id.toString() || "",
       image: null,
-      fruity: 1,
-      tart: 1,
-      sober_or_sweet: 1,
-      tags: [],
+      fruity: wine?.fruity || 1,
+      tart: wine?.tart || 1,
+      sober_or_sweet: wine?.sober_or_sweet || 1,
+      tags: wine?.tags?.split(",") || [],
     },
     validate: zodResolver(editingPageSchema),
   });
@@ -47,17 +52,36 @@ const EditingPage: FC = () => {
     if (!user) {
       throw new Error("ログインしてください。");
     }
-    const image = imageInputSchema.safeParse(value.image);
-    if (!image.success) {
-      alert(image.error.errors[0].message);
-    } else if (image.success) {
-      winePostMutation.mutate({ value, user, image: image.data });
+    if (!wine) {
+      const image = imageInputSchema.safeParse(value.image);
+      if (!image.success) {
+        alert(image.error.errors[0].message);
+      } else if (image.success) {
+        winePostMutation.mutate({ value, user, image: image.data });
+      }
+    } else if (wine) {
+      wineUpdateMutation.mutate({
+        id: wine.id,
+        value,
+        user_id: user.id,
+        oldWineImage: wine.image_src,
+        image: value.image,
+      });
     }
   };
+
+  useEffect(() => {
+    if (wine?.image_src) {
+      setImage_src(
+        `https://bcssrfyaqnyvqtmabmnt.supabase.co/storage/v1/object/public/wines/${wine.image_src}`,
+      );
+    }
+  }, [setImage_src, wine]);
 
   return (
     <div className="relative z-0 mx-auto my-15 max-w-[64.9375rem]">
       {winePostMutation.isPending && <LoadingOverlay />}
+      {wineUpdateMutation.isPending && <LoadingOverlay />}
       <Heading title="記事編集" />
       <form className="space-y-15" onSubmit={form.onSubmit(submitHandler)}>
         <TextInput

@@ -4,7 +4,7 @@ exports[`EditingLinkの単体テスト propsのwine_idに応じて正しいリ�
 <div>
   <a
     class="block w-fit bg-blue/90 px-3 py-[0.375rem] text-white transition-colors duration-300 hover:bg-blue"
-    href="/editing?id=1234"
+    href="/editing/1234"
   >
     記事編集
   </a>

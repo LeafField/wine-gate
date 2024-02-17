@@ -1,17 +1,20 @@
 import React from "react";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { favoriteCount, removeFavorite } from "../utils/fetcher";
+import { addFavorite, removeFavorite } from "../utils/fetcher";
 
 const useMutateFavoriteCount = () => {
   const queryClient = useQueryClient();
 
   const CountAddMutation = useMutation({
-    mutationFn: favoriteCount,
+    mutationFn: addFavorite,
     onSuccess: (_, variable) => {
       queryClient.setQueryData(
-        ["favoriteCount", variable],
+        ["favoriteCount", variable.wine_id],
         (prevCount: number) => prevCount + 1,
       );
+      queryClient.setQueryData(["favoriteUser", variable.wine_id], {
+        user_id: variable.user_id,
+      });
     },
   });
 
@@ -19,9 +22,12 @@ const useMutateFavoriteCount = () => {
     mutationFn: removeFavorite,
     onSuccess: (_, variable) => {
       queryClient.setQueryData(
-        ["favoriteCount", variable],
+        ["favoriteCount", variable.wine_id],
         (prevCount: number) => prevCount - 1,
       );
+      queryClient.removeQueries({
+        queryKey: ["favoriteUser", variable.wine_id],
+      });
     },
   });
 

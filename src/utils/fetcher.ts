@@ -1,6 +1,7 @@
 import { supabase } from "./supabase";
 import { EditingPageSchemaType, ImageInputSchemaType } from "./schema";
 import { User } from "../store";
+import { revalidateServer } from "../server/revalidate";
 
 export const postWine = async ({
   value,
@@ -41,6 +42,52 @@ export const postWine = async ({
     if (error) throw new Error("投稿に失敗しました");
     return data[0].id;
   }
+};
+
+export const updateWine = async ({
+  id,
+  image,
+  oldWineImage,
+  user_id,
+  value,
+}: {
+  id: string;
+  user_id: string;
+  value: EditingPageSchemaType;
+  image: ImageInputSchemaType | null;
+  oldWineImage: string;
+}) => {
+  revalidateServer(id);
+  if (image) {
+    const IMAGE_SRC = `${user_id}/${image.name}`;
+    const { error } = await supabase.storage
+      .from("wines")
+      .upload(IMAGE_SRC, image);
+    if (error) throw new Error("画像のアップロードに失敗しました");
+    const { error: deleteError } = await supabase.storage
+      .from("wines")
+      .remove([oldWineImage]);
+    if (deleteError) throw new Error("画像の削除に失敗しました");
+  }
+  const { data, error } = await supabase
+    .from("wines")
+    .update({
+      title: value.title.replace(/　/g, " "),
+      price: value.price,
+      place: value.place,
+      description: value.description,
+      erudition: value.erudition,
+      category_id: Number(value.category_id),
+      fruity: value.fruity,
+      tart: value.tart,
+      sober_or_sweet: value.sober_or_sweet,
+      tags: value.tags.join(),
+      image_src: image ? `${user_id}/${image.name}` : oldWineImage,
+    })
+    .eq("id", id)
+    .select();
+  if (error) throw new Error("ワインの更新に失敗しました");
+  return data[0].id;
 };
 
 export const favoriteCount = async (wine_id: string) => {

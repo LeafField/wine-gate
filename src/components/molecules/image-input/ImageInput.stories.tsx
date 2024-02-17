@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
 import ImageInput from "./ImageInput";
-import { FC, FormEvent, PropsWithChildren } from "react";
+import { FC, FormEvent, PropsWithChildren, useEffect } from "react";
 import { useForm } from "@mantine/form";
 import { EditingPageSchemaType } from "../../../utils/schema";
+import { useStore } from "../../../store";
 
 const DummyImageForm: FC<PropsWithChildren> = ({ children }) => {
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
@@ -20,6 +21,16 @@ const DummyImageForm: FC<PropsWithChildren> = ({ children }) => {
       <button type="submit">投稿</button>
     </form>
   );
+};
+
+const ImageInputWrapper: FC = () => {
+  const { setImage_src } = useStore();
+  useEffect(() => {
+    setImage_src(
+      "https://images.unsplash.com/photo-1707343848610-16f9afe1ae23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    );
+  }, [setImage_src]);
+  return null;
 };
 
 const UseFormWrapper = () => {
@@ -57,6 +68,17 @@ export const WithForm: Story = {
   decorators: [
     (Story) => (
       <DummyImageForm>
+        <Story />
+      </DummyImageForm>
+    ),
+  ],
+};
+
+export const WithDBImageData: Story = {
+  decorators: [
+    (Story) => (
+      <DummyImageForm>
+        <ImageInputWrapper />
         <Story />
       </DummyImageForm>
     ),

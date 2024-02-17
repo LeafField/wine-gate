@@ -25,6 +25,7 @@ const config: Config = {
         15: "3.75rem",
         30: "7.5rem",
         45: "11.25rem",
+        75: "18.75rem",
       },
       fontSize: {
         "header-subtitle": "clamp(0.625rem,1.54vw,1rem)",

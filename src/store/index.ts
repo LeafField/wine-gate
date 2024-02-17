@@ -17,6 +17,9 @@ type Store = {
   modal: string[];
   setModal: (modal: string[]) => void;
   clearModal: () => void;
+  image_src: string | null;
+  setImage_src: (image_src: string) => void;
+  clearImage_src: () => void;
 };
 
 export const useStore = create<Store>((set) => ({
@@ -28,4 +31,7 @@ export const useStore = create<Store>((set) => ({
   modal: [],
   setModal: (modal) => set({ modal }),
   clearModal: () => set({ modal: [] }),
+  image_src: null,
+  setImage_src: (image_src) => set({ image_src }),
+  clearImage_src: () => set({ image_src: null }),
 }));

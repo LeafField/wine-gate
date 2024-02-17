@@ -64,4 +64,26 @@ describe("useStoreの単体テスト", () => {
     });
     expect(result.current.modal).toEqual([]);
   });
+
+  test("image_srcの初期値がnullであること", () => {
+    const { result } = renderHook(() => useStore());
+    expect(result.current.image_src).toBeNull();
+  });
+
+  test("setImage_srcを実行した時、image_srcの値が期待された値に更新されること", () => {
+    const { result } = renderHook(() => useStore());
+    act(() => {
+      result.current.setImage_src("test.jpg");
+    });
+    expect(result.current.image_src).toBe("test.jpg");
+  });
+
+  test("clearImage_srcを実行した時、image_srcの値がnullになること", () => {
+    const { result } = renderHook(() => useStore());
+    act(() => {
+      result.current.setImage_src("test.jpg");
+      result.current.clearImage_src();
+    });
+    expect(result.current.image_src).toBeNull();
+  });
 });

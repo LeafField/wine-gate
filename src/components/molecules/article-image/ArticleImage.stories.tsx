@@ -15,7 +15,7 @@ export const Default: Story = {
   args: {
     author_name: "ワイン大好きクラブ会長",
     price: 900,
-    image_src: dummyImage.src,
+    testImage: dummyImage.src,
     title: "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ",
   },
   decorators: [
@@ -31,7 +31,7 @@ export const Mobile: Story = {
   args: {
     author_name: "ワイン大好きクラブ会長",
     price: 900,
-    image_src: dummyImage.src,
+    testImage: dummyImage.src,
     title: "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ",
   },
   parameters: {

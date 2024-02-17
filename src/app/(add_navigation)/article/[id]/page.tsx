@@ -4,6 +4,7 @@ import ArticlePage from "../../../../components/template/article-page/ArticlePag
 
 const page = async ({ params }: { params: { id: string } }) => {
   const wine = await getWine(params.id);
+
   return <ArticlePage {...wine} />;
 };
 

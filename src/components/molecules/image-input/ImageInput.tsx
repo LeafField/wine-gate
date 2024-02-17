@@ -1,6 +1,8 @@
 import React, { ChangeEvent, FC, useEffect, useRef, useState } from "react";
 import { EditingPageSchemaType } from "../../../utils/schema";
 import { UseFormReturnType } from "@mantine/form";
+import { useStore } from "../../../store";
+import ImageWrapper from "../../atoms/image-wrapper/ImageWrapper";
 
 type Props = {
   form: UseFormReturnType<EditingPageSchemaType>;
@@ -9,6 +11,7 @@ type Props = {
 const ImageInput: FC<Props> = ({ form }) => {
   const [imageName, setImageName] = useState<string>("");
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const { image_src, clearImage_src } = useStore();
 
   const changeHandler = (event: ChangeEvent<HTMLInputElement>) => {
     const files = event.target.files;
@@ -21,7 +24,9 @@ const ImageInput: FC<Props> = ({ form }) => {
 
   useEffect(() => {
     const file = form.values.image;
+
     if (file) {
+      clearImage_src();
       const reader = new FileReader();
       const image = new Image();
       reader.readAsDataURL(file);
@@ -63,16 +68,19 @@ const ImageInput: FC<Props> = ({ form }) => {
       ctx.fillText("No Image", canvas.width / 2, canvas.height / 2 + 15);
       ctx.restore();
     }
-  }, [form.values.image]);
+  }, [form.values.image, clearImage_src]);
 
   return (
     <div>
-      <canvas
-        width={320}
-        height={300}
-        className="bg-gray"
-        ref={canvasRef}
-      ></canvas>
+      <div className="h-75 relative w-80">
+        <canvas
+          width={320}
+          height={300}
+          className="bg-gray"
+          ref={canvasRef}
+        ></canvas>
+        {image_src && !form.values.image && <ImageWrapper src={image_src} />}
+      </div>
       <div className="relative mt-4 w-80 overflow-hidden border-2 border-gray">
         <label
           htmlFor="image"

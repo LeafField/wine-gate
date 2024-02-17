@@ -9,3 +9,7 @@ input {
 summary::-webkit-details-marker {
   display: none;
 }
+
+body {
+  background-color: white !important;
+}
