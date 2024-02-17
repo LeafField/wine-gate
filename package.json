@@ -37,6 +37,7 @@
     "zustand": "^4.5.0"
   },
   "devDependencies": {
+    "@opentelemetry/api": "^1.7.0",
     "@storybook/addon-essentials": "^7.6.16",
     "@storybook/addon-interactions": "^7.6.16",
     "@storybook/addon-links": "^7.6.16",
