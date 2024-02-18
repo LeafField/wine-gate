@@ -207,6 +207,23 @@ const config: Config = {
           alignItems: "center",
         } satisfies CSSProperties,
       });
+      addUtilities({
+        ".clip": {
+          clipPath: "inset(0)",
+        } satisfies CSSProperties,
+      });
+      addUtilities({
+        ".hero-overlay": {
+          backgroundImage:
+            "linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.75) 90%)",
+        } satisfies CSSProperties,
+      });
+      addUtilities({
+        ".hero-mobile-verlay": {
+          backgroundImage:
+            "linear-gradient(90deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70) 90%)",
+        } satisfies CSSProperties,
+      });
     }),
   ],
 };

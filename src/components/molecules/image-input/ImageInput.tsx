@@ -68,11 +68,15 @@ const ImageInput: FC<Props> = ({ form }) => {
       ctx.fillText("No Image", canvas.width / 2, canvas.height / 2 + 15);
       ctx.restore();
     }
+
+    return () => {
+      clearImage_src();
+    };
   }, [form.values.image, clearImage_src]);
 
   return (
     <div>
-      <div className="h-75 relative w-80">
+      <div className="relative h-75 w-80">
         <canvas
           width={320}
           height={300}
