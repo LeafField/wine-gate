@@ -27,6 +27,7 @@ const CategoryHeader: FC<Props> = ({ title }) => {
         className="block w-48"
         value={params && params.category[1] ? params.category[1] : "new"}
         onChange={changeHandler}
+        id="sort-select"
       />
     </div>
   );

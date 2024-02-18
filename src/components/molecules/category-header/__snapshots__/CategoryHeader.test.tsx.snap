@@ -29,7 +29,7 @@ exports[`CategoryHeaderの単体テスト スナップショットテスト 1`] 
           aria-invalid="false"
           class="m-8fb7ebe7 mantine-Input-input mantine-NativeSelect-input"
           data-variant="default"
-          id="mantine-ftjeks90i"
+          id="sort-select"
         >
           <option
             value="new"
