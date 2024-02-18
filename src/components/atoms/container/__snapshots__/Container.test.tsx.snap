@@ -3,7 +3,7 @@
 exports[`Contaierの単体テスト スナップショットテスト 1`] = `
 <div>
   <div
-    class="mx-auto grid justify-center grid-areaMobile max-tablet:grid-cols-1 tablet:gap-x-5 tablet:grid-areas tablet:empty-hero"
+    class="mx-auto grid justify-center grid-areaMobile max-tablet:grid-cols-1 tablet:gap-x-5 tablet:grid-areas"
   />
 </div>
 `;

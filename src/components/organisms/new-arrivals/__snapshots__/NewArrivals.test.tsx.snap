@@ -10,7 +10,7 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
       class="col-span-3"
     >
       <h2
-        class="text-heading2 border-b-2 border-red  "
+        class="border-b-2 border-red text-heading2"
       >
         新着ワイン
       </h2>

@@ -119,7 +119,13 @@ const config: Config = {
       addUtilities({
         ".grid-areas": {
           gridTemplate:
-            '"hero hero hero hero" auto ".... main nav ...." auto / 1fr auto auto 1fr',
+            '"hero hero hero hero" auto ".... sort .... ...." auto ".... main nav ...." auto / 1fr auto auto 1fr',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".grid-areas:not(:has([class*=hero]))": {
+          paddingTop: "3.75rem",
         } satisfies CSSProperties,
       });
 
@@ -146,12 +152,6 @@ const config: Config = {
       addUtilities({
         ".grid-areaMobile:has(.article-title)": {
           gridTemplateAreas: '"title" "main" ',
-        } satisfies CSSProperties,
-      });
-
-      addUtilities({
-        ".empty-hero:not(:has([class*=hero]))": {
-          paddingTop: "3.75rem",
         } satisfies CSSProperties,
       });
 
