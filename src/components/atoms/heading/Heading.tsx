@@ -5,7 +5,7 @@ type Props = {
 };
 
 const Heading: FC<Props> = ({ title }) => {
-  return <h2 className="text-heading2 border-b-2 border-red  ">{title}</h2>;
+  return <h2 className="border-b-2 border-red text-heading2">{title}</h2>;
 };
 
 export default Heading;
