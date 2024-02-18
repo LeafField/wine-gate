@@ -13,3 +13,7 @@ summary::-webkit-details-marker {
 body {
   background-color: white !important;
 }
+
+.sb-show-main.sb-main-padded {
+  padding: 0;
+}
