@@ -16,9 +16,9 @@ const Navigation = () => {
         className={`${menu === "close" ? "invisible" : "show-panel"} z-nav tablet:visible tablet:sticky tablet:top-1 tablet:space-y-2`}
         id="navigation"
       >
-        <UserPanel />
         <CategoryPanel categories={categoryDummyData} />
         <SearchPanel selectData={selectDummyData} />
+        <UserPanel />
       </div>
       <NavMenu />
     </nav>
