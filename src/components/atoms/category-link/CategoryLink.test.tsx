@@ -3,8 +3,8 @@ import CategoryLink from "./CategoryLink";
 
 describe("CategoryLinkの単体テスト", () => {
   const mockProps = {
-    src: "渋い",
-    title: "sober",
+    title: "渋い",
+    src: "sober",
   };
 
   test("コンポーネントがクラッシュせずにレンダリングされる", () => {
@@ -16,7 +16,7 @@ describe("CategoryLinkの単体テスト", () => {
   test("リンクが正しいhrefを持つ", () => {
     render(<CategoryLink {...mockProps} />);
     const linkElement = screen.getByRole("link");
-    expect(linkElement).toHaveAttribute("href", `/${mockProps.src}`);
+    expect(linkElement).toHaveAttribute("href", `/category/${mockProps.src}`);
   });
 
   test("リンクが正しいテキストを持つ", () => {

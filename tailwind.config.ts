@@ -145,7 +145,7 @@ const config: Config = {
 
       addUtilities({
         ".grid-areaMobile": {
-          gridTemplateAreas: '"hero" "main" ',
+          gridTemplateAreas: '"hero" "sort" "main" ',
         } satisfies CSSProperties,
       });
 
@@ -172,9 +172,18 @@ const config: Config = {
       addUtilities({
         ".hero": {
           gridArea: "hero",
-          marginBottom: "7.5rem",
         } satisfies CSSProperties,
       });
+
+      addUtilities({
+        ".sort": {
+          gridArea: "sort",
+          marginTop: "3.75rem",
+          marginBottom: "1.5rem",
+          maxWidth: "64.9375rem",
+        } satisfies CSSProperties,
+      });
+
       addComponents({
         ".show-panel": {
           visibility: "visible",
