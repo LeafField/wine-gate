@@ -5,10 +5,10 @@ import lineUpImage from "../../../images/lineup_image.jpg";
 
 const LineUpHero: FC = () => {
   return (
-    <div className="tablet:h-75 relative h-40">
+    <div className="relative h-40 hero tablet:h-75">
       <HeroHeader title="ワイン検索" />
-      <div className="clip absolute inset-0 h-full w-full">
-        <div className="tablet:h-75 fixed inset-0 h-40 w-full">
+      <div className="absolute inset-0 h-full w-full clip">
+        <div className="h-40 w-full tablet:h-75">
           <Image
             src={lineUpImage}
             alt="様々な種類のグラスワインが並んでいる"
