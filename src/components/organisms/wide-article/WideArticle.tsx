@@ -23,7 +23,7 @@ const WideArticle: FC<Props> = ({ article, image_src }) => {
               src={image_src}
               alt={`${article.title}の画像`}
               fill
-              style={{ objectFit: "cover", width: "100%", height: "100%" }}
+              style={{ objectFit: "contain", width: "100%", height: "100%" }}
               sizes="(min-width: 768px) 20.8125rem, 100vw"
               priority
             />
