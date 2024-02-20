@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleInfoの単体テスト ArticleInfoが正しく表示される 1`] = `
+<div>
+  <div
+    class="flex w-fit gap-x-4"
+  >
+    <p
+      class="text-main-text"
+    >
+      甘味
+      :
+      2
+    </p>
+    <p
+      class="text-main-text"
+    >
+      酸味
+      :
+      3
+    </p>
+    <p
+      class="text-main-text"
+    >
+      果実味
+      :
+      1
+    </p>
+  </div>
+</div>
+`;

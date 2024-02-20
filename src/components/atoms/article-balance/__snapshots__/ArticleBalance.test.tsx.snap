@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArticleBalanceの単体テスト ArticleBalanceが正しく表示される 1`] = `
+<div>
+  <p
+    class="text-main-text"
+  >
+    甘味
+    :
+    3
+  </p>
+</div>
+`;

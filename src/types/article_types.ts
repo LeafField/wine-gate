@@ -6,6 +6,26 @@ export type WineProps = Wines & {
   categories: CategoryProps | null;
 };
 
+export type TasteBalanceProps = {
+  sober_or_sweet: number;
+  tart: number;
+  fruity: number;
+};
+
+export type ArticleProps = Pick<
+  Wines,
+  | "title"
+  | "sober_or_sweet"
+  | "tart"
+  | "fruity"
+  | "author_name"
+  | "tags"
+  | "id"
+  | "price"
+> & {
+  categories: CategoryProps;
+};
+
 export type WinePostType = Omit<
   Database["public"]["Tables"]["wines"]["Insert"],
   "id" | "created_at"

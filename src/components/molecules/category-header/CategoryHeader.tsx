@@ -16,7 +16,7 @@ const CategoryHeader: FC<Props> = ({ title }) => {
   };
 
   return (
-    <div className="sort flex flex-col-reverse justify-between gap-y-2 border-b-2 border-red tablet:w-[calc(var(--vw)-401px)] tablet:flex-row tablet:items-center">
+    <div className="mx-4 flex flex-col-reverse justify-between gap-y-2 border-b-2 border-red sort tablet:mx-0 tablet:w-[calc(var(--vw)-401px)] tablet:flex-row tablet:items-center">
       <h2 className="text-heading2">{title}</h2>
       <NativeSelect
         data={[
