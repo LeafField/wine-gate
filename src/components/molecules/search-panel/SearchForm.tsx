@@ -31,9 +31,7 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
     const schema = searchSchema.safeParse(data);
     if (schema.success) {
       const slug = schema.data;
-      router.push(
-        `/search?sort=${slug.sort}&category=${slug.category}&search=${slug.search}`,
-      );
+      router.push(`/search?search=${slug.search}`);
       setErrorState(null);
     } else {
       setErrorState(schema.error.errors[0].message);
@@ -52,8 +50,6 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
         role="search"
       >
         <SearchInput ref={inputRef} error={errorState} />
-        <SearchSort />
-        <SearchCategory selectData={selectData} />
         <SearchButton />
       </form>
     </div>

@@ -8,7 +8,7 @@ const LineUpHero: FC = () => {
     <div className="relative h-40 hero tablet:h-75">
       <HeroHeader title="ワイン検索" />
       <div className="absolute inset-0 h-full w-full clip">
-        <div className="h-40 w-full tablet:h-75">
+        <div className="absolute inset-0 h-40 w-full tablet:h-75">
           <Image
             src={lineUpImage}
             alt="様々な種類のグラスワインが並んでいる"

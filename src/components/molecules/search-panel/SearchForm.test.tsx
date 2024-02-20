@@ -49,9 +49,7 @@ describe("SearchFormの結合テスト", () => {
     await userEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(mockRouterPush).toHaveBeenCalledWith(
-        "/search?sort=new&category=&search=コノスル",
-      );
+      expect(mockRouterPush).toHaveBeenCalledWith("/search?search=コノスル");
     });
   });
 

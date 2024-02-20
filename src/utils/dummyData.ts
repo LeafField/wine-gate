@@ -3,6 +3,7 @@ import {
   SmallArticleProps,
   CategoryProps,
   WineProps,
+  ArticleProps,
 } from "../types/article_types";
 
 export const smallArticleDummyData: SmallArticleProps[] = [
@@ -109,4 +110,16 @@ export const wineDummyData: WineProps = {
     "カベルネソーヴィニヨンはボルドー地方の赤ワインの原料としても有名です。",
   category_id: 1,
   created_at: "2021-10-10",
+};
+
+export const articleDummyData: ArticleProps = {
+  title: "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ",
+  author_name: "ワイン大好き太郎",
+  tags: "樽熟成",
+  sober_or_sweet: 3,
+  tart: 3,
+  fruity: 3,
+  categories: categoryDummyData[0],
+  id: "1",
+  price: 1500,
 };
