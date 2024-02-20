@@ -3,7 +3,7 @@ import CategoryHeader from "../../../../components/molecules/category-header/Cat
 import LineUpHero from "../../../../components/molecules/lineup-hero/LineUpHero";
 import WideArticle from "../../../../components/organisms/wide-article/WideArticle";
 import { articleDummyData } from "../../../../utils/dummyData";
-import dummyImage from "../../../../images/dummy_wine.png";
+import dummyImage from "../../../../images/dummy_wine2.jpg";
 
 const CategoryPage = () => {
   return (

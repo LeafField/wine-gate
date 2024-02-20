@@ -1,7 +1,7 @@
 import { StoryObj, Meta } from "@storybook/react";
 import WideArticle from "./WideArticle";
 import { articleDummyData } from "../../../utils/dummyData";
-import dummyImage from "../../../images/dummy_wine.png";
+import dummyImage from "../../../images/dummy_wine2.jpg";
 
 const meta = {
   title: "organisms/WideArticle",
