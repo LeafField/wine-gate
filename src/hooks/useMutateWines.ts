@@ -21,6 +21,7 @@ const useMutateWines = () => {
   const wineUpdateMutation = useMutation({
     mutationFn: updateWine,
     onSuccess: (id) => {
+      revalidateServer(id);
       router.replace(`/article/${id}`);
     },
   });

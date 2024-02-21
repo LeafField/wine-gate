@@ -36,7 +36,7 @@ export const postWine = async ({
         tags: value.tags.join(),
         author_id: user.id,
         author_name: user.username,
-        image_src: `https://bcssrfyaqnyvqtmabmnt.supabase.co/storage/v1/object/public/wines/${imageData.path}`,
+        image_src: imageData.path,
       })
       .select();
     if (error) throw new Error("投稿に失敗しました");

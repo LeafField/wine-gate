@@ -27,6 +27,7 @@ const WideArticle: FC<Props> = ({ article, image_src, favorite_count }) => {
               style={{ objectFit: "contain", width: "100%", height: "100%" }}
               sizes="(min-width: 768px) 20.8125rem, 100vw"
               priority
+              loading="eager"
             />
           </figure>
         </div>
