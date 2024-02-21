@@ -21,7 +21,7 @@ const WideArticle: FC<Props> = ({ article, image_src, favorite_count }) => {
             className="relative h-full w-full bg-gray transition-transform duration-300 group-hover:scale-110"
           >
             <Image
-              src={image_src}
+              src={`${process.env.NEXT_PUBLIC_SUPABSE_IMAGE_URL}${image_src}`}
               alt={`${article.title}の画像`}
               fill
               style={{ objectFit: "contain", width: "100%", height: "100%" }}

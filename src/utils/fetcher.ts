@@ -2,6 +2,7 @@ import { supabase } from "./supabase";
 import { EditingPageSchemaType, ImageInputSchemaType } from "./schema";
 import { User } from "../store";
 import { revalidateServer } from "../server/revalidate";
+import { SmallArticleProps } from "../types/article_types";
 
 export const postWine = async ({
   value,
@@ -42,6 +43,22 @@ export const postWine = async ({
     if (error) throw new Error("投稿に失敗しました");
     return data[0].id;
   }
+};
+
+export const getNewWines = async () => {
+  const { data, error } = await supabase
+    .from("wines")
+    .select("*,categories(chara)")
+    .order("created_at", { ascending: false });
+  if (error) throw new Error("新着ワインの取得に失敗しました");
+  const smallArticles: SmallArticleProps[] = data.map((wine) => ({
+    id: wine.id,
+    title: wine.title,
+    image_src: wine.image_src,
+    tags: wine.tags,
+    chara: wine.categories!.chara,
+  }));
+  return smallArticles;
 };
 
 export const updateWine = async ({
