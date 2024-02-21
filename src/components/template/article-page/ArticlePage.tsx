@@ -38,7 +38,10 @@ const ArticlePage: FC<WineProps> = (props) => {
         <div className="w-fit">
           <h3 className="text-heading3 font-bold">味のバランス</h3>
           <div className="mt-2 space-y-4">
-            <TasteBalance title="渋味" balance={props.sober_or_sweet} />
+            <TasteBalance
+              title={props.categories?.sub === "red" ? "渋味" : "甘味"}
+              balance={props.sober_or_sweet}
+            />
             <TasteBalance title="酸味" balance={props.tart} />
             <TasteBalance title="果実味" balance={props.fruity} />
           </div>
@@ -53,7 +56,7 @@ const ArticlePage: FC<WineProps> = (props) => {
           <h3 className="text-heading3 font-bold">買える場所</h3>
           <p className="mt-2 text-main-text">{props.place}</p>
         </div>
-        <Accordion content={props.erudition ? props.erudition : ""} />
+        {props.erudition && <Accordion content={props.erudition} />}
       </main>
       <div className="footer-area">
         <BackLink />

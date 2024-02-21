@@ -17,6 +17,9 @@ const LineUpHero: FC = () => {
               objectFit: "cover",
             }}
             sizes="100vw"
+            priority
+            loading="eager"
+            key={lineUpImage.src}
           />
         </div>
       </div>
