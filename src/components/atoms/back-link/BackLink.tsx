@@ -1,3 +1,4 @@
+"use client";
 import React, { FC, MouseEvent } from "react";
 import { useRouter } from "next/navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

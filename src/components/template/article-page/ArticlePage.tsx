@@ -5,6 +5,8 @@ import Accordion from "../../atoms/accordion/Accordion";
 import { WineProps } from "../../../types/article_types";
 import ArticlePanel from "../../organisms/article-panel/ArticlePanel";
 import TasteBalance from "../../atoms/taste-balance/TasteBalance";
+import BackLink from "../../atoms/back-link/BackLink";
+import TopPageLink from "../../atoms/toppage-link/TopPageLink";
 
 const ArticlePage: FC<WineProps> = (props) => {
   return (
@@ -53,6 +55,10 @@ const ArticlePage: FC<WineProps> = (props) => {
         </div>
         <Accordion content={props.erudition ? props.erudition : ""} />
       </main>
+      <div className="footer-area">
+        <BackLink />
+        <TopPageLink />
+      </div>
     </>
   );
 };

@@ -17,3 +17,8 @@ body {
 .sb-show-main.sb-main-padded {
   padding: 0;
 }
+
+button[data-active="true"] {
+  background-color: #1400ff;
+  color: #fff;
+}

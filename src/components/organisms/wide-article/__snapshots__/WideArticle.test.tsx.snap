@@ -4,7 +4,7 @@ exports[`WideArticleの単体テスト WideArticleコンポーネントが存在
 <div>
   <a
     class="block @container"
-    href="/artcle/4be1f2ab-b3b3-4599-b1a1-a73d280f5033"
+    href="/article/4be1f2ab-b3b3-4599-b1a1-a73d280f5033"
   >
     <article
       class="group flex flex-col border border-gray transition-colors duration-300 hover:border-blue @[767px]:flex-row"
