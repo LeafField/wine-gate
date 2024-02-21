@@ -20,7 +20,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/sober"
+            href="/category/sober/new/1"
           >
             渋い
           </a>
@@ -28,7 +28,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/tart"
+            href="/category/tart/new/1"
           >
             酸っぱい
           </a>
@@ -36,7 +36,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/fruity"
+            href="/category/fruity/new/1"
           >
             果実味豊か
           </a>
@@ -48,7 +48,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/white"
+            href="/category/white/new/1"
           >
             辛口白
           </a>
@@ -56,7 +56,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/sweet"
+            href="/category/sweet/new/1"
           >
             甘口白
           </a>
@@ -68,7 +68,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/rose"
+            href="/category/rose/new/1"
           >
             ロゼ
           </a>
@@ -76,7 +76,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/orange"
+            href="/category/orange/new/1"
           >
             オレンジ
           </a>
@@ -88,7 +88,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/sparkling"
+            href="/category/sparkling/new/1"
           >
             スパークリング
           </a>
@@ -96,7 +96,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
         <li>
           <a
             class="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
-            href="/category/fortified"
+            href="/category/fortified/new/1"
           >
             酒精強化
           </a>

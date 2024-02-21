@@ -4,20 +4,12 @@ import Image from "next/image";
 import ImageFooter from "../../atoms/image-footer/ImageFooter";
 import { Wines } from "../../../types/article_types";
 
-type Props = Pick<Wines, "author_name" | "price" | "title"> & {
-  testImage?: string;
-} & Partial<Pick<Wines, "image_src">>;
+type Props = Pick<Wines, "author_name" | "price" | "title" | "image_src">;
 
-const ArticleImage: FC<Props> = ({
-  author_name,
-  image_src,
-  price,
-  title,
-  testImage,
-}) => {
-  const src = testImage
-    ? testImage
-    : `https://bcssrfyaqnyvqtmabmnt.supabase.co/storage/v1/object/public/wines/${image_src}`;
+const ArticleImage: FC<Props> = ({ author_name, image_src, price, title }) => {
+  const src = process.env.NEXT_PUBLIC_SUPABSE_IMAGE_URL
+    ? `${process.env.NEXT_PUBLIC_SUPABSE_IMAGE_URL + image_src}`
+    : image_src;
   return (
     <div className="space-y-2">
       <figure className="relative aspect-video bg-gray">

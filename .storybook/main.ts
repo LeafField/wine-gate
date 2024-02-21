@@ -15,5 +15,11 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   staticDirs: ["../public"],
+  env(config) {
+    return {
+      ...config,
+      NEXT_PUBLIC_SUPABSE_IMAGE_URL: "",
+    };
+  },
 };
 export default config;
