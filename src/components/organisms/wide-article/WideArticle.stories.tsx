@@ -28,6 +28,21 @@ export const Laptop: Story = {
   ],
 };
 
+export const AddFavoriteCount: Story = {
+  args: {
+    article: articleDummyData,
+    image_src: dummyImage.src,
+    favorite_count: 10,
+  },
+  decorators: [
+    (Story) => (
+      <div className="ml-4 mt-4 max-w-[1039px]">
+        <Story />
+      </div>
+    ),
+  ],
+};
+
 export const Double: Story = {
   decorators: [
     (Story) => (

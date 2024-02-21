@@ -8,11 +8,12 @@ import ArticleInfo from "../../molecules/article-info/ArticleInfo";
 type Props = {
   article: ArticleProps;
   image_src: string;
+  favorite_count?: number;
 };
 
-const WideArticle: FC<Props> = ({ article, image_src }) => {
+const WideArticle: FC<Props> = ({ article, image_src, favorite_count }) => {
   return (
-    <Link href={`/artcle/${article.id}`} className="block @container">
+    <Link href={`/article/${article.id}`} className="block @container">
       <article className="group flex flex-col border border-gray transition-colors duration-300 hover:border-blue @[767px]:flex-row">
         <div className="aspect-video w-full shrink-0 overflow-hidden @[767px]:aspect-auto @[767px]:h-auto @[767px]:w-[20.8125rem]">
           <figure
@@ -29,7 +30,7 @@ const WideArticle: FC<Props> = ({ article, image_src }) => {
             />
           </figure>
         </div>
-        <div className="flex-1 space-y-4 px-3 py-5 ">
+        <div className="flex-1 space-y-4 p-2 @[767px]:px-3 @[767px]:py-5 ">
           <h3 className="text-heading3">{article.title}</h3>
           <ArticleTags tags={article.tags} category={article.categories} />
           <ArticleInfo
@@ -37,6 +38,7 @@ const WideArticle: FC<Props> = ({ article, image_src }) => {
             sober_or_sweet={article.sober_or_sweet}
             tart={article.tart}
             fruity={article.fruity}
+            favorite_count={favorite_count}
           />
           <div className="flex justify-between">
             <p className="text-main-text">{article.author_name}</p>

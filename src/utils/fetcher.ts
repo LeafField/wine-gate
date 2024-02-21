@@ -104,7 +104,6 @@ export const favoriteUserOne = async (wine_id: string) => {
     .from("favorite")
     .select("user_id")
     .eq("wine_id", wine_id);
-  console.log(data, error);
   if (error) throw new Error("お気に入りのユーザー取得に失敗しました");
   return data[0] ? data[0] : null;
 };

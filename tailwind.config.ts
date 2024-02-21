@@ -119,7 +119,7 @@ const config: Config = {
       addUtilities({
         ".grid-areas": {
           gridTemplate:
-            '"hero hero hero hero" auto ".... sort .... ...." auto ".... main nav ...." auto / 1fr auto auto 1fr',
+            '"hero hero hero hero" auto ".... sort .... ...." auto ".... main nav ...." auto ".... footer footer ...." auto / 1fr auto auto 1fr',
         } satisfies CSSProperties,
       });
 
@@ -132,7 +132,19 @@ const config: Config = {
       addUtilities({
         ".grid-areas:has(.article-title)": {
           gridTemplate:
-            '"... title title title" auto ".... main nav ...." auto / 1fr auto auto 1fr',
+            '"... title title title" auto ".... main nav ...." auto ".... footer footer ...." auto / 1fr auto auto 1fr',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".grid-areaMobile": {
+          gridTemplateAreas: '"hero" "sort" "main" "footer"',
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".grid-areaMobile:has(.article-title)": {
+          gridTemplateAreas: '"title" "main" "footer"',
         } satisfies CSSProperties,
       });
 
@@ -140,18 +152,6 @@ const config: Config = {
         ".article-title": {
           gridArea: "title",
           marginBottom: "1.5rem",
-        } satisfies CSSProperties,
-      });
-
-      addUtilities({
-        ".grid-areaMobile": {
-          gridTemplateAreas: '"hero" "sort" "main" ',
-        } satisfies CSSProperties,
-      });
-
-      addUtilities({
-        ".grid-areaMobile:has(.article-title)": {
-          gridTemplateAreas: '"title" "main" ',
         } satisfies CSSProperties,
       });
 
@@ -181,6 +181,17 @@ const config: Config = {
           marginTop: "3.75rem",
           marginBottom: "1.5rem",
           maxWidth: "64.9375rem",
+        } satisfies CSSProperties,
+      });
+
+      addUtilities({
+        ".footer-area": {
+          gridArea: "footer",
+          marginTop: "3.75rem",
+          display: "flex",
+          alignItems: "center",
+          flexDirection: "column",
+          gap: "1rem",
         } satisfies CSSProperties,
       });
 

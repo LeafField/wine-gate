@@ -120,6 +120,6 @@ export const articleDummyData: ArticleProps = {
   tart: 3,
   fruity: 3,
   categories: categoryDummyData[0],
-  id: "1",
+  id: "4be1f2ab-b3b3-4599-b1a1-a73d280f5033",
   price: 1500,
 };
