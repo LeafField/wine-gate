@@ -33,3 +33,16 @@ export const categoryFetcher = cache(async (slug: string[]) => {
   }
   return null;
 });
+
+export const categoryCountFetcher = cache(async (category: string) => {
+  const { count } = await supabase
+    .from("wines")
+    .select("id,categories(category)", { count: "exact", head: true })
+    .eq("categories.category", category);
+  if (count) {
+    const totalPage = Math.ceil(count / 10);
+    return totalPage;
+  } else {
+    return 1;
+  }
+});

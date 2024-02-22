@@ -4,12 +4,18 @@ import CategoryHeader from "../../molecules/category-header/CategoryHeader";
 import WideArticle from "../../organisms/wide-article/WideArticle";
 import TopPageLink from "../../atoms/toppage-link/TopPageLink";
 import { ArticleProps } from "../../../types/article_types";
+import WinePagination from "../../molecules/pagination/WinePagination";
 
 type Props = {
   articles: ArticleProps[] | null;
+  slug: string[];
+  totalPage: number;
 };
 
-const CategoryPage: FC<Props> = ({ articles }) => {
+const CategoryPage: FC<Props> = ({ articles, slug, totalPage }) => {
+  const category = slug[0];
+  const sort = slug[1];
+  const activePage = slug[2];
   return (
     <>
       <LineUpHero />
@@ -21,6 +27,12 @@ const CategoryPage: FC<Props> = ({ articles }) => {
           ))}
       </main>
       <div className="footer-area">
+        <WinePagination
+          totalPages={totalPage}
+          categorySlug={category}
+          activePage={Number(activePage)}
+          sort={sort}
+        />
         <TopPageLink />
       </div>
     </>
