@@ -22,8 +22,13 @@ export type ArticleProps = Pick<
   | "tags"
   | "id"
   | "price"
+  | "image_src"
 > & {
-  categories: CategoryProps;
+  categories: CategoryProps | null;
+} & {
+  favorite?: {
+    count: number;
+  } | null;
 };
 
 export type WinePostType = Omit<
@@ -34,7 +39,11 @@ export type WinePostType = Omit<
 export type SmallArticleProps = Pick<
   Wines,
   "title" | "id" | "image_src" | "tags"
-> &
-  Pick<Database["public"]["Tables"]["categories"]["Row"], "chara">;
+> & {
+  categories: Pick<
+    Database["public"]["Tables"]["categories"]["Row"],
+    "chara"
+  > | null;
+};
 
 export type CategoryProps = Database["public"]["Tables"]["categories"]["Row"];

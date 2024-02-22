@@ -12,9 +12,10 @@ const ArticleTags: FC<Props> = ({ category, tags }) => {
   return (
     <div className="flex w-fit items-center gap-2">
       <Pill title={category.chara} big={true} />
-      {tags
-        ?.split(",")
-        .map((tag, i) => <Pill key={i} title={tag} big={true} />)}
+      {tags &&
+        tags
+          ?.split(",")
+          .map((tag, i) => <Pill key={i} title={tag} big={true} />)}
     </div>
   );
 };

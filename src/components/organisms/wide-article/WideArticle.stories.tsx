@@ -15,7 +15,6 @@ type Story = StoryObj<typeof meta>;
 export const Laptop: Story = {
   args: {
     article: articleDummyData,
-    image_src: dummyImage.src,
     // image_src:
     //   "https://bcssrfyaqnyvqtmabmnt.supabase.co/storage/v1/object/public/wines/d73c4932-020b-4c5c-b784-185cbaf301cb/conosur.jpg",
   },
@@ -31,7 +30,6 @@ export const Laptop: Story = {
 export const AddFavoriteCount: Story = {
   args: {
     article: articleDummyData,
-    image_src: dummyImage.src,
     favorite_count: 10,
   },
   decorators: [
@@ -68,15 +66,14 @@ export const Double: Story = {
       tags: "樽熟成",
       title:
         "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ あああああああああああああああああああ",
+      image_src: dummyImage.src,
     },
-    image_src: dummyImage.src,
   },
 };
 
 export const Mobile: Story = {
   args: {
     article: articleDummyData,
-    image_src: dummyImage.src,
   },
   parameters: {
     viewport: {

@@ -33,6 +33,11 @@ const DummyDataWrapper = (props: WineProps) => {
 const meta = {
   title: "template/ArticlePage",
   component: DummyDataWrapper,
+  parameters: {
+    nextjs: {
+      appDirectory: true,
+    },
+  },
 } satisfies Meta<typeof DummyDataWrapper>;
 
 export default meta;
