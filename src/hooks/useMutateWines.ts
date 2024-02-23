@@ -1,7 +1,6 @@
 import { postWine, updateWine } from "../utils/fetcher";
 import { useRouter } from "next/navigation";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { revalidateServer } from "../server/revalidate";
 
 const useMutateWines = () => {
   const queryClient = useQueryClient();
@@ -21,7 +20,6 @@ const useMutateWines = () => {
   const wineUpdateMutation = useMutation({
     mutationFn: updateWine,
     onSuccess: (id) => {
-      revalidateServer(id);
       router.replace(`/article/${id}`);
     },
   });

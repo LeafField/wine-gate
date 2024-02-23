@@ -20,7 +20,9 @@ type Story = StoryObj<typeof SmallArticle>;
 
 export const Primary: Story = {
   args: {
-    chara: "渋い",
+    categories: {
+      chara: "渋い",
+    },
     title: "コノスル カベルネ・ソーヴィニヨン ビシクレタ・レゼルバ",
     image_src: dummyImage.src,
     id: "/",
@@ -29,7 +31,9 @@ export const Primary: Story = {
 
 export const Secondary: Story = {
   args: {
-    chara: "酸っぱい",
+    categories: {
+      chara: "果実味豊か",
+    },
     tags: "樽熟成,上級者向き",
     title: "コノスル カベルネ・ソーヴィニヨン ビシクレタ・レゼルバ",
     image_src: dummyImage.src,

@@ -37,7 +37,7 @@ exports[`SmallArticle 単体テスト スナップショット 1`] = `
       <div
         class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
       >
-        chara
+        Test Chara
       </div>
       <div
         class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"

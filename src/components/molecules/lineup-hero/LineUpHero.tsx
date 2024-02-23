@@ -19,7 +19,7 @@ const LineUpHero: FC = () => {
             sizes="100vw"
             priority
             loading="eager"
-            key={lineUpImage.src}
+            key={"lineup_hero"}
           />
         </div>
       </div>

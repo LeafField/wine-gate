@@ -5,11 +5,11 @@ import WineImage from "../../atoms/wine-image/WineImage";
 import { SmallArticleProps } from "../../../types/article_types";
 
 const SmallArticle: FC<SmallArticleProps> = ({
-  chara,
   tags,
   image_src,
   title,
   id,
+  categories,
 }) => {
   const splitTags = tags && tags.split(",");
 
@@ -22,7 +22,7 @@ const SmallArticle: FC<SmallArticleProps> = ({
       <WineImage src={image_src} />
       <h3 className="w-full px-2 text-base text-black">{title}</h3>
       <div className="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2">
-        <Pill title={chara} />
+        {categories && <Pill title={categories.chara} />}
         {splitTags && splitTags.map((tag) => <Pill key={tag} title={tag} />)}
       </div>
     </Link>

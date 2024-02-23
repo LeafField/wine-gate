@@ -1,13 +1,16 @@
 import { render, screen } from "@testing-library/react";
 import SmallArticle from "./SmallArticle";
+import { SmallArticleProps } from "../../../types/article_types";
 
 describe("SmallArticle 単体テスト", () => {
-  const props = {
-    chara: "chara",
+  const props: SmallArticleProps = {
     tags: "tag1,tag2",
     image_src: "/test/image.jpg",
     title: "Test Title",
     id: "1",
+    categories: {
+      chara: "Test Chara",
+    },
   };
 
   test("指定されたプロパティを持つ要素がレンダリングされているか", () => {
@@ -18,7 +21,7 @@ describe("SmallArticle 単体テスト", () => {
     const titleElement = screen.getByText(props.title);
     expect(titleElement).toBeInTheDocument();
 
-    const charaElement = screen.getByText(props.chara);
+    const charaElement = screen.getByText(props.categories!.chara);
     expect(charaElement).toBeInTheDocument();
 
     const tagElements = screen.getAllByText(/tag/);

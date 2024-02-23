@@ -10,21 +10,27 @@ export const smallArticleDummyData: SmallArticleProps[] = [
   {
     id: "1",
     title: "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ",
-    chara: "渋い",
+    categories: {
+      chara: "渋い",
+    },
     tags: "樽熟成",
     image_src: dummyImage.src,
   },
   {
     id: "2",
     title: "コノスル シャルドネ ビシクレタ・レゼルバ",
-    chara: "辛口白",
+    categories: {
+      chara: "果実味豊か",
+    },
     tags: "フルーティ",
     image_src: dummyImage.src,
   },
   {
     id: "3",
     title: "コノスル カルメネール ビシクレタ・レゼルバ",
-    chara: "酸っぱい",
+    categories: {
+      chara: "酸っぱい",
+    },
     tags: "樽熟成,濃厚",
     image_src: dummyImage.src,
   },
@@ -122,4 +128,5 @@ export const articleDummyData: ArticleProps = {
   categories: categoryDummyData[0],
   id: "4be1f2ab-b3b3-4599-b1a1-a73d280f5033",
   price: 1500,
+  image_src: dummyImage.src,
 };
