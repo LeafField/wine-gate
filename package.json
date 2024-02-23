@@ -67,7 +67,7 @@
     "prettier": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11",
     "storybook": "^7.6.16",
-    "supabase": "^1.131.5",
+    "supabase": "^1.145.4",
     "tailwindcss": "^3.3.0",
     "ts-node": "^10.9.2",
     "typescript": "^5"

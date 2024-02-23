@@ -140,7 +140,27 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_wine_category_favorite: {
+        Args: {
+          category_value: string
+        }
+        Returns: {
+          title: string
+          sober_or_sweet: number
+          tart: number
+          fruity: number
+          author_name: string
+          id: string
+          tags: string
+          price: number
+          image_src: string
+          favorite_count: number
+          category_id: number
+          category_name: string
+          category_chara: string
+          category_sub: Database["public"]["Enums"]["subcategory"]
+        }[]
+      }
     }
     Enums: {
       subcategory: "red" | "white" | "interim" | "other"
