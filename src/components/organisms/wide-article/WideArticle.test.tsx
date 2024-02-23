@@ -5,9 +5,7 @@ import dummyImage from "../../../images/dummy_wine2.jpg";
 
 describe("WideArticleの単体テスト", () => {
   test("WideArticleコンポーネントが存在することを確認する", () => {
-    const { container } = render(
-      <WideArticle article={articleDummyData} favorite_count={10} />,
-    );
+    const { container } = render(<WideArticle article={articleDummyData} />);
     expect(screen.getByText(articleDummyData.title)).toBeInTheDocument();
     expect(container).toMatchSnapshot();
   });
@@ -24,5 +22,17 @@ describe("WideArticleの単体テスト", () => {
     failDummyData.categories = null;
 
     render(<WideArticle article={failDummyData} />);
+  });
+
+  test("お気に入り数のデータがある場合、お気に入り数が表示される", () => {
+    const favoriteDummyData = {
+      ...articleDummyData,
+      favorite: {
+        count: 10,
+      },
+    };
+    render(<WideArticle article={favoriteDummyData} />);
+    expect(screen.getByTestId("fa-star")).toBeInTheDocument();
+    expect(screen.getByText("10")).toBeInTheDocument();
   });
 });

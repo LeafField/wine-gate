@@ -29,8 +29,12 @@ export const Laptop: Story = {
 
 export const AddFavoriteCount: Story = {
   args: {
-    article: articleDummyData,
-    favorite_count: 10,
+    article: {
+      ...articleDummyData,
+      favorite: {
+        count: 10,
+      },
+    },
   },
   decorators: [
     (Story) => (
