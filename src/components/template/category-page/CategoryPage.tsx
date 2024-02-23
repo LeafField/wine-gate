@@ -5,6 +5,7 @@ import WideArticle from "../../organisms/wide-article/WideArticle";
 import TopPageLink from "../../atoms/toppage-link/TopPageLink";
 import { ArticleProps } from "../../../types/article_types";
 import WinePagination from "../../molecules/pagination/WinePagination";
+import { categoryDummyData } from "../../../utils/dummyData";
 
 type Props = {
   articles: ArticleProps[] | null;
@@ -16,10 +17,17 @@ const CategoryPage: FC<Props> = ({ articles, slug, totalPage }) => {
   const category = slug[0];
   const sort = slug[1];
   const activePage = slug[2];
+
+  const categoryTitle = categoryDummyData.find(
+    (data) => data.category === category,
+  )?.chara;
+
   return (
     <>
       <LineUpHero />
-      <CategoryHeader title="新着ワイン" />
+      {categoryTitle && (
+        <CategoryHeader title={`カテゴリー:「${categoryTitle}」`} />
+      )}
       <main className="mx-4 space-y-4 main tablet:mx-0">
         {articles &&
           articles.map((content) => (
@@ -27,12 +35,14 @@ const CategoryPage: FC<Props> = ({ articles, slug, totalPage }) => {
           ))}
       </main>
       <div className="footer-area">
-        <WinePagination
-          totalPages={totalPage}
-          categorySlug={category}
-          activePage={Number(activePage)}
-          sort={sort}
-        />
+        {sort !== "popular" && (
+          <WinePagination
+            totalPages={totalPage}
+            categorySlug={category}
+            activePage={Number(activePage)}
+            sort={sort}
+          />
+        )}
         <TopPageLink />
       </div>
     </>

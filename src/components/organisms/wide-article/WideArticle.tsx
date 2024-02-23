@@ -7,10 +7,9 @@ import ArticleInfo from "../../molecules/article-info/ArticleInfo";
 
 type Props = {
   article: ArticleProps;
-  favorite_count?: number;
 };
 
-const WideArticle: FC<Props> = ({ article, favorite_count }) => {
+const WideArticle: FC<Props> = ({ article }) => {
   if (!article.categories) return null;
   return (
     <Link href={`/article/${article.id}`} className="block @container">
@@ -39,7 +38,11 @@ const WideArticle: FC<Props> = ({ article, favorite_count }) => {
             sober_or_sweet={article.sober_or_sweet}
             tart={article.tart}
             fruity={article.fruity}
-            favorite_count={favorite_count}
+            favorite_count={
+              article.favorite && article.favorite.count !== 0
+                ? article.favorite.count
+                : undefined
+            }
           />
           <div className="flex justify-between">
             <p className="text-main-text">{article.author_name}</p>

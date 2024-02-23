@@ -46,6 +46,9 @@ export const categoryFetcher = cache(
           chara: article.category_chara,
           sub: article.category_sub,
         },
+        favorite: {
+          count: article.favorite_count,
+        },
         author_name: article.author_name,
         fruity: article.fruity,
         id: article.id,
