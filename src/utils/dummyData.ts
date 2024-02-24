@@ -36,6 +36,10 @@ export const smallArticleDummyData: SmallArticleProps[] = [
   },
 ];
 
+export const wineTitleDummyData = smallArticleDummyData.map((article) => {
+  return { id: article.id, title: article.title };
+});
+
 export const categoryDummyData: CategoryProps[] = [
   {
     id: 1,

@@ -3,10 +3,14 @@ import HeroHeader from "../../atoms/hero-header/HeroHeader";
 import Image from "next/image";
 import lineUpImage from "../../../images/lineup_image.jpg";
 
-const LineUpHero: FC = () => {
+type Props = {
+  title: string;
+};
+
+const LineUpHero: FC<Props> = ({ title }) => {
   return (
     <div className="relative h-40 hero tablet:h-75">
-      <HeroHeader title="ワイン検索" />
+      <HeroHeader title={title} />
       <div className="absolute inset-0 h-full w-full clip">
         <div className="absolute inset-0 h-40 w-full tablet:h-75">
           <Image
