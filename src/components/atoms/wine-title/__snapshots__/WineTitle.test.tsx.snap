@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WineTitleの単体テスト WineTitleコンポーネントが存在することを確認する 1`] = `
+<div>
+  <a
+    class="block border border-gray px-2 py-4 transition-colors duration-300 hover:border-blue"
+    href="/article/1"
+  >
+    <div
+      class="line-clamp-2 h-full w-full text-heading3"
+    >
+      ワインのタイトル
+    </div>
+  </a>
+</div>
+`;

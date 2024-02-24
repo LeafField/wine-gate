@@ -1,7 +1,6 @@
 import { screen, render } from "@testing-library/react";
 import WideArticle from "./WideArticle";
 import { articleDummyData } from "../../../utils/dummyData";
-import dummyImage from "../../../images/dummy_wine2.jpg";
 
 describe("WideArticleの単体テスト", () => {
   test("WideArticleコンポーネントが存在することを確認する", () => {
