@@ -24,7 +24,7 @@ const CategoryPage: FC<Props> = ({ articles, slug, totalPage }) => {
 
   return (
     <>
-      <LineUpHero />
+      <LineUpHero title="カテゴリー検索" />
       {categoryTitle && (
         <CategoryHeader title={`カテゴリー:「${categoryTitle}」`} />
       )}

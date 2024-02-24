@@ -6,6 +6,8 @@ export type WineProps = Wines & {
   categories: CategoryProps | null;
 };
 
+export type WineTitleProps = Pick<Wines, "title" | "id">;
+
 export type TasteBalanceProps = {
   sober_or_sweet: number;
   tart: number;
