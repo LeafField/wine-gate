@@ -161,6 +161,15 @@ export type Database = {
           category_sub: Database["public"]["Enums"]["subcategory"]
         }[]
       }
+      get_wine_my_favorite: {
+        Args: {
+          client_id: string
+        }
+        Returns: {
+          id: string
+          title: string
+        }[]
+      }
     }
     Enums: {
       subcategory: "red" | "white" | "interim" | "other"
