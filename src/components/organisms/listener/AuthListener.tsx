@@ -9,7 +9,6 @@ const AuthListener: FC = () => {
   const { user, setUser, logout, setModal, setMenu } = useStore();
   const router = useRouter();
   const pathname = usePathname();
-  const queryCache = new QueryCache();
   const queryClient = useQueryClient();
 
   useEffect(() => {
@@ -23,7 +22,7 @@ const AuthListener: FC = () => {
         exact: true,
       });
     }
-  }, [user, pathname]);
+  }, [user, pathname, queryClient]);
 
   supabase.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_IN" && session?.user) {
