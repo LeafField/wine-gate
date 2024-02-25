@@ -18,6 +18,10 @@ const AuthListener: FC = () => {
         queryKey: ["myFavoriteWine"],
         exact: true,
       });
+      queryClient.removeQueries({
+        queryKey: ["myPostWine"],
+        exact: true,
+      });
     }
   }, [user, pathname]);
 
