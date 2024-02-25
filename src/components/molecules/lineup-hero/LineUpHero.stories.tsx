@@ -10,7 +10,11 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    title: "ワイン検索",
+  },
+};
 
 export const Scroll: Story = {
   decorators: [
@@ -21,6 +25,9 @@ export const Scroll: Story = {
       </div>
     ),
   ],
+  args: {
+    title: "ワイン検索",
+  },
 };
 
 export const Mobile: Story = {
@@ -36,5 +43,8 @@ export const Mobile: Story = {
     viewport: {
       defaultViewport: "iphone6",
     },
+  },
+  args: {
+    title: "ワイン検索",
   },
 };
