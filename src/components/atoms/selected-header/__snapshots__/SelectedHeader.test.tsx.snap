@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectedHeaderの単体テスト SelectedHeaderコンポーネントが存在することを確認する 1`] = `
+<div>
+  <h3
+    class="border-b-2 border-red text-heading2"
+  >
+    ワイン検索
+  </h3>
+</div>
+`;
