@@ -15,6 +15,10 @@ const useMutateFavoriteCount = () => {
       queryClient.setQueryData(["favoriteUser", variable.wine_id], {
         user_id: variable.user_id,
       });
+      queryClient.invalidateQueries({
+        queryKey: ["myFavoriteWine"],
+        exact: true,
+      });
     },
   });
 
@@ -27,6 +31,10 @@ const useMutateFavoriteCount = () => {
       );
       queryClient.removeQueries({
         queryKey: ["favoriteUser", variable.wine_id],
+      });
+      queryClient.invalidateQueries({
+        queryKey: ["myFavoriteWine"],
+        exact: true,
       });
     },
   });

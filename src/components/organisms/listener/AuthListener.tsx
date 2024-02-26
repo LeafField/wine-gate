@@ -1,10 +1,28 @@
 "use client";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { useStore } from "../../../store";
 import { supabase } from "../../../utils/supabase";
+import { QueryCache, useQueryClient } from "@tanstack/react-query";
+import { useRouter, usePathname } from "next/navigation";
 
 const AuthListener: FC = () => {
-  const { setUser, logout, setModal, setMenu } = useStore();
+  const { user, setUser, logout, setModal, setMenu } = useStore();
+  const router = useRouter();
+  const pathname = usePathname();
+  const queryClient = useQueryClient();
+
+  useEffect(() => {
+    if (!user && pathname !== "/favorite" && pathname !== "/mypost") {
+      queryClient.removeQueries({
+        queryKey: ["myFavoriteWine"],
+        exact: true,
+      });
+      queryClient.removeQueries({
+        queryKey: ["myPostWine"],
+        exact: true,
+      });
+    }
+  }, [user, pathname, queryClient]);
 
   supabase.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_IN" && session?.user) {
@@ -15,6 +33,9 @@ const AuthListener: FC = () => {
       });
     } else if (event === "SIGNED_OUT") {
       logout();
+      if (pathname === "/favorite" || pathname === "/mypost") {
+        router.replace("/");
+      }
       setModal(["ログアウトしました"]);
       setMenu("close");
     }

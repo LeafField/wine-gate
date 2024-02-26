@@ -11,6 +11,7 @@ import AuthListener from "../components/organisms/listener/AuthListener";
 import PageTransitionListener from "../components/atoms/Page-transition-listener/PageTransitionListener";
 import ViewPortListener from "../components/organisms/listener/ViewPortListener";
 import Modal from "../components/organisms/modal/Modal";
+import TanstackDevTool from "../components/test-components/TanstackDevTool";
 
 export const metadata: Metadata = {
   title: "WINE GATE",
@@ -37,6 +38,7 @@ export default function RootLayout({
             <Header />
             {children}
           </MantineWrapper>
+          <TanstackDevTool />
         </TanstackProvider>
       </body>
     </html>

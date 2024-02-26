@@ -19,8 +19,8 @@ const UserPanel = () => {
       {user ? (
         <div className="flex h-full flex-wrap gap-5 panel-inner">
           <UserPanelButton href="/editing" title="ワイン記事を投稿する" />
-          <UserPanelButton href="/" title="投稿記事一覧" />
-          <UserPanelButton href="/" title="お気に入りのワイン" />
+          <UserPanelButton href="/mypost" title="投稿記事一覧" />
+          <UserPanelButton href="/favorite" title="お気に入りのワイン" />
           <LogoutButton />
         </div>
       ) : (

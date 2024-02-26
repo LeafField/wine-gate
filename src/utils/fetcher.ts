@@ -161,3 +161,21 @@ export const getWine = async (id: string) => {
 
   return data;
 };
+
+export const getMyPostWine = async (user_id: string) => {
+  const { data, error } = await supabase
+    .from("wines")
+    .select("id,title")
+    .eq("author_id", user_id);
+  if (error) throw new Error("お気に入りのワインの取得に失敗しました");
+  return data;
+};
+
+export const getFavoriteWine = async (user_id: string) => {
+  const { data, error } = await supabase.rpc("get_wine_my_favorite", {
+    client_id: user_id,
+  });
+  if (error) throw new Error("お気に入りのワインの取得に失敗しました");
+
+  return data;
+};
