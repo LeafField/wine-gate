@@ -1,0 +1,22 @@
+import React, { FC } from "react";
+import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+
+type Props = {
+  link: string;
+};
+
+const MoreLink: FC<Props> = ({ link }) => {
+  return (
+    <Link
+      href={`/category/${link}`}
+      className="flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
+    >
+      <span className="text-main-text">もっと見る</span>
+      <FontAwesomeIcon className="ml-[0.125rem]" icon={faArrowRightLong} />
+    </Link>
+  );
+};
+
+export default MoreLink;
