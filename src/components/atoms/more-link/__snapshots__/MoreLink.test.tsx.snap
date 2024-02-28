@@ -3,8 +3,8 @@
 exports[`MoreLinkの単体テスト MoreLinkコンポーネントが存在することを確認する 1`] = `
 <div>
   <a
-    class="flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
-    href="/category/sober"
+    class="mt-2 flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
+    href="/category/sober/new/1"
   >
     <span
       class="text-main-text"
@@ -13,7 +13,7 @@ exports[`MoreLinkの単体テスト MoreLinkコンポーネントが存在する
     </span>
     <svg
       aria-hidden="true"
-      class="svg-inline--fa fa-arrow-right-long ml-[0.125rem]"
+      class="svg-inline--fa fa-arrow-right-long h-[w-[clamp(0.875rem,1.54vw,1rem)] ml-[0.125rem] w-[clamp(0.875rem,1.54vw,1rem)]"
       data-icon="arrow-right-long"
       data-prefix="fas"
       focusable="false"

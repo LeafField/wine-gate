@@ -10,11 +10,14 @@ type Props = {
 const MoreLink: FC<Props> = ({ link }) => {
   return (
     <Link
-      href={`/category/${link}`}
-      className="flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
+      href={`/category/${link}/new/1`}
+      className="mt-2 flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
     >
       <span className="text-main-text">もっと見る</span>
-      <FontAwesomeIcon className="ml-[0.125rem]" icon={faArrowRightLong} />
+      <FontAwesomeIcon
+        className="h-[w-[clamp(0.875rem,1.54vw,1rem)] ml-[0.125rem] w-[clamp(0.875rem,1.54vw,1rem)]"
+        icon={faArrowRightLong}
+      />
     </Link>
   );
 };

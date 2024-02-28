@@ -10,6 +10,9 @@ describe("MoreLinkの単体テスト", () => {
 
   test("propsのlinkを元にリンクが正しく生成されているか", () => {
     render(<MoreLink link="sober" />);
-    expect(screen.getByRole("link")).toHaveAttribute("href", "/category/sober");
+    expect(screen.getByRole("link")).toHaveAttribute(
+      "href",
+      "/category/sober/new/1",
+    );
   });
 });

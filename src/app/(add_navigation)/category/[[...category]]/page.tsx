@@ -5,7 +5,7 @@ import {
   categoryCountFetcher,
 } from "../../../../utils/categoryFetcher";
 
-export const revalidate = 30;
+export const revalidate = 60 * 60;
 
 const Page = async ({ params }: { params: { category: string[] } }) => {
   const articles = await categoryFetcher(params.category);

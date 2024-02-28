@@ -140,6 +140,19 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      get_favorite_wine_small_articles: {
+        Args: {
+          category_name: string
+        }
+        Returns: {
+          id: string
+          image_src: string
+          tags: string
+          title: string
+          categories_chara: string
+          favorite_count: number
+        }[]
+      }
       get_wine_category_favorite: {
         Args: {
           category_value: string

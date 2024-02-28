@@ -1,4 +1,5 @@
 import { Database } from "./schema";
+import { categoryFavoriteSmallArticleFetcher } from "../utils/categoryFetcher";
 
 export type Wines = Database["public"]["Tables"]["wines"]["Row"];
 
@@ -49,3 +50,10 @@ export type SmallArticleProps = Pick<
 };
 
 export type CategoryProps = Database["public"]["Tables"]["categories"]["Row"];
+
+export type CategoryFavoriteSmallArticleProps =
+  ReturnType<typeof categoryFavoriteSmallArticleFetcher> extends Promise<
+    infer T
+  >
+    ? T
+    : never;

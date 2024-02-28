@@ -78,3 +78,13 @@ export const categoryCountFetcher = cache(async (category: string) => {
     return 1;
   }
 });
+
+export const categoryFavoriteSmallArticleFetcher = cache(
+  async (category_name: string) => {
+    const { data, error } = await supabase
+      .rpc("get_favorite_wine_small_articles", { category_name: category_name })
+      .limit(4);
+    if (error) throw new Error("カテゴリの取得に失敗しました");
+    return data;
+  },
+);
