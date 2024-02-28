@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要素を元にコンポーネントが正しく描画される 1`] = `
+<div>
+  <section
+    class="mt-6 max-w-[1392px] border-b border-gray pb-6"
+  >
+    <h4
+      class="text-heading3"
+    >
+      渋い
+    </h4>
+    <p
+      class="text-main-text"
+    >
+      タンニンが強さが強調されていたり、ブラックベリーやカシス、プルーン等黒系果実で表現される事も多い種類です。
+      <br />
+      タンニンは口の中で渋みを感じさせる成分であり、若いワインでは特に強く感じられることがあります。
+      <br />
+      カベルネ・ソーヴィニヨンやシラーなどの品種が一般的にこのタイプのワインに含まれます。
+      <br />
+      主に色が濃く重めの肉料理に合いやすいです。
+    </p>
+    <div
+      class="mt-6 grid grid-cols-1 gap-x-5 gap-y-4 tablet:grid-cols-[repeat(auto-fill,333px)]"
+    >
+      <a
+        aria-label="テストワインその1"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        href="/article/4be1f2ab-b3b3-4599-b1a1-a73d280f5033"
+      >
+        <div
+          class="aspect-video w-full overflow-hidden bg-gray "
+        >
+          <figure
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+          >
+            <img
+              alt="ワイン画像"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              sizes="(min-width:768px) 332px,100vw"
+              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+            />
+          </figure>
+        </div>
+        <h3
+          class="w-full px-2 text-base text-black"
+        >
+          テストワインその1
+        </h3>
+        <div
+          class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
+        >
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            渋い
+          </div>
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            樽熟成
+          </div>
+        </div>
+      </a>
+      <a
+        aria-label="テストワインその2"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        href="/article/4be1f2ab-b3b3-4599-b1a1-a73d280f50"
+      >
+        <div
+          class="aspect-video w-full overflow-hidden bg-gray "
+        >
+          <figure
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+          >
+            <img
+              alt="ワイン画像"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              sizes="(min-width:768px) 332px,100vw"
+              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+            />
+          </figure>
+        </div>
+        <h3
+          class="w-full px-2 text-base text-black"
+        >
+          テストワインその2
+        </h3>
+        <div
+          class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
+        >
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            渋い
+          </div>
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            樽熟成
+          </div>
+        </div>
+      </a>
+      <a
+        aria-label="テストワインその3"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        href="/article/4be1f2-b3b3-4599-b1a1-a73d280f50"
+      >
+        <div
+          class="aspect-video w-full overflow-hidden bg-gray "
+        >
+          <figure
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+          >
+            <img
+              alt="ワイン画像"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              sizes="(min-width:768px) 332px,100vw"
+              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+            />
+          </figure>
+        </div>
+        <h3
+          class="w-full px-2 text-base text-black"
+        >
+          テストワインその3
+        </h3>
+        <div
+          class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
+        >
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            渋い
+          </div>
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            樽熟成
+          </div>
+        </div>
+      </a>
+      <a
+        aria-label="テストワインその4"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        href="/article/4be1f2-b3b3-4599-b1ad1-a73d280f50"
+      >
+        <div
+          class="aspect-video w-full overflow-hidden bg-gray "
+        >
+          <figure
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+          >
+            <img
+              alt="ワイン画像"
+              data-nimg="fill"
+              decoding="async"
+              fetchpriority="high"
+              loading="eager"
+              sizes="(min-width:768px) 332px,100vw"
+              src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+              srcset="/_next/image?url=%2Fimg.jpg&w=16&q=75 16w, /_next/image?url=%2Fimg.jpg&w=32&q=75 32w, /_next/image?url=%2Fimg.jpg&w=48&q=75 48w, /_next/image?url=%2Fimg.jpg&w=64&q=75 64w, /_next/image?url=%2Fimg.jpg&w=96&q=75 96w, /_next/image?url=%2Fimg.jpg&w=128&q=75 128w, /_next/image?url=%2Fimg.jpg&w=256&q=75 256w, /_next/image?url=%2Fimg.jpg&w=384&q=75 384w, /_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+              style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: contain; color: transparent;"
+            />
+          </figure>
+        </div>
+        <h3
+          class="w-full px-2 text-base text-black"
+        >
+          テストワインその4
+        </h3>
+        <div
+          class="mt-auto flex flex-row justify-center gap-2 pb-2 pt-2"
+        >
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            渋い
+          </div>
+          <div
+            class="w-fit rounded-[3.2rem] border border-black px-2 py-[0.125rem] text-black text-sm"
+          >
+            樽熟成
+          </div>
+        </div>
+      </a>
+    </div>
+    <a
+      class="mt-2 flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
+      href="/category/sober/new/1"
+    >
+      <span
+        class="text-main-text"
+      >
+        もっと見る
+      </span>
+      <svg
+        aria-hidden="true"
+        class="svg-inline--fa fa-arrow-right-long h-[w-[clamp(0.875rem,1.54vw,1rem)] ml-[0.125rem] w-[clamp(0.875rem,1.54vw,1rem)]"
+        data-icon="arrow-right-long"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M502.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L402.7 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l370.7 0-73.4 73.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l128-128z"
+          fill="currentColor"
+        />
+      </svg>
+    </a>
+  </section>
+</div>
+`;

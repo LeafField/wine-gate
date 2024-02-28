@@ -4,6 +4,7 @@ import {
   CategoryProps,
   WineProps,
   ArticleProps,
+  CategoryFavoriteSmallArticleProps,
 } from "../types/article_types";
 
 export const smallArticleDummyData: SmallArticleProps[] = [
@@ -134,3 +135,39 @@ export const articleDummyData: ArticleProps = {
   price: 1500,
   image_src: dummyImage.src,
 };
+
+export const categoryFavoriteSmallArticleDummyData: CategoryFavoriteSmallArticleProps =
+  [
+    {
+      title: "テストワインその1",
+      tags: "樽熟成",
+      id: "4be1f2ab-b3b3-4599-b1a1-a73d280f5033",
+      image_src: dummyImage.src,
+      categories_chara: categoryDummyData[0].chara,
+      favorite_count: 3,
+    },
+    {
+      title: "テストワインその2",
+      tags: "樽熟成",
+      id: "4be1f2ab-b3b3-4599-b1a1-a73d280f50",
+      image_src: dummyImage.src,
+      categories_chara: categoryDummyData[0].chara,
+      favorite_count: 5,
+    },
+    {
+      title: "テストワインその3",
+      tags: "樽熟成",
+      id: "4be1f2-b3b3-4599-b1a1-a73d280f50",
+      image_src: dummyImage.src,
+      categories_chara: categoryDummyData[0].chara,
+      favorite_count: 7,
+    },
+    {
+      title: "テストワインその4",
+      tags: "樽熟成",
+      id: "4be1f2-b3b3-4599-b1ad1-a73d280f50",
+      image_src: dummyImage.src,
+      categories_chara: categoryDummyData[0].chara,
+      favorite_count: 10,
+    },
+  ];
