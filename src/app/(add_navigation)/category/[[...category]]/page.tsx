@@ -6,6 +6,7 @@ import {
 } from "../../../../utils/categoryFetcher";
 
 export const revalidate = 60 * 60;
+export const runtime = "edge";
 
 const Page = async ({ params }: { params: { category: string[] } }) => {
   const articles = await categoryFetcher(params.category);

@@ -8,6 +8,8 @@ type Props = {
   };
 };
 
+export const runtime = "edge";
+
 const FetchedEditingPage: FC<Props> = async ({ params }) => {
   const wine = await getWine(params.id);
   return <EditingPage wine={wine} />;
