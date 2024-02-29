@@ -3,13 +3,17 @@ import SelectHero from "../../molecules/select-hero/SelectHero";
 import SelectedHeader from "../../atoms/selected-header/SelectedHeader";
 import SelectSection from "../../organisms/select-section/SelectSection";
 import { categoryFavoriteSmallArticleFetcher } from "../../../utils/categoryFetcher";
+import { CategoryFavoriteSmallArticleProps } from "../../../types/article_types";
 
-const SelectPage: FC = async () => {
-  const sober = await categoryFavoriteSmallArticleFetcher("sober");
-  const fruity = await categoryFavoriteSmallArticleFetcher("fruity");
-  const tart = await categoryFavoriteSmallArticleFetcher("tart");
-  const white = await categoryFavoriteSmallArticleFetcher("white");
-  const sweet = await categoryFavoriteSmallArticleFetcher("sweet");
+type Props = {
+  sober: CategoryFavoriteSmallArticleProps;
+  fruity: CategoryFavoriteSmallArticleProps;
+  tart: CategoryFavoriteSmallArticleProps;
+  white: CategoryFavoriteSmallArticleProps;
+  sweet: CategoryFavoriteSmallArticleProps;
+};
+
+const SelectPage: FC<Props> = ({ fruity, sober, sweet, tart, white }) => {
   return (
     <>
       <SelectHero title="ワインの簡単な選び方" />
