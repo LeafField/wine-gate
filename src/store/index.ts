@@ -20,6 +20,9 @@ type Store = {
   image_src: string | null;
   setImage_src: (image_src: string) => void;
   clearImage_src: () => void;
+  searchValue: string;
+  setSearchValue: (searchValue: string) => void;
+  clearSearchValue: () => void;
 };
 
 export const useStore = create<Store>((set) => ({
@@ -34,4 +37,7 @@ export const useStore = create<Store>((set) => ({
   image_src: null,
   setImage_src: (image_src) => set({ image_src }),
   clearImage_src: () => set({ image_src: null }),
+  searchValue: "",
+  setSearchValue: (searchValue) => set({ searchValue }),
+  clearSearchValue: () => set({ searchValue: "" }),
 }));
