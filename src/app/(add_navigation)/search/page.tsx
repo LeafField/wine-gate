@@ -1,8 +1,13 @@
 "use client";
-import React from "react";
+import React, { Suspense } from "react";
+import SearchPage from "../../../components/template/search-page/SearchPage";
 
 const Search = () => {
-  return <div>Search</div>;
+  return (
+    <Suspense fallback={null}>
+      <SearchPage />
+    </Suspense>
+  );
 };
 
 export default Search;
