@@ -3,6 +3,7 @@ import { EditingPageSchemaType, ImageInputSchemaType } from "./schema";
 import { User } from "../store";
 import { revalidateServer } from "../server/revalidate";
 import { cache } from "react";
+import { ArticleProps } from "../types/article_types";
 
 export const postWine = async ({
   value,
@@ -178,4 +179,29 @@ export const getFavoriteWine = async (user_id: string) => {
   if (error) throw new Error("お気に入りのワインの取得に失敗しました");
 
   return data;
+};
+
+export const getSearchWine = async (searchText: string) => {
+  const { data, error } = await supabase
+    .rpc("get_search_wines", { search_text: searchText })
+    .limit(10);
+  if (error) throw new Error("検索結果の取得に失敗しました");
+  const articles: ArticleProps[] = data.map((article) => ({
+    categories: {
+      category: article.category_name,
+      id: article.category_id,
+      chara: article.category_chara,
+      sub: article.category_sub,
+    },
+    author_name: article.author_name,
+    fruity: article.fruity,
+    id: article.id,
+    image_src: article.image_src,
+    price: article.price,
+    sober_or_sweet: article.sober_or_sweet,
+    tags: article.tags,
+    tart: article.tart,
+    title: article.title,
+  }));
+  return articles;
 };
