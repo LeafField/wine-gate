@@ -7,9 +7,12 @@ import { selectDummyData } from "../../../utils/dummyData";
 import { categoryDummyData } from "../../../utils/dummyData";
 import NavMenu from "../../molecules/nav-menu/NavMenu";
 import { useStore } from "../../../store";
+import { usePathname } from "next/navigation";
 
 const Navigation = () => {
   const { menu } = useStore();
+  const pathname = usePathname();
+
   return (
     <nav className="nav">
       <div
@@ -17,7 +20,7 @@ const Navigation = () => {
         id="navigation"
       >
         <CategoryPanel categories={categoryDummyData} />
-        <SearchPanel selectData={selectDummyData} />
+        {pathname !== "/search" && <SearchPanel selectData={selectDummyData} />}
         <UserPanel />
       </div>
       <NavMenu />
