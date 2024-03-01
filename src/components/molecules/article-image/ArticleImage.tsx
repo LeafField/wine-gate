@@ -19,7 +19,6 @@ const ArticleImage: FC<Props> = ({ author_name, image_src, price, title }) => {
           alt={`${title}の画像`}
           sizes="(max-width:1039px) 100vw,1039px"
           style={{ objectFit: "contain" }}
-          loading="eager"
           priority
         />
       </figure>

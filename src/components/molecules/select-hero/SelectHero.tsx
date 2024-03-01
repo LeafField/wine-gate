@@ -22,7 +22,6 @@ const SelectHero: FC<Props> = ({ title }) => {
             }}
             sizes="100vw"
             priority
-            loading="eager"
             key={"select_hero"}
           />
         </div>

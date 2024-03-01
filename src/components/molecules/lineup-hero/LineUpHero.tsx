@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import HeroHeader from "../../atoms/hero-header/HeroHeader";
 import Image from "next/image";
@@ -22,7 +23,6 @@ const LineUpHero: FC<Props> = ({ title }) => {
             }}
             sizes="100vw"
             priority
-            loading="eager"
             key={"lineup_hero"}
           />
         </div>

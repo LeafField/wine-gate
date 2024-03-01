@@ -8,7 +8,6 @@ const AboutLink: FC = () => {
     <Link
       className="group relative row-span-1 block w-full overflow-hidden tablet:col-span-2 laptop:col-span-1 "
       href={"/about"}
-      prefetch={false}
     >
       <figure className="absolute h-full w-full transition-transform duration-300 group-hover:scale-110">
         <Image
