@@ -16,7 +16,6 @@ const WineImage: FC<Props> = ({ src }) => {
           alt="ワイン画像"
           sizes="(min-width:768px) 332px,100vw"
           placeholder="empty"
-          loading="eager"
           priority
         />
       </figure>

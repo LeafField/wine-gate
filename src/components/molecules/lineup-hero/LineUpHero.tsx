@@ -23,7 +23,6 @@ const LineUpHero: FC<Props> = ({ title }) => {
             }}
             sizes="100vw"
             priority
-            loading="eager"
             key={"lineup_hero"}
           />
         </div>

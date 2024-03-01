@@ -28,7 +28,6 @@ exports[`HeaderTitleの単体テスト スナップショット 1`] = `
         decoding="async"
         fetchpriority="high"
         height="124"
-        loading="eager"
         src="/symbol.svg"
         style="color: transparent; object-fit: cover;"
         width="124"

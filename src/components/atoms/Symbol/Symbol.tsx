@@ -12,7 +12,6 @@ export const Symbol = () => {
         height={124}
         style={{ objectFit: "cover" }}
         priority
-        loading="eager"
       />
     </figure>
   );
