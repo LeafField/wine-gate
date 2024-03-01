@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import HeroHeader from "../../atoms/hero-header/HeroHeader";
 import Image from "next/image";
