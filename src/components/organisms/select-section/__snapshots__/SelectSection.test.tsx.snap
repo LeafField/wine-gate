@@ -26,7 +26,7 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
     >
       <a
         aria-label="テストワインその1"
-        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
         href="/article/4be1f2ab-b3b3-4599-b1a1-a73d280f5033"
       >
         <div
@@ -69,7 +69,7 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
       </a>
       <a
         aria-label="テストワインその2"
-        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
         href="/article/4be1f2ab-b3b3-4599-b1a1-a73d280f50"
       >
         <div
@@ -112,7 +112,7 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
       </a>
       <a
         aria-label="テストワインその3"
-        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
         href="/article/4be1f2-b3b3-4599-b1a1-a73d280f50"
       >
         <div
@@ -155,7 +155,7 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
       </a>
       <a
         aria-label="テストワインその4"
-        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 border border-gray transition-colors duration-500 hover:border-blue"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
         href="/article/4be1f2-b3b3-4599-b1ad1-a73d280f50"
       >
         <div
