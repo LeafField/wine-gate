@@ -1,3 +1,4 @@
+"use client";
 import React, { FC } from "react";
 import LineUpHero from "../../molecules/lineup-hero/LineUpHero";
 import WideArticle from "../../organisms/wide-article/WideArticle";
