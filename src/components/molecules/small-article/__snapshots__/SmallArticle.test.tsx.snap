@@ -4,7 +4,7 @@ exports[`SmallArticle 単体テスト スナップショット 1`] = `
 <div>
   <a
     aria-label="Test Title"
-    class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
+    class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-0 border border-gray transition-colors duration-500 hover:border-blue"
     href="/article/1"
   >
     <div

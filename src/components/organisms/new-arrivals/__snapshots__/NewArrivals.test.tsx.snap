@@ -20,7 +20,7 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
     >
       <a
         aria-label="コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ"
-        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="/article/1"
       >
         <div
@@ -63,7 +63,7 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
       </a>
       <a
         aria-label="コノスル シャルドネ ビシクレタ・レゼルバ"
-        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="/article/2"
       >
         <div
@@ -106,7 +106,7 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
       </a>
       <a
         aria-label="コノスル カルメネール ビシクレタ・レゼルバ"
-        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-y-0 overflow-hidden border border-gray transition-colors duration-500 hover:border-blue"
+        class="group row-span-3 grid h-full w-full grid-rows-subgrid gap-0 border border-gray transition-colors duration-500 hover:border-blue"
         href="/article/3"
       >
         <div
