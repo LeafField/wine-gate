@@ -2,7 +2,7 @@
 import { FC, useEffect } from "react";
 import { useStore } from "../../../store";
 import { supabase } from "../../../utils/supabase";
-import { QueryCache, useQueryClient } from "@tanstack/react-query";
+import { useQueryClient } from "@tanstack/react-query";
 import { useRouter, usePathname } from "next/navigation";
 
 const AuthListener: FC = () => {
@@ -23,6 +23,22 @@ const AuthListener: FC = () => {
       });
     }
   }, [user, pathname, queryClient]);
+
+  useEffect(() => {
+    const getUserSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data.session) {
+        setUser({
+          id: data.session.user.id,
+          email: data.session.user.email,
+          username: data.session.user.user_metadata.username,
+        });
+      }
+    };
+    if (!user) {
+      getUserSession();
+    }
+  }, [user, setUser]);
 
   supabase.auth.onAuthStateChange((event, session) => {
     if (event === "SIGNED_IN" && session?.user) {
