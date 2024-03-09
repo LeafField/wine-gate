@@ -22,3 +22,9 @@ button[data-active="true"] {
   background-color: #1400ff;
   color: #fff;
 }
+
+@-moz-document url-prefix() {
+  .grid-rows-subgrid {
+    overflow: hidden;
+  }
+}
