@@ -79,7 +79,7 @@ const EditingPage: FC<Props> = ({ wine }) => {
   }, [setImage_src, wine]);
 
   return (
-    <div className="relative z-0 mx-auto my-15 max-w-[64.9375rem]">
+    <div className="relative z-0 mx-4 my-15 max-w-[64.9375rem] min-[1086px]:mx-auto">
       {winePostMutation.isPending && <LoadingOverlay />}
       {wineUpdateMutation.isPending && <LoadingOverlay />}
       <Heading title="記事編集" />
