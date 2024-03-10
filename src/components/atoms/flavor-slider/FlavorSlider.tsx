@@ -45,7 +45,7 @@ const FlavorSlider: FC<Props> = ({ name, form }) => {
       max={5}
       name={name}
       id={name}
-      className="ml-2"
+      className="ml-2 w-full"
       label={(value) => marks.find((mark) => mark.value === value)?.label}
       marks={marks}
       {...form.getInputProps(name)}

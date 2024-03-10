@@ -23,7 +23,7 @@ const TasteInput: FC<Categories> = ({ categories, form }) => {
   ];
 
   return (
-    <>
+    <div className="w-[calc(100%-3.125rem)] xl:w-[calc(100%-1.5625rem)] min-[1440px]:w-full ">
       <NativeSelect
         name="category_id"
         id="category"
@@ -63,7 +63,7 @@ const TasteInput: FC<Categories> = ({ categories, form }) => {
           </div>
         )}
       </fieldset>
-    </>
+    </div>
   );
 };
 
