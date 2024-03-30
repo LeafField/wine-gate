@@ -53,14 +53,14 @@ describe("SearchFormの結合テスト", () => {
     });
   });
 
-  test("異常系:inputタグの入力が4文字未満の時、バリデーションエラーを表示する", async () => {
+  test("異常系:inputタグの入力が2文字未満の時、バリデーションエラーを表示する", async () => {
     const textBox = screen.getByRole("textbox", { name: "search" });
     const submitButton = screen.getByRole("button", { name: "検索" });
-    await userEvent.type(textBox, "コノス");
+    await userEvent.type(textBox, "コ");
     await userEvent.click(submitButton);
 
     await waitFor(() => {
-      expect(screen.getByText("4文字以上入力してください")).toBeInTheDocument();
+      expect(screen.getByText("2文字以上入力してください")).toBeInTheDocument();
     });
   });
 

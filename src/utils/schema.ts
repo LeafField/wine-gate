@@ -6,7 +6,7 @@ const IMAGE_SIZE = 153600;
 export const searchSchema = z.object({
   search: z
     .string()
-    .min(4, { message: "4文字以上入力してください" })
+    .min(2, { message: "2文字以上入力してください" })
     .max(60, { message: "60文字以下で入力してください" }),
 });
 
