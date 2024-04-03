@@ -9,11 +9,11 @@ describe("TopPageContainerの単体テスト", () => {
 
   test("paddingがtrueの場合", () => {
     render(<TopPageContainer />);
-    expect(screen.getByTestId("top-page-container")).toHaveClass("px-6");
+    expect(screen.getByTestId("top-page-container")).toHaveClass("px-4");
   });
 
   test("paddingがfalseの場合", () => {
     render(<TopPageContainer padding={false} />);
-    expect(screen.getByTestId("top-page-container")).not.toHaveClass("px-6");
+    expect(screen.getByTestId("top-page-container")).not.toHaveClass("px-4");
   });
 });
