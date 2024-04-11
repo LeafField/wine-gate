@@ -8,7 +8,7 @@ type Props = {
   };
 };
 
-export const runtime = "edge";
+export const dynamic = "force-dynamic";
 
 const FetchedEditingPage: FC<Props> = async ({ params }) => {
   const wine = await getWine(params.id);
