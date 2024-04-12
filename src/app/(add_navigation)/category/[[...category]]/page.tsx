@@ -5,6 +5,7 @@ import {
   categoryCountFetcher,
 } from "../../../../utils/categoryFetcher";
 
+export const dynamic = "force-dynamic";
 export const runtime = "edge";
 
 const Page = async ({ params }: { params: { category: string[] } }) => {
