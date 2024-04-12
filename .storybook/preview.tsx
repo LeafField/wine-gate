@@ -5,7 +5,6 @@ import {
 } from "@storybook/addon-viewport";
 import "@mantine/core/styles.css";
 import "../src/app/globals.css";
-import { initialize, mswLoader } from "msw-storybook-addon";
 import React from "react";
 import { notoStyle } from "../src/utils/font";
 import { MantineProvider } from "@mantine/core";

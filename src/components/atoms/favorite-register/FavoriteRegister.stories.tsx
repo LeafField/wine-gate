@@ -4,6 +4,10 @@ import FavoriteRegister from "./FavoriteRegister";
 const meta = {
   title: "atoms/FavoriteRegister",
   component: FavoriteRegister,
+  args: {
+    addFavoriteCallback: () => {},
+    removeFavoriteCallback: () => {},
+  },
 } satisfies Meta<typeof FavoriteRegister>;
 
 export default meta;

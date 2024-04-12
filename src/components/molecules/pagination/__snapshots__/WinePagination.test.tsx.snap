@@ -11,19 +11,20 @@ exports[`WinePagination 正しくレンダリングがされている 1`] = `
     class="flex justify-center"
   >
     <div
-      class="m-4addd315 mantine-Pagination-root"
+      class="m_4addd315 mantine-Pagination-root"
     >
       <div
-        class="m-4081bf90 mantine-Group-root"
+        class="m_4081bf90 mantine-Group-root"
         style="--group-gap: calc(0.5rem * var(--mantine-scale)); --group-align: center; --group-justify: flex-start; --group-wrap: wrap;"
       >
         <button
-          class="mantine-focus-auto m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           data-disabled="true"
           disabled=""
           type="button"
         >
           <svg
+            class="mantine-rotate-rtl"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
           >
@@ -35,7 +36,7 @@ exports[`WinePagination 正しくレンダリングがされている 1`] = `
         </button>
         <button
           aria-current="page"
-          class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           data-active="true"
           data-with-padding="true"
           type="button"
@@ -43,35 +44,35 @@ exports[`WinePagination 正しくレンダリングがされている 1`] = `
           1
         </button>
         <button
-          class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           data-with-padding="true"
           type="button"
         >
           2
         </button>
         <button
-          class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           data-with-padding="true"
           type="button"
         >
           3
         </button>
         <button
-          class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           data-with-padding="true"
           type="button"
         >
           4
         </button>
         <button
-          class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           data-with-padding="true"
           type="button"
         >
           5
         </button>
         <div
-          class="m-4ad7767d mantine-Pagination-dots"
+          class="m_4ad7767d mantine-Pagination-dots"
         >
           <svg
             viewBox="0 0 16 16"
@@ -84,17 +85,18 @@ exports[`WinePagination 正しくレンダリングがされている 1`] = `
           </svg>
         </div>
         <button
-          class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           data-with-padding="true"
           type="button"
         >
           10
         </button>
         <button
-          class="mantine-focus-auto mantine-active m-326d024a mantine-Pagination-control m-87cf2631 mantine-UnstyledButton-root"
+          class="mantine-focus-auto mantine-active m_326d024a mantine-Pagination-control m_87cf2631 mantine-UnstyledButton-root"
           type="button"
         >
           <svg
+            class="mantine-rotate-rtl"
             viewBox="0 0 16 16"
             xmlns="http://www.w3.org/2000/svg"
           >
