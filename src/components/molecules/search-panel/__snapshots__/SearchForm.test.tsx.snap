@@ -21,16 +21,16 @@ exports[`SearchFormの結合テスト スナップショットテスト 1`] = `
       role="search"
     >
       <div
-        class="w-full focus:border-blue m-46b77525 mantine-InputWrapper-root mantine-TextInput-root"
+        class="w-full focus:border-blue m_46b77525 mantine-InputWrapper-root mantine-TextInput-root"
       >
         <div
-          class="m-6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
+          class="m_6c018570 mantine-Input-wrapper mantine-TextInput-wrapper"
           data-variant="default"
           data-with-left-section="true"
           style="--input-right-section-pointer-events: all;"
         >
           <div
-            class="m-82577fc2 mantine-Input-section mantine-TextInput-section"
+            class="m_82577fc2 mantine-Input-section mantine-TextInput-section"
             data-position="left"
           >
             <svg
@@ -52,7 +52,7 @@ exports[`SearchFormの結合テスト スナップショットテスト 1`] = `
           <input
             aria-invalid="false"
             aria-label="search"
-            class="m-8fb7ebe7 mantine-Input-input mantine-TextInput-input"
+            class="m_8fb7ebe7 mantine-Input-input mantine-TextInput-input"
             data-variant="default"
             id="search"
             name="search"

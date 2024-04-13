@@ -16,10 +16,10 @@ exports[`CategoryHeaderの単体テスト スナップショットテスト 1`] 
       新着ワイン
     </h2>
     <div
-      class="block w-48 m-46b77525 mantine-InputWrapper-root mantine-NativeSelect-root"
+      class="block w-48 m_46b77525 mantine-InputWrapper-root mantine-NativeSelect-root"
     >
       <div
-        class="m-6c018570 mantine-Input-wrapper mantine-NativeSelect-wrapper"
+        class="m_6c018570 mantine-Input-wrapper mantine-NativeSelect-wrapper"
         data-pointer="true"
         data-variant="default"
         data-with-right-section="true"
@@ -27,7 +27,7 @@ exports[`CategoryHeaderの単体テスト スナップショットテスト 1`] 
       >
         <select
           aria-invalid="false"
-          class="m-8fb7ebe7 mantine-Input-input mantine-NativeSelect-input"
+          class="m_8fb7ebe7 mantine-Input-input mantine-NativeSelect-input"
           data-variant="default"
           id="sort-select"
         >
@@ -48,11 +48,11 @@ exports[`CategoryHeaderの単体テスト スナップショットテスト 1`] 
           </option>
         </select>
         <div
-          class="m-82577fc2 mantine-Input-section mantine-NativeSelect-section"
+          class="m_82577fc2 mantine-Input-section mantine-NativeSelect-section"
           data-position="right"
         >
           <svg
-            class="m-2943220b mantine-ComboboxChevron-chevron"
+            class="m_2943220b mantine-ComboboxChevron-chevron"
             data-combobox-chevron="true"
             fill="none"
             viewBox="0 0 15 15"
