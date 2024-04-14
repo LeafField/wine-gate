@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import { TextInput, Textarea, Button, TagsInput } from "@mantine/core";
 import { useForm } from "@mantine/form";
@@ -30,6 +30,7 @@ type Props = {
 const EditingPage: FC<Props> = ({ wine }) => {
   const { user, setImage_src } = useStore();
   const { winePostMutation, wineUpdateMutation } = useMutateWines();
+  const [loading, setLoading] = useState<boolean>(false);
 
   const form = useForm<EditingPageSchemaType>({
     initialValues: {
@@ -57,6 +58,7 @@ const EditingPage: FC<Props> = ({ wine }) => {
       if (!image.success) {
         alert(image.error.errors[0].message);
       } else if (image.success) {
+        setLoading(true);
         winePostMutation.mutate({ value, user, image: image.data });
       }
     } else if (wine) {
@@ -76,11 +78,15 @@ const EditingPage: FC<Props> = ({ wine }) => {
         `https://bcssrfyaqnyvqtmabmnt.supabase.co/storage/v1/object/public/wines/${wine.image_src}`,
       );
     }
-  }, [setImage_src, wine]);
+
+    return () => {
+      setLoading(false);
+    };
+  }, [setImage_src, wine, setLoading]);
 
   return (
     <div className="relative z-0 mx-4 my-15 max-w-[64.9375rem] min-[1086px]:mx-auto">
-      {winePostMutation.isPending && <LoadingOverlay />}
+      {loading && <LoadingOverlay />}
       {wineUpdateMutation.isPending && <LoadingOverlay />}
       <Heading title="記事編集" />
       <form className="space-y-15" onSubmit={form.onSubmit(submitHandler)}>
