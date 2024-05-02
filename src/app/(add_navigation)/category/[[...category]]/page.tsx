@@ -7,6 +7,7 @@ import {
 
 export const dynamic = "force-dynamic";
 export const runtime = "edge";
+export const revalidate = 0;
 
 const Page = async ({ params }: { params: { category: string[] } }) => {
   const articles = await categoryFetcher(params.category);
