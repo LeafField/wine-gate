@@ -113,13 +113,13 @@ export const favoriteCount = async (wine_id: string) => {
   return count;
 };
 
-export const favoriteUserOne = async (wine_id: string) => {
-  const { data, error } = await supabase
-    .from("favorite")
-    .select("user_id")
-    .eq("wine_id", wine_id);
+export const favoriteUserOne = async (wine_id: string, userId: string) => {
+  const { data, error } = await supabase.rpc("favorite_user_one", {
+    wine: wine_id,
+    arg_user_id: userId,
+  });
   if (error) throw new Error("お気に入りのユーザー取得に失敗しました");
-  return data[0] ? data[0] : null;
+  return data ? { user_id: data } : null;
 };
 
 export const addFavorite = async ({
