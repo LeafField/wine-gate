@@ -14,6 +14,7 @@ import LoginImage from "../../../images/loginImage.jpg";
 import { supabase } from "../../../utils/supabase";
 import { useRouter } from "next/navigation";
 import { useStore } from "../../../store";
+import { useQueryClient } from "@tanstack/react-query";
 
 const Authentication = () => {
   const router = useRouter();
@@ -21,9 +22,11 @@ const Authentication = () => {
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const { setModal } = useStore();
+  const queryClient = useQueryClient();
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    queryClient.invalidateQueries({ queryKey: ["favoriteUser"] });
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
     if (register) {
