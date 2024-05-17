@@ -9,7 +9,7 @@ type Props = {
 const CategoryLink: FC<Props> = ({ src, title }) => {
   return (
     <Link
-      className="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-colors duration-500 hover:border-blue"
+      className="flex h-10 w-fit items-center justify-center border border-gray px-4 transition-[border-color] duration-500 hover:border-blue"
       href={`/category/${src}/new/1`}
     >
       {title}
