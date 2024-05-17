@@ -3,7 +3,7 @@
 exports[`LoginButtonの単体テスト スナップショットテスト 1`] = `
 <div>
   <a
-    class="w-full rounded-xl border border-gray py-2 text-center transition-colors duration-300 hover:border-blue focus:outline-blue"
+    class="w-full rounded-xl border border-gray py-2 text-center transition-[border-color] duration-300 hover:border-blue focus:outline-blue"
     href="/login"
   >
     ログイン/会員登録

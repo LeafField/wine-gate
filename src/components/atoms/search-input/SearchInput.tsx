@@ -9,7 +9,6 @@ type Props = {
 };
 
 const SearchInput = forwardRef<HTMLInputElement, Props>(({ error }, ref) => {
-  // const [value, setValue] = useState<string>("");
   const { searchValue, setSearchValue } = useStore();
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
