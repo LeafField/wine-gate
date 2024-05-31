@@ -1,6 +1,7 @@
 import { render, fireEvent, screen } from "@testing-library/react";
 import SearchInput from "./SearchInput";
 import { MantineProvider } from "@mantine/core";
+import { ProviderWrapper } from "../../test-components/ProviderWrapper";
 
 describe("SearchInputの単体テスト", () => {
   beforeAll(() => {
@@ -20,7 +21,7 @@ describe("SearchInputの単体テスト", () => {
   });
 
   test("コンポーネントがクラッシュせずにレンダリングされる", () => {
-    render(<SearchInput error={""} />, { wrapper: MantineProvider });
+    render(<SearchInput error={""} />, { wrapper: ProviderWrapper });
     const inputElement = screen.getByRole("textbox", {
       name: "search",
     });
@@ -28,7 +29,7 @@ describe("SearchInputの単体テスト", () => {
   });
 
   test("ユーザーの入力が正しく反映される", () => {
-    render(<SearchInput error={""} />, { wrapper: MantineProvider });
+    render(<SearchInput error={""} />, { wrapper: ProviderWrapper });
     const inputElement = screen.getByRole<HTMLInputElement>("textbox", {
       name: "search",
     });
@@ -37,7 +38,7 @@ describe("SearchInputの単体テスト", () => {
   });
 
   test("クローズボタンをクリックすると入力がクリアされる", () => {
-    render(<SearchInput error={""} />, { wrapper: MantineProvider });
+    render(<SearchInput error={""} />, { wrapper: ProviderWrapper });
     const inputElement = screen.getByRole<HTMLInputElement>("textbox", {
       name: "search",
     });
@@ -49,7 +50,7 @@ describe("SearchInputの単体テスト", () => {
 
   test("スナップショットテスト", () => {
     const { container } = render(<SearchInput error={""} />, {
-      wrapper: MantineProvider,
+      wrapper: ProviderWrapper,
     });
     expect(container).toMatchSnapshot();
   });
