@@ -1,5 +1,5 @@
 "use client";
-import React, { FC, FormEvent, useState, useRef } from "react";
+import React, { FC, FormEvent, useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import SearchButton from "../../atoms/search-button/SearchButton";
 import SearchInput from "../../atoms/search-input/SearchInput";
@@ -36,6 +36,10 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
     }
     clearSearchValue();
   };
+
+  useEffect(() => {
+    router.prefetch("/search");
+  }, [router]);
 
   return (
     <div
