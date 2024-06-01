@@ -6,6 +6,7 @@ import TopPageLink from "../../atoms/toppage-link/TopPageLink";
 import { useSearchParams } from "next/navigation";
 import useQueryWineSearch from "../../../hooks/useQueryWineSearch";
 import Heading from "../../atoms/heading/Heading";
+import WideArticleLoading from "../../atoms/wide-article-loading/WideArticleLoading";
 
 const SearchPage: FC = () => {
   const searchParams = useSearchParams();
@@ -19,10 +20,13 @@ const SearchPage: FC = () => {
         <Heading title={`検索結果:「${searchText}」`} />
       </div>
       <main className="mx-4 max-w-[64.9375rem] space-y-4 main tablet:mx-0 tablet:w-[calc(var(--vw)-401px)]">
-        {data &&
-          data.map((content) => (
-            <WideArticle key={content.id} article={content} />
-          ))}
+        {data
+          ? data.map((content) => (
+              <WideArticle key={content.id} article={content} />
+            ))
+          : Array.from({ length: 10 }).map((_, i) => (
+              <WideArticleLoading key={i} />
+            ))}
       </main>
       <div className="footer-area">
         <TopPageLink />
