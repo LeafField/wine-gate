@@ -11,7 +11,7 @@ import WideArticleLoading from "../../atoms/wide-article-loading/WideArticleLoad
 const SearchPage: FC = () => {
   const searchParams = useSearchParams();
   const searchText = searchParams.get("search");
-  const { data } = useQueryWineSearch(searchText!);
+  const { data } = useQueryWineSearch(searchText);
 
   return (
     <>

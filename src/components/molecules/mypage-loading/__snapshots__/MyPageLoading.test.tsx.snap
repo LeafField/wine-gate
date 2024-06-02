@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MyPageLoadingの単体テスト スナップショットテスト 1`] = `
+<div>
+  <main
+    class="max-w-[64.9375rem] space-y-4 px-4 main tablet:w-[calc(var(--vw)-401px)] tablet:px-0"
+  >
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+    <div
+      class="h-[4.375rem] max-w-[64.9375rem] animate-pulse bg-gray tablet:w-[calc(var(--vw)-401px)]"
+    >
+      <span
+        class="sr-only"
+      >
+        読み込み中...
+      </span>
+    </div>
+  </main>
+</div>
+`;
