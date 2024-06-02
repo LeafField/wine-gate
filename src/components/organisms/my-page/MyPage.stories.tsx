@@ -29,8 +29,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    heroTitle: "マイページ",
-    pageTitle: "お気に入りワイン",
     articles: wineTitleDummyData,
   },
 };

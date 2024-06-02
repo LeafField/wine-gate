@@ -2,42 +2,6 @@
 
 exports[`MyPageの単体テスト MyPageコンポーネントが存在することを確認する 1`] = `
 <div>
-  <div
-    class="relative h-40 hero tablet:h-75"
-  >
-    <div
-      class="hero-mobile-verlay tablet:hero-overlay absolute inset-0 z-front flex h-full w-full items-center justify-end pr-6"
-    >
-      <h2
-        class="text-heading2 font-bold text-white"
-      >
-        マイページ
-      </h2>
-    </div>
-    <div
-      class="absolute inset-0 h-full w-full clip"
-    >
-      <div
-        class="absolute inset-0 h-40 w-full tablet:h-75"
-      >
-        <img
-          alt="様々な種類のグラスワインが並んでいる"
-          data-nimg="fill"
-          decoding="async"
-          fetchpriority="high"
-          sizes="100vw"
-          src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
-          srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
-          style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; object-fit: cover; color: transparent;"
-        />
-      </div>
-    </div>
-  </div>
-  <h3
-    class="mx-4 border-b-2 border-red text-heading2 sort tablet:mx-0"
-  >
-    お気に入りのワイン
-  </h3>
   <main
     class="max-w-[64.9375rem] space-y-4 px-4 main tablet:w-[calc(var(--vw)-401px)] tablet:px-0"
   >
