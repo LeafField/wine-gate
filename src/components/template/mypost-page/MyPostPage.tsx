@@ -21,7 +21,7 @@ const MyPostPage = () => {
   return (
     <>
       <LineUpHero title="マイページ" />
-      <h3 className="mx-4 border-b-2 border-red text-heading2 sort tablet:mx-0 tablet:min-w-[calc(var(--vw)-401px)]">
+      <h3 className="mx-4 border-b-2 border-red text-heading2 sort tablet:mx-0 tablet:w-[calc(var(--vw)-401px)]">
         投稿したワイン
       </h3>
       {data ? <MyPage articles={data} /> : <MyPageLoading />}
