@@ -7,13 +7,25 @@ const useMutateFavoriteCount = () => {
 
   const CountAddMutation = useMutation({
     mutationFn: addFavorite,
-    onSuccess: (_, variable) => {
+    onMutate: async (variables) => {
+      await queryClient.cancelQueries({
+        queryKey: ["favoriteUser", variables.wine_id],
+      });
+      queryClient.setQueryData(["favoriteUser", variables.wine_id], variables);
       queryClient.setQueryData(
-        ["favoriteCount", variable.wine_id],
+        ["favoriteCount", variables.wine_id],
         (prevCount: number) => prevCount + 1,
       );
-      queryClient.setQueryData(["favoriteUser", variable.wine_id], {
-        user_id: variable.user_id,
+
+      return variables.user_id;
+    },
+    onError: (_, variables, context) => {
+      queryClient.setQueryData(["favoriteUser", variables.wine_id], context);
+    },
+    onSettled: (_, __, { wine_id }) => {
+      queryClient.invalidateQueries({
+        queryKey: ["favoriteUser", wine_id],
+        exact: true,
       });
       queryClient.invalidateQueries({
         queryKey: ["myFavoriteWine"],
@@ -24,13 +36,22 @@ const useMutateFavoriteCount = () => {
 
   const CountRemoveMutation = useMutation({
     mutationFn: removeFavorite,
-    onSuccess: (_, variable) => {
+    onMutate: async (variables) => {
+      await queryClient.cancelQueries({
+        queryKey: ["favoriteUser", variables.wine_id],
+      });
+      queryClient.setQueryData(["favoriteUser", variables.wine_id], null);
       queryClient.setQueryData(
-        ["favoriteCount", variable.wine_id],
+        ["favoriteCount", variables.wine_id],
         (prevCount: number) => prevCount - 1,
       );
+    },
+    onError: (_, variables, context) => {
+      queryClient.setQueryData(["favoriteUser", variables.wine_id], context);
+    },
+    onSettled: (_, __, variables) => {
       queryClient.removeQueries({
-        queryKey: ["favoriteUser", variable.wine_id],
+        queryKey: ["favoriteUser", variables.wine_id],
       });
       queryClient.invalidateQueries({
         queryKey: ["myFavoriteWine"],
