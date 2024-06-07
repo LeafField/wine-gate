@@ -19,7 +19,7 @@ const ArticleConsole: FC<Props> = ({ wine_id, author_id }) => {
   const { user } = useStore();
   const { data: count, isLoading: countLoading } =
     useQueryFavoriteCount(wine_id);
-  const { data, isLoading: favoriteLoading } = useQueryFavoriteUser(wine_id);
+  const { data } = useQueryFavoriteUser(wine_id);
   const { CountAddMutation, CountRemoveMutation } = useMutateFavoriteCount();
   return (
     <div className="flex items-center justify-between gap-x-2 @[330px]:gap-x-4 tablet:w-fit">
@@ -28,7 +28,7 @@ const ArticleConsole: FC<Props> = ({ wine_id, author_id }) => {
       ) : (
         <FavoriteCount count={count} />
       )}
-      {!favoriteLoading && user && user.id !== author_id && (
+      {user && user.id !== author_id && (
         <FavoriteRegister
           loading={CountAddMutation.isPending || CountRemoveMutation.isPending}
           favorite={user.id === data?.user_id ? true : false}
