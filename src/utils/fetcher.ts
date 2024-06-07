@@ -101,7 +101,10 @@ export const updateWine = async ({
     .eq("id", id)
     .select();
   if (error) throw new Error("ワインの更新に失敗しました");
-  return data[0].id;
+  const slug: { id: string } = await fetch(`/api/revalidate?id=${data[0].id}`, {
+    method: "GET",
+  }).then((res) => res.json());
+  return slug.id;
 };
 
 export const favoriteCount = async (wine_id: string) => {
