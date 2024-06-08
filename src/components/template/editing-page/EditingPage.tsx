@@ -62,6 +62,7 @@ const EditingPage: FC<Props> = ({ wine }) => {
         winePostMutation.mutate({ value, user, image: image.data });
       }
     } else if (wine) {
+      setLoading(true);
       wineUpdateMutation.mutate({
         id: wine.id,
         value,
@@ -87,7 +88,6 @@ const EditingPage: FC<Props> = ({ wine }) => {
   return (
     <div className="relative z-0 mx-4 my-15 max-w-[64.9375rem] min-[1086px]:mx-auto">
       {loading && <LoadingOverlay />}
-      {wineUpdateMutation.isPending && <LoadingOverlay />}
       <Heading title="記事編集" />
       <form className="space-y-15" onSubmit={form.onSubmit(submitHandler)}>
         <TextInput
