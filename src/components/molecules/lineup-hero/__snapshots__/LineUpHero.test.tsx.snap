@@ -6,7 +6,7 @@ exports[`LineUpHeroの単体テスト LineUpHeroコンポーネントが存在�
     class="relative h-40 hero tablet:h-75"
   >
     <div
-      class="hero-mobile-verlay tablet:hero-overlay absolute inset-0 z-front flex h-full w-full items-center justify-end pr-6"
+      class="absolute inset-0 z-front flex h-full w-full items-center justify-end pr-6 hero-mobile-verlay tablet:hero-overlay"
     >
       <h2
         class="text-heading2 font-bold text-white"
