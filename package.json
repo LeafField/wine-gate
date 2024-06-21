@@ -10,7 +10,8 @@
     "test": "jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_99497e2eced9b31"
+    "chromatic": "npx chromatic --project-token=chpt_99497e2eced9b31",
+    "format":"prettier ./src --write"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

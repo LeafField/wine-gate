@@ -6,7 +6,7 @@ type Props = {
 
 const ArticleHeader: FC<Props> = ({ title }) => {
   return (
-    <h2 className="article-title mx-4 mt-8 border-l-4 border-blue py-[0.125rem] pl-2 text-heading2 tablet:mx-0 tablet:pt-0">
+    <h2 className="mx-4 mt-8 border-l-4 border-blue py-[0.125rem] pl-2 text-heading2 article-title tablet:mx-0 tablet:pt-0">
       {title}
     </h2>
   );
