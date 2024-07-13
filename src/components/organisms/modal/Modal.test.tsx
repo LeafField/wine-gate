@@ -4,26 +4,31 @@ import Modal from "./Modal";
 import { useStore } from "../../../store";
 
 describe("Modalの単体テスト", () => {
+  beforeAll(() => {
+    HTMLDialogElement.prototype.showModal = jest.fn();
+    HTMLDialogElement.prototype.close = jest.fn();
+  });
+
   test("初期状態では、何も表示されない", () => {
     render(<Modal />);
     expect(screen.queryByRole("dialog")).toBeNull();
   });
 
-  test("setModalを実行すると、dialogが表示される", () => {
+  test("setModalでメッセージが追加された際、showModalが実行される", () => {
     const { result } = renderHook(() => useStore());
     act(() => {
       result.current.setModal(["メッセージ1", "メッセージ2"]);
     });
     render(<Modal />);
-    expect(screen.getByRole("dialog")).toBeInTheDocument();
-    expect(screen.getByText("メッセージ1")).toBeInTheDocument();
-    expect(screen.getByText("メッセージ2")).toBeInTheDocument();
+    expect(HTMLDialogElement.prototype.showModal).toHaveBeenCalled();
   });
 
   test("閉じるボタンを押すと、dialogが非表示になる", async () => {
-    render(<Modal />);
+    const { container } = render(<Modal />);
+
+    container.children[0].setAttribute("open", "true");
     await userEvent.click(screen.getByRole("button"));
-    expect(screen.queryByRole("dialog")).toBeNull();
+    return expect(HTMLDialogElement.prototype.close).toHaveBeenCalled();
   });
 
   test("スナップショットテスト", () => {
