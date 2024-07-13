@@ -3,7 +3,7 @@
 exports[`Modalの単体テスト スナップショットテスト 1`] = `
 <div>
   <dialog
-    class="relative animate-fadeIn border border-gray bg-white px-4 py-4 shadow-md backdrop:bg-[rgba(255,255,255,0.6)] backdrop:backdrop-blur-[4px] max-tablet:mx-4 tablet:w-[400px]"
+    class="relative animate-fadeIn border border-gray bg-white px-4 py-4 shadow-md backdrop:animate-fadeIn backdrop:bg-[rgba(255,255,255,0.6)] backdrop:backdrop-blur-[4px] max-tablet:mx-4 tablet:w-[400px]"
   >
     <p
       class="text-base"
