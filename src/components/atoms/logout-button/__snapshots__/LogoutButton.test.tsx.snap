@@ -2,7 +2,7 @@
 
 exports[`LogoutButtonの単体テスト スナップショットテスト 1`] = `
 <div>
-  <div
+  <button
     class="user-panel-button cursor-pointer hover:border-blue focus:outline-blue"
   >
     <span
@@ -10,6 +10,6 @@ exports[`LogoutButtonの単体テスト スナップショットテスト 1`] = 
     >
       ログアウト
     </span>
-  </div>
+  </button>
 </div>
 `;

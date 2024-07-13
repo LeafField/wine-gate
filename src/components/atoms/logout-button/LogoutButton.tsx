@@ -7,12 +7,12 @@ const LogoutButton = () => {
   };
 
   return (
-    <div
+    <button
       onClick={clickHandler}
       className="user-panel-button cursor-pointer hover:border-blue focus:outline-blue"
     >
       <span className="w-24 select-none text-center">ログアウト</span>
-    </div>
+    </button>
   );
 };
 
