@@ -30,10 +30,10 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
         href="/article/4be1f2ab-b3b3-4599-b1a1-a73d280f5033"
       >
         <div
-          class="aspect-video w-full overflow-hidden bg-gray "
+          class="aspect-video w-full overflow-hidden bg-gray"
         >
           <figure
-            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110"
           >
             <img
               alt="ワイン画像"
@@ -73,10 +73,10 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
         href="/article/4be1f2ab-b3b3-4599-b1a1-a73d280f50"
       >
         <div
-          class="aspect-video w-full overflow-hidden bg-gray "
+          class="aspect-video w-full overflow-hidden bg-gray"
         >
           <figure
-            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110"
           >
             <img
               alt="ワイン画像"
@@ -116,10 +116,10 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
         href="/article/4be1f2-b3b3-4599-b1a1-a73d280f50"
       >
         <div
-          class="aspect-video w-full overflow-hidden bg-gray "
+          class="aspect-video w-full overflow-hidden bg-gray"
         >
           <figure
-            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110"
           >
             <img
               alt="ワイン画像"
@@ -159,10 +159,10 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
         href="/article/4be1f2-b3b3-4599-b1ad1-a73d280f50"
       >
         <div
-          class="aspect-video w-full overflow-hidden bg-gray "
+          class="aspect-video w-full overflow-hidden bg-gray"
         >
           <figure
-            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110"
           >
             <img
               alt="ワイン画像"

@@ -29,7 +29,7 @@ exports[`WideArticleの単体テスト WideArticleコンポーネントが存在
         </figure>
       </div>
       <div
-        class="flex-1 space-y-4 p-2 @[767px]:px-3 @[767px]:py-5 "
+        class="flex-1 space-y-4 p-2 @[767px]:px-3 @[767px]:py-5"
       >
         <h3
           class="text-heading3"

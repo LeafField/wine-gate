@@ -4,7 +4,7 @@ import TopPageContainer from "./TopPageContainer";
 const ContainerInner = () => {
   return (
     <TopPageContainer>
-      <div className="h-96 bg-black " />
+      <div className="h-96 bg-black" />
     </TopPageContainer>
   );
 };

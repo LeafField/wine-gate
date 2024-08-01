@@ -29,7 +29,7 @@ const WideArticle: FC<Props> = ({ article }) => {
             />
           </figure>
         </div>
-        <div className="flex-1 space-y-4 p-2 @[767px]:px-3 @[767px]:py-5 ">
+        <div className="flex-1 space-y-4 p-2 @[767px]:px-3 @[767px]:py-5">
           <h3 className="text-heading3">{article.title}</h3>
           <ArticleTags tags={article.tags} category={article.categories} />
           <ArticleInfo
