@@ -37,6 +37,8 @@ const preview: Preview = {
       </QueryClientProvider>
     ),
   ],
+
+  tags: ["autodocs"]
 };
 
 export default preview;
