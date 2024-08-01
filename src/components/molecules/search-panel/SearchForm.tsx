@@ -22,7 +22,7 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     inputRef.current?.blur();
-    queryClient.invalidateQueries({ queryKey: ["search"] });
+    queryClient.removeQueries({ queryKey: ["search"] });
 
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
