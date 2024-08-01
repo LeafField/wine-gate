@@ -1,9 +1,8 @@
-import React, { ChangeEvent, FC, forwardRef, useRef, useState } from "react";
+import React, { ChangeEvent, forwardRef } from "react";
 import { CloseButton, TextInput } from "@mantine/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { useStore } from "../../../store";
-import { useQueryClient } from "@tanstack/react-query";
 
 type Props = {
   error: string | null;
@@ -11,11 +10,9 @@ type Props = {
 
 const SearchInput = forwardRef<HTMLInputElement, Props>(({ error }, ref) => {
   const { searchValue, setSearchValue } = useStore();
-  const queryClient = useQueryClient();
 
   const changeHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
-    queryClient.resetQueries({ queryKey: ["search"], exact: true });
   };
 
   return (

@@ -24,10 +24,10 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
         href="/article/1"
       >
         <div
-          class="aspect-video w-full overflow-hidden bg-gray "
+          class="aspect-video w-full overflow-hidden bg-gray"
         >
           <figure
-            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110"
           >
             <img
               alt="ワイン画像"
@@ -67,10 +67,10 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
         href="/article/2"
       >
         <div
-          class="aspect-video w-full overflow-hidden bg-gray "
+          class="aspect-video w-full overflow-hidden bg-gray"
         >
           <figure
-            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110"
           >
             <img
               alt="ワイン画像"
@@ -110,10 +110,10 @@ exports[`NewArrivalsの結合テスト スナップショットテスト 1`] = `
         href="/article/3"
       >
         <div
-          class="aspect-video w-full overflow-hidden bg-gray "
+          class="aspect-video w-full overflow-hidden bg-gray"
         >
           <figure
-            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110 "
+            class="relative h-full w-full transition-transform duration-300 group-hover:scale-110"
           >
             <img
               alt="ワイン画像"

@@ -11,7 +11,7 @@ exports[`HeaderTitleの単体テスト スナップショット 1`] = `
       気軽にワイン入門、気楽にワイン紹介
     </p>
     <h1
-      class="className text-center text-header-title "
+      class="className text-center text-header-title"
     >
       <a
         href="/"

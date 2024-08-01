@@ -13,7 +13,7 @@ const ArticlePage: FC<WineProps> = (props) => {
     <>
       <ArticleHeader title={props.title} />
 
-      <main className="flex flex-col gap-y-15 px-4 main tablet:w-[calc(var(--vw)-401px)] tablet:px-0 tablet:pt-0  desktop:w-[64.9375rem]">
+      <main className="flex flex-col gap-y-15 px-4 main tablet:w-[calc(var(--vw)-401px)] tablet:px-0 tablet:pt-0 desktop:w-[64.9375rem]">
         <div className="space-y-6">
           <ArticleImage
             author_name={props.author_name}

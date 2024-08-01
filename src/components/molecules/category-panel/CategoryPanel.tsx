@@ -23,7 +23,7 @@ const CategoryPanel: FC<Props> = ({ categories }) => {
     >
       <h2 className="nav-title">カテゴリー検索</h2>
       <div className="flex flex-col gap-y-4 panel-inner">
-        <ul className=" flex justify-between">
+        <ul className="flex justify-between">
           {redItems.map((item) => (
             <li key={item.id}>
               <CategoryLink src={item.category} title={item.chara} />

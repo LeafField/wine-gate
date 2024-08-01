@@ -7,8 +7,8 @@ type Props = {
 
 const WineImage: FC<Props> = ({ src }) => {
   return (
-    <div className="aspect-video w-full overflow-hidden bg-gray ">
-      <figure className="relative h-full w-full transition-transform duration-300 group-hover:scale-110 ">
+    <div className="aspect-video w-full overflow-hidden bg-gray">
+      <figure className="relative h-full w-full transition-transform duration-300 group-hover:scale-110">
         <Image
           src={`${process.env.NEXT_PUBLIC_SUPABSE_IMAGE_URL}${src}`}
           fill

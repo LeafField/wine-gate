@@ -9,7 +9,7 @@ const Header = () => {
       <p className="text-center text-header-subtitle">
         気軽にワイン入門、気楽にワイン紹介
       </p>
-      <h1 className={`${KumarOne.className} text-center text-header-title `}>
+      <h1 className={`${KumarOne.className} text-center text-header-title`}>
         <Link href={"/"}>WINE GATE</Link>
       </h1>
       <Symbol />

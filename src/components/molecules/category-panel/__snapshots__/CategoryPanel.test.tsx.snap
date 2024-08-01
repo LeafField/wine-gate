@@ -15,7 +15,7 @@ exports[`CategoryPanelの単体テスト スナップショットテスト 1`] =
       class="flex flex-col gap-y-4 panel-inner"
     >
       <ul
-        class=" flex justify-between"
+        class="flex justify-between"
       >
         <li>
           <a
