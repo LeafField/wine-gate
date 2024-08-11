@@ -18,8 +18,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     activePage: 1,
+    setPage: () => {},
     totalPages: 10,
-    categorySlug: "sober",
-    sort: "new",
   },
 };

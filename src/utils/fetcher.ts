@@ -208,3 +208,9 @@ export const getSearchWine = async (searchText: string) => {
   }));
   return articles;
 };
+
+export const getWineCategorySlug = async () => {
+  const { data, error } = await supabase.from("categories").select("category");
+  if (error) throw new Error("カテゴリースラグの取得に失敗しました。");
+  return data;
+};

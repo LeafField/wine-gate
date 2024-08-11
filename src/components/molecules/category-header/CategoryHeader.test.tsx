@@ -15,14 +15,11 @@ describe("CategoryHeaderの単体テスト", () => {
   });
 
   test("CategoryHeaderが正しく表示される", () => {
-    jest
-      .spyOn(nextRouter, "useParams")
-      .mockReturnValue({ category: ["sober", "new", "1"] });
     render(<CategoryHeader title="新着ワイン" />, {
       wrapper: MantineProvider,
     });
     expect(screen.getByText("新着ワイン")).toBeInTheDocument();
-    expect(screen.getByDisplayValue("新着順")).toBeInTheDocument();
+    expect(screen.getByDisplayValue("人気順")).toBeInTheDocument();
   });
 
   test("CategoryHeaderのセレクトボックスの選択肢が正しく表示される", async () => {
@@ -33,7 +30,7 @@ describe("CategoryHeaderの単体テスト", () => {
       wrapper: MantineProvider,
     });
 
-    await userEvent.click(screen.getByDisplayValue("新着順"));
+    await userEvent.click(screen.getByDisplayValue("人気順"));
     await waitFor(() => {
       expect(screen.getByText("新着順")).toBeInTheDocument();
       expect(screen.getByText("価格が安い順")).toBeInTheDocument();
@@ -41,33 +38,28 @@ describe("CategoryHeaderの単体テスト", () => {
     });
   });
 
-  test("CategoryHeaderのセレクトボックスの選択肢を変更すると、router.pushが呼ばれる", async () => {
-    jest
-      .spyOn(nextRouter, "useParams")
-      .mockReturnValue({ category: ["sober", "new", "1"] });
-    const pushMock = jest.fn();
-    jest.spyOn(nextRouter, "useRouter").mockReturnValue({
-      push: pushMock,
-    } as any);
-    render(<CategoryHeader title="新着ワイン" />, {
+  test("CategoryHeaderのセレクトボックスの選択肢を変更すると、setSortが呼ばれる", async () => {
+    const mockSort = jest.fn();
+    render(<CategoryHeader setSort={mockSort} title="新着ワイン" />, {
       wrapper: MantineProvider,
     });
 
-    await userEvent.selectOptions(
-      screen.getByDisplayValue("新着順"),
-      "popular",
-    );
-    expect(pushMock).toHaveBeenCalledWith("/category/sober/popular/1");
+    await userEvent.selectOptions(screen.getByDisplayValue("人気順"), "new");
+    return expect(mockSort).toHaveBeenCalledWith("new");
   });
 
-  test("params.category[1]がundefinedの場合、デフォルトで新着順が選択される", () => {
-    jest
-      .spyOn(nextRouter, "useParams")
-      .mockReturnValue({ category: ["sober"] });
+  test("sortのクエリパラメータがnullの場合、デフォルトで人気順が選択される", () => {
     render(<CategoryHeader title="新着ワイン" />, {
       wrapper: MantineProvider,
     });
-    expect(screen.getByDisplayValue("新着順")).toBeInTheDocument();
+    expect(screen.getByDisplayValue("人気順")).toBeInTheDocument();
+  });
+
+  test("setSortを渡していない場合、ソートが実行されない", async () => {
+    render(<CategoryHeader title="新着ワイン" sort="popular" />, {
+      wrapper: MantineProvider,
+    });
+    await userEvent.selectOptions(screen.getByDisplayValue("人気順"), "new");
   });
 
   test("スナップショットテスト", () => {

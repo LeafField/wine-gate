@@ -16,7 +16,7 @@ describe("WinePagination", () => {
 
   test("正しくレンダリングがされている", () => {
     const { container } = render(
-      <WinePagination totalPages={10} categorySlug="red" sort="new" />,
+      <WinePagination totalPages={10} activePage={1} setPage={jest.fn} />,
       {
         wrapper: MantineProvider,
       },
@@ -29,21 +29,16 @@ describe("WinePagination", () => {
     expect(container).toMatchSnapshot();
   });
 
-  test("ページネーションがクリックされた時にrouter.pushが呼ばれる", async () => {
+  test("ページネーションをクリックした時、setPageにクリックしたページの数値が入力される", async () => {
     expect.assertions(1);
-    const mockPush = jest.fn();
-    jest.spyOn(router, "useRouter").mockImplementationOnce(() => ({
-      push: mockPush,
-      back: jest.fn(),
-      prefetch: jest.fn(),
-      replace: jest.fn(),
-      forward: jest.fn(),
-      refresh: jest.fn(),
-    }));
-    render(<WinePagination totalPages={10} categorySlug="red" sort="new" />, {
-      wrapper: MantineProvider,
-    });
+    const setPage = jest.fn();
+    render(
+      <WinePagination totalPages={10} activePage={1} setPage={setPage} />,
+      {
+        wrapper: MantineProvider,
+      },
+    );
     await userEvent.click(screen.getByText("2"));
-    return expect(mockPush).toHaveBeenCalledWith("/category/red/new/2");
+    expect(setPage).toHaveBeenCalledWith(2);
   });
 });

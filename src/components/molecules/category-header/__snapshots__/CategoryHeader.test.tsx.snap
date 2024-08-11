@@ -32,6 +32,11 @@ exports[`CategoryHeaderの単体テスト スナップショットテスト 1`] 
           id="sort-select"
         >
           <option
+            value="popular"
+          >
+            人気順
+          </option>
+          <option
             value="new"
           >
             新着順
@@ -40,11 +45,6 @@ exports[`CategoryHeaderの単体テスト スナップショットテスト 1`] 
             value="inexpensive"
           >
             価格が安い順
-          </option>
-          <option
-            value="popular"
-          >
-            人気順
           </option>
         </select>
         <div
