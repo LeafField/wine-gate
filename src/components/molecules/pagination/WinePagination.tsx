@@ -1,25 +1,17 @@
 "use client";
-import React, { FC } from "react";
+import React, { Dispatch, FC, SetStateAction } from "react";
 import { useRouter } from "next/navigation";
 import { Pagination } from "@mantine/core";
 
 type Props = {
-  activePage?: number;
+  activePage: number;
   totalPages: number;
-  categorySlug: string;
-  sort: string;
+  setPage: Dispatch<SetStateAction<number>>;
 };
 
-const WinePagination: FC<Props> = ({
-  activePage = 1,
-  totalPages,
-  categorySlug,
-  sort,
-}) => {
-  const router = useRouter();
-
+const WinePagination: FC<Props> = ({ activePage, totalPages, setPage }) => {
   const changeHandler = (value: number) => {
-    router.push(`/category/${categorySlug}/${sort}/${value}`);
+    setPage(value);
   };
   return (
     <div className="flex justify-center">

@@ -16,10 +16,7 @@ describe("CategoryLinkの単体テスト", () => {
   test("リンクが正しいhrefを持つ", () => {
     render(<CategoryLink {...mockProps} />);
     const linkElement = screen.getByRole("link");
-    expect(linkElement).toHaveAttribute(
-      "href",
-      `/category/${mockProps.src}/new/1`,
-    );
+    expect(linkElement).toHaveAttribute("href", `/category/${mockProps.src}`);
   });
 
   test("リンクが正しいテキストを持つ", () => {
