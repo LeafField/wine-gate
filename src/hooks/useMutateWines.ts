@@ -20,6 +20,7 @@ const useMutateWines = () => {
   const wineUpdateMutation = useMutation({
     mutationFn: updateWine,
     onSuccess: (id) => {
+      queryClient.removeQueries({ queryKey: ["editing", id], exact: true });
       router.replace(`/article/${id}`);
       router.refresh();
     },
