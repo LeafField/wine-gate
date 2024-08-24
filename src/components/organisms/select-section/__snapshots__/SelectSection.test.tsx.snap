@@ -199,7 +199,7 @@ exports[`SelectSectionの単体テスト 与えられたtitle及びchildren要�
     </div>
     <a
       class="mt-2 flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
-      href="/category/sober/new/1"
+      href="/category/sober"
     >
       <span
         class="text-main-text"
