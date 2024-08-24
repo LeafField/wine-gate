@@ -6,13 +6,17 @@ exports[`LineUpHeroの単体テスト LineUpHeroコンポーネントが存在�
     class="relative h-40 hero tablet:h-75"
   >
     <div
-      class="absolute inset-0 z-front flex h-full w-full items-center justify-end pr-6 hero-mobile-verlay tablet:hero-overlay"
+      class="hero-mobile-overlay absolute inset-0 z-front flex h-full w-full items-center justify-end tablet:hero-overlay"
     >
-      <h2
-        class="text-heading2 font-bold text-white"
+      <div
+        class="mx-auto flex w-full max-w-[87rem] items-center justify-end px-6"
       >
-        ワイン検索
-      </h2>
+        <h2
+          class="text-heading2 font-bold text-white"
+        >
+          ワイン検索
+        </h2>
+      </div>
     </div>
     <div
       class="absolute inset-0 h-full w-full clip"
