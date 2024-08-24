@@ -10,7 +10,7 @@ type Props = {
 const MoreLink: FC<Props> = ({ link }) => {
   return (
     <Link
-      href={`/category/${link}/new/1`}
+      href={`/category/${link}`}
       className="mt-2 flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
     >
       <span className="text-main-text">もっと見る</span>
