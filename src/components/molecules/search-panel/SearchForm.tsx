@@ -16,7 +16,7 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
   const [errorState, setErrorState] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const router = useRouter();
-  const { menu, clearSearchValue } = useStore();
+  const { menu, setMenu, clearSearchValue } = useStore();
   const queryClient = useQueryClient();
 
   const submitHandler = (event: FormEvent<HTMLFormElement>) => {
@@ -31,6 +31,7 @@ const SearchPanel: FC<Props> = ({ selectData }) => {
       const slug = schema.data;
       router.push(`/search?search=${slug.search}`);
       setErrorState(null);
+      setMenu("close");
     } else {
       setErrorState(schema.error.errors[0].message);
     }
