@@ -239,7 +239,7 @@ const config: Config = {
         } satisfies CSSProperties,
       });
       addUtilities({
-        ".hero-mobile-verlay": {
+        ".hero-mobile-overlay": {
           backgroundImage:
             "linear-gradient(90deg, rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70) 90%)",
         } satisfies CSSProperties,
