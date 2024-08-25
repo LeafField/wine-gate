@@ -3,7 +3,7 @@
 exports[`HeroHeaderの単体テスト propsのtitleが表示される 1`] = `
 <div>
   <div
-    class="hero-mobile-overlay absolute inset-0 z-front flex h-full w-full items-center justify-end tablet:hero-overlay"
+    class="absolute inset-0 z-front flex h-full w-full items-center justify-end hero-mobile-overlay tablet:hero-overlay"
   >
     <div
       class="mx-auto flex w-full max-w-[87rem] items-center justify-end px-6"
