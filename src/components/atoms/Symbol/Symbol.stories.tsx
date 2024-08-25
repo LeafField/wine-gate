@@ -4,6 +4,13 @@ import { Symbol } from "./Symbol";
 const meta = {
   title: "atoms/Symbol",
   component: Symbol,
+  decorators: [
+    (Story) => (
+      <div style={{ height: "124px", position: "relative" }}>
+        <Story />
+      </div>
+    ),
+  ],
 } satisfies Meta<typeof Symbol>;
 
 export default meta;

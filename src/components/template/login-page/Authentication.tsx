@@ -1,5 +1,5 @@
 "use client";
-import React, { FormEvent, useReducer, useRef } from "react";
+import React, { FormEvent, useReducer, useRef, useState } from "react";
 import {
   Paper,
   TextInput,
@@ -19,6 +19,7 @@ import { useQueryClient } from "@tanstack/react-query";
 const Authentication = () => {
   const router = useRouter();
   const [register, dispatch] = useReducer((state: boolean) => !state, false);
+  const [loading, setLoading] = useState<boolean>(false);
   const emailRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
   const { setModal } = useStore();
@@ -26,6 +27,7 @@ const Authentication = () => {
 
   const submitHandler = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    setLoading(true);
     queryClient.invalidateQueries({ queryKey: ["favoriteUser"] });
     const formData = new FormData(event.currentTarget);
     const data = Object.fromEntries(formData.entries());
@@ -40,13 +42,16 @@ const Authentication = () => {
 
       if (error?.status === 422) {
         alert("パスワードが短すぎます。6文字以上で登録してください。");
+        setLoading(false);
       } else if (error) {
         alert("登録に失敗しました。お手数ですが管理者までご連絡ください。");
+        setLoading(false);
         throw new Error(error.message);
       }
 
       if (authData.user?.identities?.length === 0) {
         alert("そのメールアドレスは既に登録されています。");
+        setLoading(false);
       } else {
         setModal([
           "ご登録いただいたメールアドレスへ確認メールを送信しました。",
@@ -63,7 +68,7 @@ const Authentication = () => {
         alert(
           "ログインに失敗しました。\nメールアドレスかパスワードが間違っています。",
         );
-        throw new Error(error.message);
+        setLoading(false);
       } else {
         setModal(["ログインしました"]);
         router.back();
@@ -125,8 +130,15 @@ const Authentication = () => {
             required
             ref={passwordRef}
           />
-          <Button type="submit" bg={"blue"} fullWidth mt="xl" size="md">
-            {register ? "会員登録" : "ログイン"}
+          <Button
+            type="submit"
+            disabled={loading}
+            bg={"blue"}
+            fullWidth
+            mt="xl"
+            size="md"
+          >
+            {loading ? "...通信中" : register ? "会員登録" : "ログイン"}
           </Button>
         </form>
 
