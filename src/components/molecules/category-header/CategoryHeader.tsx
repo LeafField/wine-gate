@@ -33,6 +33,7 @@ const CategoryHeader: FC<Props> = ({ title, sort, setSort }) => {
         value={sort}
         onChange={changeHandler}
         id="sort-select"
+        aria-label="sort-select"
       />
     </div>
   );

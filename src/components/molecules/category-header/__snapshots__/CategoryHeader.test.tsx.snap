@@ -27,6 +27,7 @@ exports[`CategoryHeaderの単体テスト スナップショットテスト 1`] 
       >
         <select
           aria-invalid="false"
+          aria-label="sort-select"
           class="m_8fb7ebe7 mantine-Input-input mantine-NativeSelect-input"
           data-variant="default"
           id="sort-select"
