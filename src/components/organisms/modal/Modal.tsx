@@ -17,7 +17,7 @@ const Modal: FC = () => {
   return (
     <dialog
       ref={modalRef}
-      className="relative animate-fadeIn border border-gray bg-white px-4 py-4 shadow-md backdrop:animate-fadeIn backdrop:bg-[rgba(255,255,255,0.6)] backdrop:backdrop-blur-[4px] max-tablet:mx-4 tablet:w-[400px]"
+      className="relative animate-fadeIn border border-gray bg-white px-4 py-4 shadow-md backdrop:animate-fadeIn backdrop:bg-[rgba(255,255,255,0.6)] backdrop:backdrop-blur-[4px] tablet:w-[400px]"
     >
       {modal.map((message, index) => (
         <p key={index} className={`text-base`}>

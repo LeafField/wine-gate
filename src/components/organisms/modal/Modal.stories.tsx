@@ -6,6 +6,13 @@ import { useEffect } from "react";
 const meta = {
   title: "organisms/Modal",
   component: Modal,
+} satisfies Meta<typeof Modal>;
+
+export default meta;
+
+type Story = StoryObj<typeof Modal>;
+
+export const PC: Story = {
   decorators: [
     (Story) => {
       const { setModal } = useStore();
@@ -18,19 +25,25 @@ const meta = {
       return <Story />;
     },
   ],
-} satisfies Meta<typeof Modal>;
-
-export default meta;
-
-type Story = StoryObj<typeof Modal>;
-
-export const PC: Story = {};
+};
 export const Mobile: Story = {
   parameters: {
     viewport: {
       defaultViewport: "iphone6",
     },
   },
+  decorators: [
+    (Story) => {
+      const { setModal } = useStore();
+      useEffect(() => {
+        setModal([
+          "メールアドレスかパスワードが間違っています。",
+          "確認の上もう一度お試しください。",
+        ]);
+      }, [setModal]);
+      return <Story />;
+    },
+  ],
 };
 
 export const ShowHide: Story = {
@@ -41,6 +54,13 @@ export const ShowHide: Story = {
         const messages = e.target.value.split("\n");
         setModal(messages);
       };
+      useEffect(() => {
+        setModal([
+          "メールアドレスかパスワードが間違っています。",
+          "確認の上もう一度お試しください。",
+        ]);
+      }, [setModal]);
+
       return (
         <>
           <Story />
@@ -48,6 +68,18 @@ export const ShowHide: Story = {
           <p>{modal}</p>
         </>
       );
+    },
+  ],
+};
+
+export const LoginedModal: Story = {
+  decorators: [
+    (Story) => {
+      const { setModal } = useStore();
+      useEffect(() => {
+        setModal(["ログインしました。"]);
+      }, [setModal]);
+      return <Story />;
     },
   ],
 };

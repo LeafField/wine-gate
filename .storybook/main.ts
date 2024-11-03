@@ -9,10 +9,11 @@ const config: StorybookConfig = {
     "@storybook/addon-interactions",
   ],
 
-  framework: {
-    name: "@storybook/nextjs",
-    options: {},
-  },
+  // framework: {
+  //   name: "@storybook/nextjs",
+  //   options: {},
+  // },
+  framework: "@storybook/experimental-nextjs-vite",
 
   docs: {},
 
