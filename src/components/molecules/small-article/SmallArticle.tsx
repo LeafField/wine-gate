@@ -18,7 +18,6 @@ const SmallArticle: FC<SmallArticleProps> = ({
       href={`/article/${id}`}
       className="group row-span-3 grid h-full w-full grid-rows-subgrid gap-0 border border-gray transition-colors duration-500 hover:border-blue"
       aria-label={title}
-      prefetch={false}
     >
       <WineImage src={image_src} />
       <h3 className="w-full px-2 text-base text-black">{title}</h3>
