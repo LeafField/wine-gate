@@ -3,15 +3,15 @@
 exports[`Modalの単体テスト スナップショットテスト 1`] = `
 <div>
   <dialog
-    class="relative animate-fadeIn border border-gray bg-white px-4 py-4 shadow-md backdrop:animate-fadeIn backdrop:bg-[rgba(255,255,255,0.6)] backdrop:backdrop-blur-[4px] tablet:w-[400px]"
+    class="animate-fadeIn overflow-x-hidden border border-gray bg-white px-4 py-4 shadow-md backdrop:animate-fadeIn backdrop:bg-[rgba(255,255,255,0.6)] backdrop:backdrop-blur-[4px] tablet:w-[400px]"
   >
     <p
-      class="text-base"
+      class="text-wrap break-words text-base"
     >
       ご登録いただいたメールアドレスへ確認メールを送信しました。
     </p>
     <p
-      class="text-base"
+      class="text-wrap break-words text-base"
     >
       メール内のリンクより登録を完了してください。
     </p>
