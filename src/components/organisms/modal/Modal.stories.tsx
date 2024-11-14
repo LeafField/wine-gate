@@ -83,3 +83,27 @@ export const LoginedModal: Story = {
     },
   ],
 };
+
+export const LongPageModal: Story = {
+  decorators: [
+    (Story) => {
+      const { setModal } = useStore();
+
+      const clickHandler = () => {
+        setModal([
+          "ログインしました。",
+          "hogehogehogehogehogehogehogehogehogehogehoge",
+          "asjfdhasklhgkdsahfgkfh",
+        ]);
+      };
+
+      return (
+        <div>
+          <Story />
+          <div className="h-[150vh] bg-gray"></div>
+          <button onClick={clickHandler}>show modal</button>
+        </div>
+      );
+    },
+  ],
+};
