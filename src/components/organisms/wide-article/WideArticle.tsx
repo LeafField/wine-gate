@@ -12,7 +12,11 @@ type Props = {
 const WideArticle: FC<Props> = ({ article }) => {
   if (!article.categories) return null;
   return (
-    <Link href={`/article/${article.id}`} className="block @container">
+    <Link
+      href={`/article/${article.id}`}
+      className="block @container"
+      prefetch={false}
+    >
       <article className="group flex flex-col border border-gray transition-colors duration-300 hover:border-blue @[767px]:flex-row">
         <div className="aspect-video w-full shrink-0 overflow-hidden @[767px]:aspect-auto @[767px]:h-auto @[767px]:w-[20.8125rem]">
           <figure

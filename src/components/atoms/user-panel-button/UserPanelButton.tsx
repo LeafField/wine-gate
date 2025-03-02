@@ -11,6 +11,7 @@ const UserPanelButton: FC<Props> = ({ href, title }) => {
     <Link
       className="user-panel-button hover:border-blue focus:outline-blue"
       href={href}
+      prefetch={false}
     >
       <span className="w-24 text-center">{title}</span>
     </Link>
