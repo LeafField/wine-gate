@@ -12,6 +12,7 @@ const MoreLink: FC<Props> = ({ link }) => {
     <Link
       href={`/category/${link}`}
       className="mt-2 flex items-center justify-end text-black transition-colors duration-300 hover:text-blue"
+      prefetch={false}
     >
       <span className="text-main-text">もっと見る</span>
       <FontAwesomeIcon

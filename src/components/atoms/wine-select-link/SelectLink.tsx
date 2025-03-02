@@ -8,6 +8,7 @@ const SelectLink: FC = () => {
     <Link
       className="group relative block h-[12rem] w-full overflow-hidden tablet:col-span-2 tablet:h-[24.0625rem] desktop:row-span-2"
       href={"/select"}
+      prefetch={false}
     >
       <figure className="absolute h-full w-full transition-transform duration-300 group-hover:scale-110">
         <Image
