@@ -8,7 +8,6 @@ const TopPageLink: FC = () => {
     <Link
       href={"/"}
       className="flex w-fit items-center justify-center gap-1 transition-colors duration-300 hover:text-blue"
-      prefetch={false}
     >
       <FontAwesomeIcon className="mt-[0.125rem]" icon={faArrowTurnUp} />
       トップページへ戻る
