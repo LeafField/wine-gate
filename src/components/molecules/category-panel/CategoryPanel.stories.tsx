@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import CategoryPanel from "./CategoryPanel";
 import { categoryDummyData } from "../../../utils/dummyData";
 

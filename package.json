@@ -37,8 +37,10 @@
   },
   "devDependencies": {
     "@opentelemetry/api": "^1.9.0",
+    "@storybook/addon-docs": "^10.1.8",
     "@storybook/addon-links": "^10.1.8",
     "@storybook/addon-onboarding": "^10.1.8",
+    "@storybook/nextjs": "^10.1.8",
     "@tanstack/react-query-devtools": "^5.51.16",
     "@testing-library/jest-dom": "^6.4.8",
     "@testing-library/react": "^16.0.0",
@@ -65,10 +67,7 @@
     "supabase": "^1.187.10",
     "tailwindcss": "^3.4.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5",
-    "@storybook/addon-docs": "^10.1.8",
-    "@storybook/nextjs-vite": "10.1.8",
-    "vite": "^7.0.0"
+    "typescript": "^5"
   },
   "msw": {
     "workerDirectory": [

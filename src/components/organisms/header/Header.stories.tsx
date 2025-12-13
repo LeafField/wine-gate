@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import Header from "./Header";
 import { notoStyle } from "../../../utils/font";
 
@@ -23,7 +23,7 @@ export const Mobile: Story = {
   globals: {
     viewport: {
       value: "iphone6",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };

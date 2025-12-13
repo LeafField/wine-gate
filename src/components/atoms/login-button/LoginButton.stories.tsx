@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/nextjs-vite";
+import { StoryObj, Meta } from "@storybook/nextjs";
 import LoginButton from "./LoginButton";
 
 const meta = {

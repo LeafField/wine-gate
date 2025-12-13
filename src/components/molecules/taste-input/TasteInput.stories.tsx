@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import TasteInput from "./TasteInput";
 import { categoryDummyData } from "../../../utils/dummyData";
 import { FormEvent } from "react";

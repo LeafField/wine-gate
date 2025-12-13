@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/nextjs-vite";
+import { StoryObj, Meta } from "@storybook/nextjs";
 import ArticleImage from "./ArticleImage";
 import dummyImage from "../../../images/dummy_wine.png";
 
@@ -37,7 +37,7 @@ export const Mobile: Story = {
   globals: {
     viewport: {
       value: "iphone6",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };

@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/nextjs-vite";
+import { StoryObj, Meta } from "@storybook/nextjs";
 import ArticlePanel from "./ArticlePanel";
 import { categoryDummyData } from "../../../utils/dummyData";
 import { useQueryClient } from "@tanstack/react-query";

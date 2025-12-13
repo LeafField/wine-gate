@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import WineImage from "./WineImage";
 import dummyImage from "../../../images/dummy_wine.png";
 

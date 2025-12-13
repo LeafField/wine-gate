@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import { spyOn, within } from "storybook/test";
 import EditingPage from "./EditingPage";
 import * as fetcher from "../../../utils/fetcher";

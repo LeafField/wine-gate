@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/nextjs-vite";
+import { StoryObj, Meta } from "@storybook/nextjs";
 import LineUpHero from "./LineUpHero";
 
 const meta = {
@@ -45,7 +45,7 @@ export const Mobile: Story = {
   globals: {
     viewport: {
       value: "iphone6",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };

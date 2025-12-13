@@ -1,8 +1,5 @@
-import type { Preview } from "@storybook/nextjs-vite";
-import {
-  INITIAL_VIEWPORTS,
-  MINIMAL_VIEWPORTS,
-} from "storybook/viewport";
+import type { Preview } from "@storybook/nextjs";
+import { INITIAL_VIEWPORTS, MINIMAL_VIEWPORTS } from "storybook/viewport";
 import "@mantine/core/styles.css";
 import "../src/app/globals.css";
 import React from "react";

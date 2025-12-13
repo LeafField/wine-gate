@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import NavMenu from "./NavMenu";
 
 const meta = {
@@ -15,8 +15,8 @@ export const Default: Story = {
   globals: {
     viewport: {
       value: "iphone5",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };
 
@@ -24,7 +24,7 @@ export const IPhone14Pro: Story = {
   globals: {
     viewport: {
       value: "iphone14promax",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };

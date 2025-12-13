@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import UserPanel from "./UserPanel";
 import UseStoreTester from "../../test-components/UseStoreTester";
 import { spyOn, within } from "storybook/test";

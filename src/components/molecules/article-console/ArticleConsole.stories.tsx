@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/nextjs-vite";
+import { StoryObj, Meta } from "@storybook/nextjs";
 import ArticleConsole from "./ArticleConsole";
 import { useQueryClient } from "@tanstack/react-query";
 import UseStoreTester from "../../test-components/UseStoreTester";
@@ -59,8 +59,8 @@ export const Mobile: Story = {
   globals: {
     viewport: {
       value: "iphone6",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };
 

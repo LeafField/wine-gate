@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import SearchForm from "./SearchForm";
 import { selectDummyData } from "../../../utils/dummyData";
 

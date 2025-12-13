@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/nextjs-vite";
+import { StoryObj, Meta } from "@storybook/nextjs";
 import SelectSection from "./SelectSection";
 import { categoryFavoriteSmallArticleDummyData } from "../../../utils/dummyData";
 

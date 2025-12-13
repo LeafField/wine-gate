@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/nextjs-vite";
+import { StoryObj, Meta } from "@storybook/nextjs";
 import LogoutButton from "./LogoutButton";
 import { spyOn, within } from "storybook/test";
 import { supabase } from "../../../utils/supabase";

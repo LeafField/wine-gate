@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import Navigation from "./Navigation";
 import { spyOn, within } from "storybook/test";
 import { supabase } from "../../../utils/supabase";
@@ -39,13 +39,13 @@ export const Mobile: Story = {
   parameters: {
     backgrounds: {
       default: "dark",
-    }
+    },
   },
 
   globals: {
     viewport: {
       value: "iphone6",
-      isRotated: false
-    }
-  }
+      isRotated: false,
+    },
+  },
 };

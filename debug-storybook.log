@@ -1,14 +1,34 @@
-[17:01:45.488] [INFO] storybook v10.1.8
-[17:01:45.606] [ERROR] [38;2;241;97;97mSB_CORE-COMMON_0003 (CouldNotEvaluateFrameworkError): Could not evaluate the '@storybook/nextjs-vite-vite' package from the 'framework' field of Storybook config.
+[23:26:31.406] [INFO] storybook v10.1.8
+[23:26:32.565] [DEBUG] Getting package.json info for /root/wine-gate/package.json...
+[23:26:32.575] [ERROR] [38;2;241;97;97mSB_CORE-SERVER_0002 (CriticalPresetLoadError): Storybook failed to load the following preset: @storybook/nextjs/preset.
 
-Are you sure it's a valid package and is installed?
+Please check whether your setup is correct, the Storybook dependencies (and their peer dependencies) are installed correctly and there are no package version clashes.
+
+If you believe this is a bug, please open an issue on Github.
+
+Error [ERR_MODULE_NOT_FOUND]: Cannot find package '@storybook/nextjs' imported from ./node_modules/storybook/dist/_node-chunks/chunk-MOOIRZDT.js
+    at Object.getPackageJSONURL (node:internal/modules/package_json_reader:268:9)
+    at packageResolve (node:internal/modules/esm/resolve:768:81)
+    at moduleResolve (node:internal/modules/esm/resolve:854:18)
+    at defaultResolve (node:internal/modules/esm/resolve:984:11)
+    at nextResolve (node:internal/modules/esm/hooks:748:28)
+    at Hooks.resolve (node:internal/modules/esm/hooks:240:30)
+    at handleMessage (node:internal/modules/esm/worker:199:24)
+    at checkForMessages (node:internal/modules/esm/worker:141:28)
+    at process.<anonymous> (node:internal/modules/esm/worker:160:5)
+    at process.emit (node:events:518:28)
 
 More info: 
 [39m
-    at validateFrameworkName (file://./node_modules/storybook/dist/_node-chunks/chunk-76UP3JOL.js:12127:13)
-    at buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:7150:28)
+    at loadPreset (file://./node_modules/storybook/dist/_node-chunks/chunk-76UP3JOL.js:10101:13)
+    at async Promise.all (index 0)
+    at async loadPresets (file://./node_modules/storybook/dist/_node-chunks/chunk-76UP3JOL.js:10110:73)
+    at async getPresets (file://./node_modules/storybook/dist/_node-chunks/chunk-76UP3JOL.js:10141:23)
+    at async buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:7163:17)
     at async withTelemetry (file://./node_modules/storybook/dist/_node-chunks/chunk-6CJUCYYK.js:209:12)
     at async dev (file://./node_modules/storybook/dist/bin/core.js:2734:3)
     at async _Command.<anonymous> (file://./node_modules/storybook/dist/bin/core.js:2801:92)
-[17:01:45.607] [WARN] Broken build, fix the error above.
+[23:26:32.577] [WARN] Broken build, fix the error above.
 You may need to refresh the browser.
+[23:26:36.515] [PROMPT] Would you like to send anonymous crash reports to improve Storybook and fix bugs faster? {"choice":true}
+[23:26:36.516] [INFO] Storybook collects completely anonymous usage telemetry. We use it to shape Storybook's roadmap and prioritize features. You can learn more, including how to opt out, at https://storybook.js.org/telemetry

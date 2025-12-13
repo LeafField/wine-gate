@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Meta, StoryObj } from "@storybook/nextjs";
 import TopPageContainer from "./TopPageContainer";
 
 const ContainerInner = () => {
@@ -23,15 +23,15 @@ export const Tablet: Story = {
   globals: {
     viewport: {
       value: "ipad",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };
 export const Mobile: Story = {
   globals: {
     viewport: {
       value: "iphone6",
-      isRotated: false
-    }
+      isRotated: false,
+    },
   },
 };
