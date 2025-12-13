@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import TopPage from "./TopPage";
 import { smallArticleDummyData } from "../../../utils/dummyData";
 

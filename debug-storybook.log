@@ -1,0 +1,14 @@
+[17:01:45.488] [INFO] storybook v10.1.8
+[17:01:45.606] [ERROR] [38;2;241;97;97mSB_CORE-COMMON_0003 (CouldNotEvaluateFrameworkError): Could not evaluate the '@storybook/nextjs-vite-vite' package from the 'framework' field of Storybook config.
+
+Are you sure it's a valid package and is installed?
+
+More info: 
+[39m
+    at validateFrameworkName (file://./node_modules/storybook/dist/_node-chunks/chunk-76UP3JOL.js:12127:13)
+    at buildDevStandalone (file://./node_modules/storybook/dist/core-server/index.js:7150:28)
+    at async withTelemetry (file://./node_modules/storybook/dist/_node-chunks/chunk-6CJUCYYK.js:209:12)
+    at async dev (file://./node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file://./node_modules/storybook/dist/bin/core.js:2801:92)
+[17:01:45.607] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.

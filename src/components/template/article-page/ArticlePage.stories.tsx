@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import ArticlePage from "./ArticlePage";
 import { wineDummyData } from "../../../utils/dummyData";
 import { WineProps } from "../../../types/article_types";

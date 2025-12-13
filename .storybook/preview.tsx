@@ -1,8 +1,8 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/nextjs-vite";
 import {
   INITIAL_VIEWPORTS,
   MINIMAL_VIEWPORTS,
-} from "@storybook/addon-viewport";
+} from "storybook/viewport";
 import "@mantine/core/styles.css";
 import "../src/app/globals.css";
 import React from "react";
@@ -18,7 +18,7 @@ import { queryClient } from "../src/utils/queryClient";
 const preview: Preview = {
   parameters: {
     viewport: {
-      viewports: {
+      options: {
         ...INITIAL_VIEWPORTS,
         ...MINIMAL_VIEWPORTS,
       },

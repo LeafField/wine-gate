@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import WineTitle from "./WineTitle";
 
 const meta = {
@@ -38,10 +38,11 @@ export const Mobile: Story = {
       "ワインのタイトルが長い場合のテストです。ワインのタイトルが長い場合のテストです。ワインのタイトルが長い場合のテストです。",
     id: "fasdf",
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: "iphone6",
-    },
+      value: "iphone6",
+      isRotated: false
+    }
   },
 };
 

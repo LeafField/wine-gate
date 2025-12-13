@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import NewArrivals from "./NewArrivals";
 import { smallArticleDummyData } from "../../../utils/dummyData";
 
@@ -16,9 +16,10 @@ type Story = StoryObj<typeof meta>;
 
 export const PC: Story = {};
 export const Mobile: Story = {
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: "iphone6",
-    },
+      value: "iphone6",
+      isRotated: false
+    }
   },
 };

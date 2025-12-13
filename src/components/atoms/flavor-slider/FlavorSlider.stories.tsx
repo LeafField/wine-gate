@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import FlavorSlider from "./FlavorSlider";
 import { useForm, zodResolver } from "@mantine/form";
 import {

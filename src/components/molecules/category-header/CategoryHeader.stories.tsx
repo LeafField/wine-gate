@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import CategoryHeader from "./CategoryHeader";
 
 const meta = {
@@ -35,17 +35,16 @@ export const Mobile: Story = {
   args: {
     title: "新着ワイン",
   },
+
   parameters: {
-    viewport: {
-      defaultViewport: "iphone6",
-    },
     nextjs: {
       appDirectory: true,
       navigation: {
         segments: [["category", "sober"]],
       },
-    },
+    }
   },
+
   decorators: [
     (Story) => (
       <div className="px-4">
@@ -53,4 +52,11 @@ export const Mobile: Story = {
       </div>
     ),
   ],
+
+  globals: {
+    viewport: {
+      value: "iphone6",
+      isRotated: false
+    }
+  }
 };

@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import UserPanel from "./UserPanel";
 import UseStoreTester from "../../test-components/UseStoreTester";
-import { spyOn, within } from "@storybook/test";
+import { spyOn, within } from "storybook/test";
 import { supabase } from "../../../utils/supabase";
 
 const meta = {

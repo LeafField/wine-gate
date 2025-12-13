@@ -1,6 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import Navigation from "./Navigation";
-import { spyOn, within } from "@storybook/test";
+import { spyOn, within } from "storybook/test";
 import { supabase } from "../../../utils/supabase";
 
 const meta = {
@@ -35,12 +35,17 @@ export const Mobile: Story = {
       return Promise.resolve({ error: null, data: null });
     });
   },
+
   parameters: {
-    viewport: {
-      defaultViewport: "iphone6",
-    },
     backgrounds: {
       default: "dark",
-    },
+    }
   },
+
+  globals: {
+    viewport: {
+      value: "iphone6",
+      isRotated: false
+    }
+  }
 };

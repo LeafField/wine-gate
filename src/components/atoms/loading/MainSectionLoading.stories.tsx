@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import MainSectionLoading from "./MainSectionLoading";
 import Container from "../container/Container";
 import Navigation from "../../organisms/navigation/Navigation";

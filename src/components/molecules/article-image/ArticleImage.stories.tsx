@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import ArticleImage from "./ArticleImage";
 import dummyImage from "../../../images/dummy_wine.png";
 
@@ -34,9 +34,10 @@ export const Mobile: Story = {
     image_src: dummyImage.src,
     title: "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ",
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: "iphone6",
-    },
+      value: "iphone6",
+      isRotated: false
+    }
   },
 };

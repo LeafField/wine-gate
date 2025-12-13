@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import SmallArticle from "./SmallArticle";
 import dummyImage from "../../../images/dummy_wine.png";
 

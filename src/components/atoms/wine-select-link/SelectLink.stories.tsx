@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import SelectLink from "./SelectLink";
 import TopPageContainer from "../toppage-container/TopPageContainer";
 import GridContainer from "../grid-container/GridContainer";

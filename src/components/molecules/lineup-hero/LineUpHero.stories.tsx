@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import LineUpHero from "./LineUpHero";
 
 const meta = {
@@ -39,12 +39,13 @@ export const Mobile: Story = {
       </div>
     ),
   ],
-  parameters: {
-    viewport: {
-      defaultViewport: "iphone6",
-    },
-  },
   args: {
     title: "ワイン検索",
+  },
+  globals: {
+    viewport: {
+      value: "iphone6",
+      isRotated: false
+    }
   },
 };

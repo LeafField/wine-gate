@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import Modal from "./Modal";
 import { useStore } from "../../../store";
 import { useEffect } from "react";
@@ -27,11 +27,6 @@ export const PC: Story = {
   ],
 };
 export const Mobile: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: "iphone6",
-    },
-  },
   decorators: [
     (Story) => {
       const { setModal } = useStore();
@@ -44,6 +39,12 @@ export const Mobile: Story = {
       return <Story />;
     },
   ],
+  globals: {
+    viewport: {
+      value: "iphone6",
+      isRotated: false
+    }
+  },
 };
 
 export const ShowHide: Story = {

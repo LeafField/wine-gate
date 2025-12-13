@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { spyOn, within } from "@storybook/test";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { spyOn, within } from "storybook/test";
 import EditingPage from "./EditingPage";
 import * as fetcher from "../../../utils/fetcher";
 

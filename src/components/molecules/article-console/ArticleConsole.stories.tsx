@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import ArticleConsole from "./ArticleConsole";
 import { useQueryClient } from "@tanstack/react-query";
 import UseStoreTester from "../../test-components/UseStoreTester";
@@ -44,11 +44,6 @@ export const Default: Story = {
 };
 
 export const Mobile: Story = {
-  parameters: {
-    viewport: {
-      defaultViewport: "iphone6",
-    },
-  },
   args: {
     wine_id: "1234",
     author_id: "5678",
@@ -61,6 +56,12 @@ export const Mobile: Story = {
       </>
     ),
   ],
+  globals: {
+    viewport: {
+      value: "iphone6",
+      isRotated: false
+    }
+  },
 };
 
 export const Author: Story = {

@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import ImageFooter from "./ImageFooter";
 
 const meta = {
@@ -29,9 +29,10 @@ export const Mobile: Story = {
     author_name: "ワイン大好きクラブ会長",
     price: 900,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: "iphone6",
-    },
+      value: "iphone6",
+      isRotated: false
+    }
   },
 };

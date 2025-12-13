@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import ArticleHeader from "./ArticleHeader";
 
 const meta = {
@@ -20,9 +20,10 @@ export const Mobile: Story = {
   args: {
     title: "コノスル カベルネソーヴィニヨン ビシクレタ・レゼルバ",
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: "iphone6",
-    },
+      value: "iphone6",
+      isRotated: false
+    }
   },
 };

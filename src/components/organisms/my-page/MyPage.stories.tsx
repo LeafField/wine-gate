@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import MyPage from "./MyPage";
 import { wineTitleDummyData } from "../../../utils/dummyData";
 import Container from "../../atoms/container/Container";

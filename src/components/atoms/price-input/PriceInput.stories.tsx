@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import PriceInput from "./PriceInput";
 import { useForm } from "@mantine/form";
 import { EditingPageSchemaType } from "../../../utils/schema";

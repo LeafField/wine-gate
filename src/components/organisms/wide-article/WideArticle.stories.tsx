@@ -1,4 +1,4 @@
-import { StoryObj, Meta } from "@storybook/react";
+import { StoryObj, Meta } from "@storybook/nextjs-vite";
 import WideArticle from "./WideArticle";
 import { articleDummyData } from "../../../utils/dummyData";
 import dummyImage from "../../../images/dummy_wine2.jpg";
@@ -79,9 +79,10 @@ export const Mobile: Story = {
   args: {
     article: articleDummyData,
   },
-  parameters: {
+  globals: {
     viewport: {
-      defaultViewport: "iphone6",
-    },
+      value: "iphone6",
+      isRotated: false
+    }
   },
 };

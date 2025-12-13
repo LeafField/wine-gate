@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import ImageInput from "./ImageInput";
 import { FC, FormEvent, PropsWithChildren, useEffect } from "react";
 import { useForm } from "@mantine/form";
